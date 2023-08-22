@@ -2,6 +2,7 @@ import Header from '@/components/organism/Header'
 import '../style/globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/organism/Footer'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,10 +14,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* <Head> */}
+        {/* <!-- Google Font "Inter font" --> */}
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+      </Head> */}
       <body className={inter.className}>
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )
