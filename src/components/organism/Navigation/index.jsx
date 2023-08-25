@@ -46,23 +46,23 @@ const Navigation = () => {
           <select name="ship">
             <option value="1">
               Ship to1{" "}
-              <Image
+              {/* <Image
                 src={GermanyFlag}
                 width={24}
                 height={24}
                 alt="Menu"
                 loading="lazy"
-              />
+              /> */}
             </option>
             <option value="1">
               Ship to2{" "}
-              <Image
+              {/* <Image
                 src={GermanyFlag}
                 width={24}
                 height={24}
                 alt="Menu"
                 loading="lazy"
-              />
+              /> */}
             </option>
           </select>
         </div>
