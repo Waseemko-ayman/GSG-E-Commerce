@@ -3,8 +3,6 @@
 import { styled } from "styled-components";
 
 const ButtonComponent = styled.button`
-  position: relative;
-  border-radius: 6px;
   border: 1px solid
     ${(props) =>
       props.borderColor === "primary"
@@ -13,11 +11,11 @@ const ButtonComponent = styled.button`
         ? "#fff"
         : "transparent"};
 
-  backgroud-color: ${(props) =>
+  background-color: ${(props) =>
     props.variant === "primary"
       ? "#0d6efd"
       : props.variant === "secondary"
-      ? "#fff"
+      ? "#ffffff"
       : ""};
 
   color: ${(props) =>
@@ -28,17 +26,15 @@ const ButtonComponent = styled.button`
       : props.color === "dark"
       ? "#1c1c1c"
       : ""};
+  position: relative;
+  border-radius: 6px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
 `;
 
-const Button = ({
-  type,
-  variant,
-  color,
-  borderColor,
-  onClick,
-  size,
-  children,
-}) => {
+const Button = ({ type, variant, color, borderColor, onClick, size, text }) => {
   return (
     <ButtonComponent
       type={type ? type : "button"}
@@ -48,7 +44,7 @@ const Button = ({
       onClick={onClick}
       size={size}
     >
-      {children}
+      {text}
     </ButtonComponent>
   );
 };
