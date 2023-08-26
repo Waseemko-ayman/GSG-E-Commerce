@@ -8,10 +8,10 @@ const RequestSuppliersForm = () => {
     <div className="request-suppliers-form">
       <h4>Send quote to suppliers</h4>
       <form>
-        <Input type="text" placeholder="What item you need?" />
-        <Input type="textarea" placeholder="Type more details" />
+        <Input type="text" placeholder="What item you need?" imageHidden />
+        <Input type="textarea" placeholder="Type more details" imageHidden />
         <div style={{ display: "flex" }}>
-          <Input type="text" placeholder="Quantity" />
+          <Input type="text" placeholder="Quantity" imageHidden />
           <select>
             <option value="1">Pcs</option>
             <option value="2">Pcs</option>
@@ -23,7 +23,7 @@ const RequestSuppliersForm = () => {
           text="Send inquiry"
           type="submit"
           color="secondary"
-          backgroundColor="primary"
+          variant="primary"
         />
       </form>
     </div>

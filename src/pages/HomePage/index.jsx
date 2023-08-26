@@ -7,6 +7,7 @@ import RequestSuppliers from "./Sections/RequestSuppliers";
 import RecommendedItem from "./Sections/RecommendedItemSection";
 import ExtraServices from "./Sections/ExtraServicesSection";
 import SuppliersRegoin from "./Sections/SuppliersByRegion";
+import Subscribe from "@/components/organism/SubscribeSection";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
         <ExtraServices />
         <SuppliersRegoin />
       </Container>
+      <Subscribe />
     </main>
   );
 };

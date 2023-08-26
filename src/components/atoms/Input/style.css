@@ -1,3 +1,9 @@
+.input_component {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .input_component input,
 .input_component textarea {
   max-width: 100%;
@@ -27,6 +33,15 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.input_component img {
+  max-width: 100%;
+  width: 22px;
+}
+
+.image__hidden {
+  display: none;
 }
 
 /* export const StyledInput = styled */
