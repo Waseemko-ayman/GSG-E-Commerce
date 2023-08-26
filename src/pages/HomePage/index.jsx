@@ -6,6 +6,7 @@ import HomeAndOutDoor from "./Sections/HomeAndOutDoor";
 import RequestSuppliers from "./Sections/RequestSuppliers";
 import RecommendedItem from "./Sections/RecommendedItemSection";
 import ExtraServices from "./Sections/ExtraServicesSection";
+import SuppliersRegoin from "./Sections/SuppliersByRegion";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
         <RequestSuppliers />
         <RecommendedItem />
         <ExtraServices />
+        <SuppliersRegoin />
       </Container>
     </main>
   );

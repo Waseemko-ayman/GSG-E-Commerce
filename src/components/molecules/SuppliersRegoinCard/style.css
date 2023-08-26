@@ -1,0 +1,28 @@
+.suppliers__card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.suppliers__card img {
+  max-width: 100%;
+  width: 28px;
+}
+
+.suppliers__card .info {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.suppliers__card .info p {
+  color: var(--dark-color);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.suppliers__card .info span {
+  color: var(--gray-500-color);
+  font-size: 13px;
+  line-height: normal;
+}
