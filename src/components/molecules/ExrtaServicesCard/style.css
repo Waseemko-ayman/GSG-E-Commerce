@@ -1,0 +1,41 @@
+.extra_card {
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-300-color);
+  border-radius: 8px;
+  position: relative;
+}
+
+.extra_card > img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.extra_card .info {
+  padding: 20px;
+}
+
+.extra_card .icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  background-color: var(--light3-blue);
+  margin-top: 27.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.extra_card .icon img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.extra_card p {
+  color: var(--dark-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}

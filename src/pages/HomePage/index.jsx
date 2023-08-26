@@ -5,6 +5,7 @@ import DealsAndOffers from "./Sections/DealsAndOffersSection";
 import HomeAndOutDoor from "./Sections/HomeAndOutDoor";
 import RequestSuppliers from "./Sections/RequestSuppliers";
 import RecommendedItem from "./Sections/RecommendedItemSection";
+import ExtraServices from "./Sections/ExtraServicesSection";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
         <HomeAndOutDoor />
         <RequestSuppliers />
         <RecommendedItem />
+        <ExtraServices />
       </Container>
     </main>
   );
