@@ -1,0 +1,32 @@
+.input_component input,
+.input_component textarea {
+  max-width: 100%;
+  width: 100%;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+  border-radius: 6px;
+  border: 1px solid var(--gray-300-color);
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.input_component input {
+  height: 40px;
+}
+
+.input_component textarea {
+  height: 73px;
+}
+
+.input_component input::placeholder,
+.input_component textarea::placeholder {
+  color: var(--gray-500-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* export const StyledInput = styled */
