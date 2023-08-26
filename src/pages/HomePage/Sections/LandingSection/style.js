@@ -6,8 +6,8 @@ export const StyledLanding = styled.div`
   border-radius: 8px;
   padding: 20px;
   margin: 20px 0 30px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 13px;
-  position: relative;
 `;
