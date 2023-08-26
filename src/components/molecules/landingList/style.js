@@ -1,9 +1,7 @@
 import { styled } from "styled-components";
 
 export const StyledLandingList = styled.div`
-  &{
-    width: 100%;
-  }
+  width: 100%;
   
   ul {
     list-style: none;

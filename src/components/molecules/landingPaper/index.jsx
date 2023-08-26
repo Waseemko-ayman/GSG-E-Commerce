@@ -13,8 +13,10 @@ const LandingPaper = () => {
         <button>Join now</button>
         <button>Log in</button>
       </div>
-      <Paper textPaper="Get US $10 off with a new supplier" variant="orange" />
-      <Paper textPaper="Send quotes with supplier preferences" variant="light-blue" />
+      {/* <Paper textPaper="Get US $10 off with a new supplier" variant="orange" />
+      <Paper textPaper="Send quotes with supplier preferences" variant="light-blue" /> */}
+      <Paper textPaper="Get US $10 off with a new supplier" />
+      <Paper textPaper="Send quotes with supplier preferences" />
     </div>
   );
 };
