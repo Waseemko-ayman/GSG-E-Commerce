@@ -1,3 +1,4 @@
+"use client"
 import Container from "@/components/organism/Container";
 import React from "react";
 import Landing from "./Sections/LandingSection";
@@ -9,10 +10,11 @@ import ExtraServices from "./Sections/ExtraServicesSection";
 import SuppliersRegoin from "./Sections/SuppliersByRegion";
 import Subscribe from "@/components/organism/SubscribeSection";
 import ConsumerElectronics from "./Sections/ConsumerElectronicsSection";
+import { StyledPage } from "@/style/common";
 
 const HomePage = () => {
   return (
-    <main>
+    <StyledPage as="main">
       <Container>
         <Landing />
         <DealsAndOffers />
@@ -24,7 +26,7 @@ const HomePage = () => {
         <SuppliersRegoin />
       </Container>
       <Subscribe />
-    </main>
+    </StyledPage>
   );
 };
 

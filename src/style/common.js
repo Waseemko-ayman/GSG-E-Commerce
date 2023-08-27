@@ -1,5 +1,9 @@
 import { styled } from "styled-components";
 
+export const StyledPage = styled.div`
+  min-height: 100vh;
+`;
+
 export const StyledFlex = styled.div`
   display: flex;
 `;

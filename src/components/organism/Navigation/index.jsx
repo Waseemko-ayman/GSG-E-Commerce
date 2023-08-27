@@ -10,9 +10,15 @@ const Navigation = () => {
     <div className="navigation">
       <Container betweenFlex>
         <div className="nav-links">
-          <Image src="/assets/menu.png" width={24} height={24} alt="Menu" loading="lazy" />
+          <Image
+            src="/assets/menu.png"
+            width={24}
+            height={24}
+            alt="Menu"
+            loading="lazy"
+          />
           <div>
-            <Link href="#">All category</Link>
+            <Link href="/ProductsList">All category</Link>
             <Link href="#">Hot offers</Link>
             <Link href="#">Gift boxes</Link>
             <Link href="#">Projects</Link>
@@ -35,28 +41,8 @@ const Navigation = () => {
             <option value="5">English, USD</option>
           </select>
           <select name="ship">
-            <option value="1">
-              Ship to1{" "}
-              {/* <Image
-                src="/assets/germany-flag.png"
-                width={24}
-                height={24}
-                alt="Menu"
-                loading="lazy"
-              /> */}
-              {/* <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/> */}
-            </option>
-            <option value="1">
-              Ship to2{" "}
-              {/* <Image
-                src="/assets/germany-flag.png"
-                width={24}
-                height={24}
-                alt="Menu"
-                loading="lazy"
-              /> */}
-              {/* <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/> */}
-            </option>
+            <option value="1">Ship to1</option>
+            <option value="1">Ship to2</option>
           </select>
         </div>
       </Container>
