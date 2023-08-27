@@ -3,12 +3,15 @@
 import { styled } from "styled-components";
 
 const ButtonComponent = styled.button`
+  width: ${(props) => props.width};
   border: 1px solid
     ${(props) =>
       props.borderColor === "primary"
         ? "#0d6efd"
         : props.borderColor === "secondary"
         ? "#fff"
+        : props.borderColor === "gray"
+        ? "#e3e8ee"
         : "transparent"};
 
   background-color: ${(props) =>
@@ -34,7 +37,7 @@ const ButtonComponent = styled.button`
   font-weight: 700;
 `;
 
-const Button = ({ type, variant, color, borderColor, onClick, size, text }) => {
+const Button = ({ type, variant, color, borderColor, onClick, size, text, width }) => {
   return (
     <ButtonComponent
       type={type ? type : "button"}
@@ -43,6 +46,7 @@ const Button = ({ type, variant, color, borderColor, onClick, size, text }) => {
       borderColor={borderColor}
       onClick={onClick}
       size={size}
+      width={width}
     >
       {text}
     </ButtonComponent>

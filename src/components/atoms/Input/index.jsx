@@ -2,7 +2,7 @@
 import React from "react";
 import "./style.css";
 
-const Input = ({ type, placeholder, onChange, imageHidden }) => {
+const Input = ({ type, placeholder, onChange, imageHidden, removeArrow }) => {
   return (
     <div className="input_component">
       <img
@@ -10,8 +10,8 @@ const Input = ({ type, placeholder, onChange, imageHidden }) => {
         alt="email icon"
         className={`${imageHidden ? "image__hidden" : ""}`}
       />
-      {type === "text" ? (
-        <input type={type} placeholder={placeholder} onChange={onChange} />
+      {type === "text" || type === "number" ? (
+        <input className={`${removeArrow ? "remove__arrow" : ""}`} type={type} placeholder={placeholder} onChange={onChange} />
       ) : (
         <textarea placeholder={placeholder}></textarea>
       )}

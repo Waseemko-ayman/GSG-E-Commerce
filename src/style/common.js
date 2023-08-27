@@ -11,6 +11,8 @@ export const StyledFlex = styled.div`
 export const StyledAlignFlex = styled.div`
   display: flex;
   align-items: center;
+  gap: ${(props) => props.gap};
+  margin: ${(props) => props.margin};
 `;
 
 export const StyledFlexColumn = styled.div`
@@ -35,6 +37,12 @@ export const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   width: 100%;
+`;
+
+export const StyledGridProducts = styled.div`
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 12px;
 `;
 
 export const StyledSection = styled.div`
