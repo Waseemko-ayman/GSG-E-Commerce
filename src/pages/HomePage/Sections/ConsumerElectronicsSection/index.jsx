@@ -6,7 +6,7 @@ import { CONSUMER_ELECTRONICS_DATA } from "@/mock/ConsumerElectronicsData";
 
 const ConsumerElectronics = () => {
   return (
-    <StyledSection>
+    <StyledSection margin="20px 0 30px">
       <StyledFlex>
         <OutdoorAndConsumerInfo
           title="Consumer electronics and gadgets"

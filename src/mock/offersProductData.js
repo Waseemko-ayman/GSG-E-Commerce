@@ -1,8 +1,8 @@
-import SmartWatche from "../../public/assets/offersProduct1.png";
-import Laptops from "../../public/assets/offersProduct2.png";
+import SmartWatche from "../../public/assets/smartWatch.png";
+import Laptops from "../../public/assets/Laptop.png";
 import Cameras from "../../public/assets/offersProduct3.png";
 import Headphones from "../../public/assets/offersProduct4.png";
-import CanonCamreras from "../../public/assets/offersProduct5.png";
+import CanonCamreras from "../../public/assets/GoPropHero6.png";
 
 export const OFFERS_PRODUCT_DATA = [
   {

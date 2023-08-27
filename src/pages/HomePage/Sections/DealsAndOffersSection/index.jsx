@@ -7,7 +7,7 @@ import { OFFERS_PRODUCT_DATA } from "@/mock/offersProductData.js";
 
 const DealsAndOffers = () => {
   return (
-    <StyledSection>
+    <StyledSection margin="20px 0 30px">
       <StyledBetweenFlex>
         <StyledInfoOffers>
           <h1>Deals and offers</h1>

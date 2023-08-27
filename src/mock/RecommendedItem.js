@@ -4,7 +4,7 @@ import Product24 from "../../public/assets/Recommended3.png";
 import Product25 from "../../public/assets/Recommended4.png";
 import Product26 from "../../public/assets/Recommended5.png";
 import Product27 from "../../public/assets/Recommended6.png";
-import Product28 from "../../public/assets/Recommended7.png";
+import Product28 from "../../public/assets/Headphone1.png";
 import Product29 from "../../public/assets/Recommended9.png";
 
 export const RECOMMENDED_DATA = [

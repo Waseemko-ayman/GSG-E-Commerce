@@ -6,7 +6,7 @@ import { HOME_OUTDOOR_DATA } from "@/mock/HomeAndOutdoorData";
 
 const HomeAndOutDoor = () => {
   return (
-    <StyledSection>
+    <StyledSection margin="20px 0 30px">
       <StyledFlex>
         <OutdoorAndConsumerInfo
           title="Home and outdoor"

@@ -6,6 +6,7 @@ export const StyledPage = styled.div`
 
 export const StyledFlex = styled.div`
   display: flex;
+  gap: ${(props) => props.gap};
 `;
 
 export const StyledAlignFlex = styled.div`
@@ -13,6 +14,12 @@ export const StyledAlignFlex = styled.div`
   align-items: center;
   gap: ${(props) => props.gap};
   margin: ${(props) => props.margin};
+`;
+
+export const StyledFlexCenter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledFlexColumn = styled.div`
@@ -39,17 +46,24 @@ export const StyledGrid = styled.div`
   width: 100%;
 `;
 
+export const StyledGrid250 = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: ${(props) => props.gap};
+  width: 100%;
+`;
+
 export const StyledGridProducts = styled.div`
   display: grid;
   grid-template-columns: 240px 1fr;
-  gap: 12px;
+  gap: 25px;
 `;
 
 export const StyledSection = styled.div`
   background-color: var(--white-color);
   border: 1px solid var(--gray-300-color);
   border-radius: 8px;
-  padding: ${(props) => (props.padding === true ? "20px" : "0px")};
-  margin: 20px 0 30px;
+  padding: ${(props) => props.padding};
+  margin: ${(props) => props.margin};
   position: relative;
 `;
