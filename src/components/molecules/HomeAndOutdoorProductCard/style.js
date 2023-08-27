@@ -2,17 +2,20 @@ import { StyledBetweenAlignFlex } from "@/style/common";
 import { styled } from "styled-components";
 
 export const StyledOutdoorCard = styled(StyledBetweenAlignFlex)`
-  // background-color: var(--white-color);
+  background-color: var(--white-color);
+  border-right: 1px solid var(--gray-300-color);
+  border-bottom: 1px solid var(--gray-300-color);
+  padding: 10px;
 
   .text {
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
   }
 
-  .text h4 {
+  .text h3 {
     color: var(--dark-color);
     font-size: 16px;
+    margin-bottom: 9px;
   }
 
   .text span {

@@ -30,6 +30,7 @@ export const StyledBetweenAlignFlex = styled.div`
 export const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
 `;
 
 export const StyledSection = styled.div`

@@ -18,5 +18,6 @@ export const StyledHomeAndConsumer = styled.div`
     font-weight: 600;
     line-height: 26px;
     letter-spacing: -0.2px;
+    margin-bottom: 18px;
   }
 `;
