@@ -44,7 +44,7 @@ const Navigation = () => {
                 alt="Menu"
                 loading="lazy"
               /> */}
-              <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/>
+              {/* <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/> */}
             </option>
             <option value="1">
               Ship to2{" "}
@@ -55,7 +55,7 @@ const Navigation = () => {
                 alt="Menu"
                 loading="lazy"
               /> */}
-              <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/>
+              {/* <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/> */}
             </option>
           </select>
         </div>

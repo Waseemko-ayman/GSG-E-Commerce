@@ -8,6 +8,7 @@ import RecommendedItem from "./Sections/RecommendedItemSection";
 import ExtraServices from "./Sections/ExtraServicesSection";
 import SuppliersRegoin from "./Sections/SuppliersByRegion";
 import Subscribe from "@/components/organism/SubscribeSection";
+import ConsumerElectronics from "./Sections/ConsumerElectronicsSection";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
         <Landing />
         <DealsAndOffers />
         <HomeAndOutDoor />
+        <ConsumerElectronics />
         <RequestSuppliers />
         <RecommendedItem />
         <ExtraServices />

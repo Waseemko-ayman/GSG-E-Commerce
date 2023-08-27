@@ -1,19 +1,19 @@
 "use client";
-import HomeAndOutdoorProductCard from "@/components/molecules/HomeAndOutdoorProductCard";
 import { StyledFlex, StyledGrid, StyledSection } from "@/style/common";
 import OutdoorAndConsumerInfo from "@/components/molecules/OutdoorAndConsumerElectInfo";
-import { HOME_OUTDOOR_DATA } from "@/mock/HomeAndOutdoorData";
+import HomeAndOutdoorProductCard from "@/components/molecules/HomeAndOutdoorProductCard";
+import { CONSUMER_ELECTRONICS_DATA } from "@/mock/ConsumerElectronicsData";
 
-const HomeAndOutDoor = () => {
+const ConsumerElectronics = () => {
   return (
     <StyledSection>
       <StyledFlex>
         <OutdoorAndConsumerInfo
-          title="Home and outdoor"
-          imageSrc="/assets/HomeAndOutdoor.png"
+          title="Consumer electronics and gadgets"
+          imageSrc="/assets/ConsumerElectronics.png"
         />
         <StyledGrid>
-          {HOME_OUTDOOR_DATA.map(({ id, src, title, price }) => (
+          {CONSUMER_ELECTRONICS_DATA.map(({ id, src, title, price }) => (
             <HomeAndOutdoorProductCard
               key={id}
               imageSrc={src}
@@ -27,4 +27,4 @@ const HomeAndOutDoor = () => {
   );
 };
 
-export default HomeAndOutDoor;
+export default ConsumerElectronics;
