@@ -17,14 +17,14 @@ const HomeAndOutDoor = () => {
           imageSrc="/assets/HomeAndOutdoor.png"
         />
         <StyledGrid>
-          {/* {HOME_OUTDOOR_DATA.map(({ id, src, title, price }) => (
+          {HOME_OUTDOOR_DATA.map(({ id, src, title, price }) => (
             <HomeAndOutdoorProductCard
               key={id}
               imageSrc={src}
               productName={title}
               productPrice={price}
             />
-          ))} */}
+          ))}
         </StyledGrid>
       </StyledFlex>
     </StyledSection>

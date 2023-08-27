@@ -3,11 +3,7 @@ import OffersDateCards from "@/components/atoms/DealsAndOffersDateCard";
 import { StyledBetweenFlex, StyledFlex, StyledSection } from "@/style/common";
 import OffersProductCard from "@/components/atoms/OffersProductCard";
 import { StyledInfoOffers } from "./style.js";
-import SmartWatche from "../../../../../public/assets/offersProduct1.png";
-import Laptops from "../../../../../public/assets/offersProduct2.png";
-import Cameras from "../../../../../public/assets/offersProduct3.png";
-import Headphones from "../../../../../public/assets/offersProduct4.png";
-import CanonCamreras from "../../../../../public/assets/offersProduct5.png";
+import { OFFERS_PRODUCT_DATA } from "@/mock/offersProductData.js";
 
 const DealsAndOffers = () => {
   return (
@@ -24,45 +20,15 @@ const DealsAndOffers = () => {
           </StyledFlex>
         </StyledInfoOffers>
         <StyledFlex>
-          {/* {OFFERS_PRODUCT_DATA.map(({ id, src, name, alt, saleRate }) => {
+          {OFFERS_PRODUCT_DATA.map(({ id, src, name, alt, saleRate }) => (
             <OffersProductCard
               key={id}
               imageSrc={src}
               productName={name}
               imageAlt={alt}
               productSale={saleRate}
-            />;
-          })} */}
-          <OffersProductCard
-            imageSrc={SmartWatche}
-            productName="Smart watches"
-            imageAlt="Smart watches"
-            productSale="-25%"
-          />
-          <OffersProductCard
-            imageSrc={Laptops}
-            productName="Laptops"
-            imageAlt="Laptops"
-            productSale="-15%"
-          />
-          <OffersProductCard
-            imageSrc={Cameras}
-            productName="GoPro cameras"
-            imageAlt="GoPro cameras"
-            productSale="-40%"
-          />
-          <OffersProductCard
-            imageSrc={Headphones}
-            productName="Headphones"
-            imageAlt="Headphones"
-            productSale="-25%"
-          />
-          <OffersProductCard
-            imageSrc={CanonCamreras}
-            productName="Canon camreras"
-            imageAlt="CanonCamreras"
-            productSale="-25%"
-          />
+            />
+          ))}
         </StyledFlex>
       </StyledBetweenFlex>
     </StyledSection>

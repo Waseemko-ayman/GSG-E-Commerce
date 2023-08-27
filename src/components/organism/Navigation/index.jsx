@@ -1,17 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import "./style.css";
 import Container from "../Container";
 import Link from "next/link";
 import Image from "next/image";
-import Menu from "../../../../public/assets/menu.png";
-import GermanyFlag from "../../../../public/assets/germany-flag.png";
 
 const Navigation = () => {
   return (
     <div className="navigation">
       <Container betweenFlex>
         <div className="nav-links">
-          <Image src={Menu} width={24} height={24} alt="Menu" loading="lazy" />
+          <Image src="/assets/menu.png" width={24} height={24} alt="Menu" loading="lazy" />
           <div>
             <Link href="#">All category</Link>
             <Link href="#">Hot offers</Link>
@@ -25,14 +24,6 @@ const Navigation = () => {
               <option value="4">Help</option>
               <option value="5">Help</option>
             </select>
-            {/* <input list="Programming" name="prog" />
-            <datalist id="Programming">
-              <option value="Help" />
-              <option value="Help" />
-              <option value="Help" />
-              <option value="Help" />
-              <option value="Help" />
-            </datalist> */}
           </div>
         </div>
         <div className="lang-ship">
@@ -47,22 +38,24 @@ const Navigation = () => {
             <option value="1">
               Ship to1{" "}
               {/* <Image
-                src={GermanyFlag}
+                src="/assets/germany-flag.png"
                 width={24}
                 height={24}
                 alt="Menu"
                 loading="lazy"
               /> */}
+              <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/>
             </option>
             <option value="1">
               Ship to2{" "}
               {/* <Image
-                src={GermanyFlag}
+                src="/assets/germany-flag.png"
                 width={24}
                 height={24}
                 alt="Menu"
                 loading="lazy"
               /> */}
+              <img src="/assets/germany-flag.png" alt="germany-flag" loading="lazy"/>
             </option>
           </select>
         </div>

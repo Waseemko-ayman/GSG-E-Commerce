@@ -1,13 +1,12 @@
 import React from "react";
 import "./style.css";
 import Image from "next/image";
-import logo from "../../../../public/assets/logo.png";
 
 const Logo = () => {
   return (
     <div className="logo">
       <Image
-        src={logo}
+        src="/assets/logo.png"
         width={44}
         height={44}
         alt="Brand logo"

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Button from "@/components/atoms/Button";
-import Input from "@/components/atoms/Input";
+// import Input from "@/components/atoms/Input";
 import "./style.css";
 
 const Subscribe = () => {

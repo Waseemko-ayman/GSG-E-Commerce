@@ -1,10 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import IconPerson from "../../../../public/assets/icon-person.png"
-import IconChat from "../../../../public/assets/icon-chat.png"
-import IconFavorite from "../../../../public/assets/icon-favorite.png"
-import IconShoppingCart from "../../../../public/assets/icon-shopping-cart.png"
 import "./style.css";
 
 const LinksList = () => {
@@ -12,7 +8,7 @@ const LinksList = () => {
     <div className="links">
       <Link href="#">
         <Image
-          src={IconPerson}
+          src="/assets/icon-person.png"
           width={20}
           height={19}
           alt=""
@@ -22,7 +18,7 @@ const LinksList = () => {
       </Link>
       <Link href="#">
         <Image
-          src={IconChat}
+          src="/assets/icon-chat.png"
           width={20}
           height={19}
           alt=""
@@ -32,7 +28,7 @@ const LinksList = () => {
       </Link>
       <Link href="#">
         <Image
-          src={IconFavorite}
+          src="/assets/icon-favorite.png"
           width={20}
           height={19}
           alt=""
@@ -42,7 +38,7 @@ const LinksList = () => {
       </Link>
       <Link href="#">
         <Image
-          src={IconShoppingCart}
+          src="/assets/icon-shopping-cart.png"
           width={20}
           height={19}
           alt=""
