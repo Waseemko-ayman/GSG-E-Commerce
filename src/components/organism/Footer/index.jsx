@@ -1,10 +1,110 @@
-import React from 'react';
-import "./style.css";
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import Logo from "@/components/atoms/Logo";
+import { SOCIAL_MEDIA } from "@/mock/socialMedia";
+import { StyledBetweenFlex, StyledFlex } from "@/style/common";
+import { styled } from "styled-components";
+import Container from "../Container";
+import FooterListCard from "@/components/atoms/FooterListCard";
+import {
+  ABOUT_LIST,
+  FOR_USERS_LIST,
+  GET_APP_LIST,
+  INFORMATION_LIST,
+  PARTNERSHIP_LIST,
+} from "@/mock/FooterLists";
+
+const StyledFooter = styled(StyledFlex)`
+  background-color: var(--white-color);
+  padding: 40px 20px 60px;
+`;
+
+const StyledFooterContent = styled(StyledFlex)`
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+
+  .info {
+  }
+
+  .info p {
+    color: var(--gray-600-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 16px 0 15px;
+  }
+
+  h3 {
+    color: var(--dark-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+`;
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <StyledFooter>
+      <Container>
+        <StyledFooterContent>
+          <div className="info">
+            <Logo />
+            <p>
+              Best information about the company gies here but now lorem ipsum is
+            </p>
+            <StyledFlex gap="10px">
+              {SOCIAL_MEDIA.map(({ id, src }) => (
+                <img key={id} src={src} alt="social media" />
+              ))}
+            </StyledFlex>
+          </div>
+          <StyledBetweenFlex className="lists">
+            <div>
+              <h3>About</h3>
+              {ABOUT_LIST.map(({ id, pageLink }) => (
+                <FooterListCard key={id} listPage={pageLink} />
+              ))}
+            </div>
+            <div>
+              <h3>Partnership</h3>
+              {PARTNERSHIP_LIST.map(({ id, pageLink }) => (
+                <FooterListCard key={id} listPage={pageLink} />
+              ))}
+            </div>
+            <div>
+              <h3>Information</h3>
+              {INFORMATION_LIST.map(({ id, pageLink }) => (
+                <FooterListCard key={id} listPage={pageLink} />
+              ))}
+            </div>
+            <div>
+              <h3>For users</h3>
+              {FOR_USERS_LIST.map(({ id, pageLink }) => (
+                <FooterListCard key={id} listPage={pageLink} />
+              ))}
+            </div>
+            <div>
+              <h3>For users</h3>
+              {GET_APP_LIST.map(({ id, src }) => (
+                <img key={id} src={src} alt="store" />
+              ))}
+            </div>
+          </StyledBetweenFlex>
+        </StyledFooterContent>
+      </Container>
+    </StyledFooter>
+  );
+};
 
 export default Footer;

@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           {children}
         </StyledComponentsRegistry>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
