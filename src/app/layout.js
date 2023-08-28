@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navigation from "@/components/organism/Navigation";
 import Footer from "@/components/organism/Footer";
 import StyledComponentsRegistry from "./registry";
+import CopyRight from "@/components/organism/CopyRight";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           {children}
         </StyledComponentsRegistry>
         <Footer />
+        <CopyRight />
       </body>
     </html>
   );

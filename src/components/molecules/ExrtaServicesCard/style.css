@@ -12,6 +12,7 @@
 
 .extra_card .info {
   padding: 20px;
+  position: relative;
 }
 
 .extra_card .icon {
@@ -20,10 +21,11 @@
   border-radius: 50%;
   border: 2px solid var(--white-color);
   background-color: var(--light3-blue);
-  margin-top: 27.5px;
+  margin-top: -57.5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  float: right;
 }
 
 .extra_card .icon img {
@@ -34,6 +36,7 @@
 
 .extra_card p {
   color: var(--dark-color);
+  width: 175px;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

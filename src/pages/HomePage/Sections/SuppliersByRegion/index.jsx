@@ -1,18 +1,19 @@
-import React from 'react'
-import "./style.css";
+"use client"
 import { SUPPLIERS_REGOIN_DATA } from '@/mock/SuppliersRegoin';
 import SuppliersregoinCard from '@/components/molecules/SuppliersRegoinCard';
+import { StyledGrid } from '@/style/common';
+import { StyledSuppliersRegoin } from './style';
 
 const SuppliersRegoin = () => {
   return (
-    <div className='suppliers__regoin'>
+    <StyledSuppliersRegoin>
       <h2>Suppliers by region</h2>
-      <div className="suppliers__card">
+      <StyledGrid gap="20px">
         {SUPPLIERS_REGOIN_DATA.map(({ id, src, country, email }) => (
           <SuppliersregoinCard key={id} imageSrc={src} countryName={country} countryEmail={email} />
         ))}
-      </div>
-    </div>
+      </StyledGrid>
+    </StyledSuppliersRegoin>
   )
 }
 

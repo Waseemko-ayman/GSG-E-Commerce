@@ -3,7 +3,6 @@
 import Logo from "@/components/atoms/Logo";
 import { SOCIAL_MEDIA } from "@/mock/socialMedia";
 import { StyledBetweenFlex, StyledFlex } from "@/style/common";
-import { styled } from "styled-components";
 import Container from "../Container";
 import FooterListCard from "@/components/atoms/FooterListCard";
 import {

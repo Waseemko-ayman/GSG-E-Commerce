@@ -1,10 +1,10 @@
-import React from "react";
-import "./style.css"
+"use client";
 import RequestSuppliersForm from "@/components/molecules/RequestSuppliersForm";
+import { StyledRequestSuppliers } from "./style.js";
 
 const RequestSuppliers = () => {
   return (
-    <div className="request__suppliers">
+    <StyledRequestSuppliers>
       <div className="text">
         <h3>An easy way to send requests to all suppliers</h3>
         <p>
@@ -13,7 +13,7 @@ const RequestSuppliers = () => {
         </p>
       </div>
       <RequestSuppliersForm />
-    </div>
+    </StyledRequestSuppliers>
   );
 };
 
