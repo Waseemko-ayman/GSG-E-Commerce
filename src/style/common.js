@@ -7,6 +7,7 @@ export const StyledPage = styled.div`
 export const StyledFlex = styled.div`
   display: flex;
   gap: ${(props) => props.gap};
+  padding: ${(props) => props.padding};
 `;
 
 export const StyledAlignFlex = styled.div`
@@ -20,6 +21,8 @@ export const StyledFlexCenter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: ${(props) => props.gap};
+  margin: ${(props) => props.margin};
 `;
 
 export const StyledFlexColumn = styled.div`
