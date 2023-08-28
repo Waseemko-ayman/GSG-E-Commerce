@@ -1,17 +1,19 @@
+"use client"
 import ExtraServicesCard from "@/components/molecules/ExrtaServicesCard";
-import "./style.css";
 import { EXTRA_SERVICES_DATA } from "@/mock/ExtraServices";
+import { StyledExtraServices } from "./style.js";
+import { StyledGrid250 } from "@/style/common.js";
 
 const ExtraServices = () => {
   return (
-    <div className="extra__services">
+    <StyledExtraServices>
       <h2>Our extra services</h2>
-      <div className="extra__cards">
+      <StyledGrid250 gap="20px">
         {EXTRA_SERVICES_DATA.map(({ id, src, alt, title, icon }) => (
           <ExtraServicesCard key={id} imageSrc={src} imageAlt={alt} title={title} iconSrc={icon} />
         ))}
-      </div>
-    </div>
+      </StyledGrid250>
+    </StyledExtraServices>
   );
 };
 

@@ -1,18 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import "./style.css";
+"use client"
+import { StyledFlexCenter } from "@/style/common";
+import { StyledExtraCard } from "./style";
 
 const ExtraServicesCard = ({ imageSrc, imageAlt, iconSrc, title }) => {
   return (
-    <div className="extra_card">
+    <StyledExtraCard>
       <img src={imageSrc} alt={imageAlt} />
       <div className="info">
-        <div className="icon">
+        <StyledFlexCenter className="icon">
           <img src={iconSrc} alt="icon" />
-        </div>
+        </StyledFlexCenter>
         <p>{title}</p>
       </div>
-    </div>
+    </StyledExtraCard>
   );
 };
 
