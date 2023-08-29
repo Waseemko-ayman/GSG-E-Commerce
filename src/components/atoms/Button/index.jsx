@@ -16,14 +16,16 @@ const ButtonComponent = styled.button`
 
   background-color: ${(props) =>
     props.variant === "primary"
-      ? "#0d6efd"
+      ? "var(--primary-color)"
       : props.variant === "secondary"
-      ? "#ffffff"
+      ? "var(--white-color)"
+      : props.variant === "orange"
+      ? "var(--orange-color)"
       : ""};
 
   color: ${(props) =>
     props.color === "primary"
-      ? "#0d6efd"
+      ? "var(--primary-color)"
       : props.color === "secondary"
       ? "#fff"
       : props.color === "dark"
@@ -33,7 +35,7 @@ const ButtonComponent = styled.button`
       : ""};
   position: relative;
   border-radius: 6px;
-  padding: 10px;
+  padding: 10px ${(props) => props.padding};
   outline: none;
   cursor: pointer;
   font-weight: 700;

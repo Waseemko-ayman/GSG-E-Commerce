@@ -7,6 +7,7 @@ import {
 import InfoSection from "./Sections/InfoSection";
 import Description from "./Sections/Description";
 import RelatedProducts from "./Sections/RelatedProducts";
+import Advertisement from "./Sections/Advertisement";
 
 const ProductDetailsPage = () => {
 
@@ -16,6 +17,7 @@ const ProductDetailsPage = () => {
         <InfoSection />
         <Description />
         <RelatedProducts />
+        <Advertisement />
       </Container>
     </StyledPage>
   );
