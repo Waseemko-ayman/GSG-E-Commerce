@@ -1,0 +1,23 @@
+import Button from "@/components/atoms/Button";
+import Input from "@/components/atoms/Input";
+import { StyledAlignFlex } from "@/style/common";
+import { StyledCoupon } from "./style";
+
+const CouponCard = () => {
+  return (
+    <StyledCoupon padding="20px">
+      <h3>Have a coupon?</h3>
+      <StyledAlignFlex>
+        <Input type="text" placeholder="Add coupon" imageHidden />
+        <Button
+          text="Apply"
+          color="primary"
+          variant="secondary"
+          borderColor="gray"
+        />
+      </StyledAlignFlex>
+    </StyledCoupon>
+  );
+};
+
+export default CouponCard;

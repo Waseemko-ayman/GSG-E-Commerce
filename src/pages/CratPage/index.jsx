@@ -1,8 +1,15 @@
-import React from 'react'
+import Container from '@/components/organism/Container';
+import { StyledPage } from '@/style/common';
+import MyCart from './Sections/MyCart';
+
 
 const CartPage = () => {
   return (
-    <div>CartPage</div>
+    <StyledPage>
+      <Container>
+        <MyCart />
+      </Container>
+    </StyledPage>
   )
 }
 

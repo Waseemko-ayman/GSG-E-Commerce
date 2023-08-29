@@ -36,7 +36,7 @@ const LinksList = () => {
         />
         <span>Orders</span>
       </Link>
-      <Link href="#">
+      <Link href="/Cart">
         <Image
           src="/assets/icon-shopping-cart.png"
           width={20}

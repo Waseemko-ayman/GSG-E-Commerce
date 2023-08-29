@@ -7,11 +7,11 @@ const ButtonComponent = styled.button`
   border: 1px solid
     ${(props) =>
       props.borderColor === "primary"
-        ? "#0d6efd"
+        ? "var(--primary-color)"
         : props.borderColor === "secondary"
         ? "#fff"
         : props.borderColor === "gray"
-        ? "#e3e8ee"
+        ? "var(--gray-300-color)"
         : "transparent"};
 
   background-color: ${(props) =>
@@ -21,6 +21,8 @@ const ButtonComponent = styled.button`
       ? "var(--white-color)"
       : props.variant === "orange"
       ? "var(--orange-color)"
+      : props.variant === "green"
+      ? "var(--green-color)"
       : ""};
 
   color: ${(props) =>
@@ -32,6 +34,8 @@ const ButtonComponent = styled.button`
       ? "var(--dark-color)"
       : props.color === "gray"
       ? "var(--gray-500-color)"
+      : props.color === "danger"
+      ? "var(--danger-color)"
       : ""};
   position: relative;
   border-radius: 6px;

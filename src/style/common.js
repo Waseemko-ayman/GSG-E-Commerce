@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { styled } from "styled-components";
 
 export const StyledPage = styled.div`
@@ -42,6 +42,7 @@ export const StyledBetweenAlignFlex = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: ${(props) => props.padding};
 `;
 
 export const StyledGrid180 = styled.div`
@@ -72,6 +73,7 @@ export const StyledGridProducts = styled.div`
 `;
 
 export const StyledSection = styled.div`
+  box-shadow: 0 0 10px #efefef;
   background-color: var(--white-color);
   border: 1px solid var(--gray-300-color);
   border-radius: 8px;
