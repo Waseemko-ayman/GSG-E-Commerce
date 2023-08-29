@@ -5,21 +5,7 @@ import MyCartCard from "@/components/molecules/MyCartCard";
 import TotalPriceCard from "@/components/molecules/TotalPriceCard";
 import { MY_CART } from "@/mock/MyCart";
 import { StyledBetweenAlignFlex, StyledSection } from "@/style/common";
-import React from "react";
-import { styled } from "styled-components";
-
-const StyledMyCart = styled.div`
-  display: grid;
-  grid-template-columns: 880px 1fr;
-  gap: 20px;
-  margin: 15px 0;
-
-  .my_card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-`;
+import { StyledMyCart } from "./style";
 
 const MyCart = () => {
   return (
