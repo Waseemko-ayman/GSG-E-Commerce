@@ -16,6 +16,7 @@ export const StyledAlignFlex = styled.div`
   align-items: center;
   gap: ${(props) => props.gap};
   margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
 `;
 
 export const StyledFlexCenter = styled.div`

@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import Logo from "@/components/atoms/Logo";
 import { SOCIAL_MEDIA } from "@/mock/socialMedia";
 import { StyledBetweenFlex, StyledFlex } from "@/style/common";

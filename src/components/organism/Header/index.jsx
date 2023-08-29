@@ -1,21 +1,22 @@
-import React from "react";
-import "./style.css";
+"use client"
 import Logo from "@/components/atoms/Logo";
 import Container from "../Container";
 import LinksList from "@/components/atoms/LinksList";
 import Search from "@/components/atoms/Search";
+import { StyledHeader } from "./style.js";
+import { StyledBetweenAlignFlex } from "@/style/common";
 
 const Header = ({ show = true }) => {
   return (
-    <header>
+    <StyledHeader as="header">
       <Container>
-        <nav>
+        <StyledBetweenAlignFlex>
           <Logo />
           {show && <Search />}
           <LinksList />
-        </nav>
+        </StyledBetweenAlignFlex>
       </Container>
-    </header>
+    </StyledHeader>
   );
 };
 

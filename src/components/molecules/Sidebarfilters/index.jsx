@@ -2,17 +2,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { StyledBetweenFlex } from "@/style/common";
 import { useState } from "react";
-import { styled } from "styled-components";
+import { StyledSidbarFilters } from "./style";
 
-const StyledSidbarFilters = styled.div`
-  border-top: 1px solid var(--gray-300-color);
-  padding: 0 2px 10px 0;
-  
-  .filter_section {
-    padding: 12px 0px;
-    cursor: pointer;
-  }
-`;
+
 
 const SidebarFilters = ({ title, children }) => {
 

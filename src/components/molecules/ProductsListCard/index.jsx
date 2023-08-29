@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import {
   StyledBetweenAlignFlex,
   StyledAlignFlex,
@@ -26,7 +26,7 @@ const ProductsListCard = ({
           <StyledBetweenAlignFlex>
             <h2>{productTitle}</h2>
             <StyledFlexCenter className="image">
-              <img src="/assets/favorite_border.png" alt="favorite_border" />
+              <img src="/assets/favorite_border.svg" alt="favorite_border" />
             </StyledFlexCenter>
           </StyledBetweenAlignFlex>
 

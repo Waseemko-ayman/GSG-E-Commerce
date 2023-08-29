@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import Button from "@/components/atoms/Button";
 import {
   StyledAlignFlex,
@@ -40,18 +40,22 @@ const ProductsDetailsCard = () => {
           color="secondary"
           variant="primary"
           width="100%"
+          padding="10px 0"
+          imageHidden
         />
         <Button
           text="Seller’s profile"
           color="primary"
           variant="secondary"
-          width="100%"
           borderColor="gray"
+          width="100%"
+          padding="10px 0"
+          imageHidden
         />
       </StyledSection>
 
       <StyledFlexCenter gap="8px" className="save_later">
-        <img src="/assets/favorite_border.png" alt="favorite_border" />
+        <img src="/assets/favorite_border.svg" alt="favorite_border" />
         <p>Save for later</p>
       </StyledFlexCenter>
     </StyledDetailsCard>

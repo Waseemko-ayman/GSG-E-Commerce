@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import SidebarFilters from "@/components/molecules/Sidebarfilters";
 import {
   SIDEBAR_BRANDS,
@@ -9,37 +9,10 @@ import {
   SIDEBAR_RATING,
 } from "@/mock/Sidebar";
 import { StyledAlignFlex } from "@/style/common";
-import { styled } from "styled-components";
 import MultiRangeSlider from "../MultiRangeSlider";
 import Input from "@/components/atoms/Input";
 import Button from "@/components/atoms/Button";
-
-const StyledFilterContent = styled.div`
-  label,
-  p.category {
-    color: var(--gray-600-color);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding: 9px 11px 8px 0px;
-  }
-
-  p {
-    color: var(--primary-color);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 15px;
-  }
-
-  .min__max span {
-    display: block;
-    color: var(--dark-color);
-    margin-bottom: 5px;
-  }
-`;
+import { StyledFilterContent } from "./style";
 
 const Sidebar = () => {
   return (
@@ -77,7 +50,7 @@ const Sidebar = () => {
           max={1000}
           onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
         />
-        <StyledAlignFlex gap="9px">
+        <StyledAlignFlex gap="9px" margin="0 0 8px">
           <div className="min__max">
             <span>Min</span>
             <Input type="number" placeholder="0" imageHidden removeArrow />
@@ -93,6 +66,8 @@ const Sidebar = () => {
           variant="secondary"
           borderColor="gray"
           width="100%"
+          padding="10px"
+          imageHidden
         />
       </SidebarFilters>
 

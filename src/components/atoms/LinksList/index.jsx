@@ -1,52 +1,29 @@
-import React from "react";
+"use client"
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Image from "next/image";
-import "./style.css";
+import "./style.js";
+import { StyledLinks } from "./style.js";
 
 const LinksList = () => {
   return (
-    <div className="links">
+    <StyledLinks className="links">
       <Link href="#">
-        <Image
-          src="/assets/icon-person.png"
-          width={20}
-          height={19}
-          alt=""
-          loading="lazy"
-        />
+        <img src="/assets/icon-person.png" alt="person icon" loading="lazy" />
         <span>Profile</span>
       </Link>
       <Link href="#">
-        <Image
-          src="/assets/icon-chat.png"
-          width={20}
-          height={19}
-          alt=""
-          loading="lazy"
-        />
+        <img src="/assets/icon-chat.png" alt="person icon" loading="lazy" />
         <span>Message</span>
       </Link>
       <Link href="#">
-        <Image
-          src="/assets/icon-favorite.png"
-          width={20}
-          height={19}
-          alt=""
-          loading="lazy"
-        />
+        <img src="/assets/icon-favorite.png" alt="person icon" loading="lazy" />
         <span>Orders</span>
       </Link>
       <Link href="/Cart">
-        <Image
-          src="/assets/icon-shopping-cart.png"
-          width={20}
-          height={19}
-          alt=""
-          loading="lazy"
-        />
+        <img src="/assets/icon-shopping-cart.png" alt="person icon" loading="lazy" />
         <span>My card</span>
       </Link>
-    </div>
+    </StyledLinks>
   );
 };
 

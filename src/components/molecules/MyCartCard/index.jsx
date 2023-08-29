@@ -21,13 +21,18 @@ const MyCartCard = ({ imageSrc, title, size, seller, price }) => {
               color="danger"
               variant="secondary"
               borderColor="gray"
+              padding="7px 0"
+              width="71px"
+              imageHidden
             />
             <Button
-              text="Remove"
+              text="Save for later"
               color="primary"
               variant="secondary"
               borderColor="gray"
-              padding="20px"
+              padding="7px 0"
+              width="108px"
+              imageHidden
             />
           </StyledFlex>
         </div>

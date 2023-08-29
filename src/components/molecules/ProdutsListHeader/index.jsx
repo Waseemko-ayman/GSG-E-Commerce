@@ -1,11 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import {
   StyledAlignFlex,
   StyledFlexCenter,
   StyledSection,
 } from "@/style/common";
 import { StyledProductsHeader } from "./style";
+import Button from "@/components/atoms/Button";
 
 const ProductsListHeader = () => {
   return (
@@ -31,6 +32,9 @@ const ProductsListHeader = () => {
             <StyledFlexCenter as="button">
               <img src="/assets/grid_view.svg" alt="grid_view" />
             </StyledFlexCenter>
+
+            {/* <Button variant="secondary" imageSrc="/assets/grid_view.svg" padding="10px" />
+            <Button variant="secondary" imageSrc="/assets/menu.svg" padding="10px" /> */}
 
             <StyledFlexCenter as="button">
               <img src="/assets/menu.svg" alt="menu" />

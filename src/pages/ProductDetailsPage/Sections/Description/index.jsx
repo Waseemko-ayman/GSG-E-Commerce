@@ -11,10 +11,10 @@ const Description = () => {
       
       <StyledSection className="desc">
         <StyledAlignFlex className="tabs">
-          <Button text="Description" color="gray" variant="secondary" />
-          <Button text="Reviews" color="gray" variant="secondary" />
-          <Button text="Shipping" color="gray" variant="secondary" />
-          <Button text="About company" color="gray" variant="secondary" />
+          <Button text="Description" color="gray" variant="secondary" padding="16px 16px 13px" imageHidden />
+          <Button text="Reviews" color="gray" variant="secondary" padding="16px 16px 13px" imageHidden />
+          <Button text="Shipping" color="gray" variant="secondary" padding="16px 16px 13px" imageHidden />
+          <Button text="About company" color="gray" variant="secondary" padding="16px 16px 13px" imageHidden />
         </StyledAlignFlex>
         <div className="desc-content">
           <p>

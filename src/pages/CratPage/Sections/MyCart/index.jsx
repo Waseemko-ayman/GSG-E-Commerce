@@ -24,8 +24,25 @@ const MyCart = () => {
           ))}
         </div>
         <StyledBetweenAlignFlex padding="20px 0 0">
-          <Button text="Back to shop" color="secondary" variant="primary" borderColor="primary" />
-          <Button text="Remove all" color="primary" variant="secondary" borderColor="gray" />
+          <Button
+            text="Back to shop"
+            color="secondary"
+            variant="primary"
+            borderColor="primary"
+            padding="9px 0"
+            width="159px"
+            imageSrc="/assets/arrow_back.svg"
+            gap="8px"
+          />
+          <Button
+            text="Remove all"
+            color="primary"
+            variant="secondary"
+            borderColor="gray"
+            padding="11px 0"
+            width="115px"
+            imageHidden
+          />
         </StyledBetweenAlignFlex>
       </StyledSection>
       <div>

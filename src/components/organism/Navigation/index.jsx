@@ -1,52 +1,48 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import "./style.css";
 import Container from "../Container";
 import Link from "next/link";
-import Image from "next/image";
+import { StyledAlignFlex, StyledBetweenFlex } from "@/style/common";
+import { StyledNavigation } from "./style.js";
 
 const Navigation = () => {
   return (
-    <div className="navigation">
-      <Container betweenFlex>
-        <div className="nav-links">
-          <Image
-            src="/assets/menu.png"
-            width={24}
-            height={24}
-            alt="Menu"
-            loading="lazy"
-          />
-          <div>
-            <Link href="/ProductsList">All category</Link>
-            <Link href="#">Hot offers</Link>
-            <Link href="#">Gift boxes</Link>
-            <Link href="#">Projects</Link>
-            <Link href="#">Menu item</Link>
-            <select name="help">
-              <option value="1">Help</option>
-              <option value="2">Help</option>
-              <option value="3">Help</option>
-              <option value="4">Help</option>
-              <option value="5">Help</option>
+    <StyledNavigation>
+      <Container>
+        <StyledBetweenFlex>
+          <StyledAlignFlex gap="10px" className="nav-links">
+            <img src="/assets/menu.png" alt="Menu" loading="lazy" />
+            <StyledAlignFlex gap="28px">
+              <Link href="/ProductsList">All category</Link>
+              <Link href="#">Hot offers</Link>
+              <Link href="#">Gift boxes</Link>
+              <Link href="#">Projects</Link>
+              <Link href="#">Menu item</Link>
+              <select name="help">
+                <option value="1">Help</option>
+                <option value="2">Help</option>
+                <option value="3">Help</option>
+                <option value="4">Help</option>
+                <option value="5">Help</option>
+              </select>
+            </StyledAlignFlex>
+          </StyledAlignFlex>
+          <StyledAlignFlex gap="32px" className="lang-ship">
+            <select name="lang">
+              <option value="1">English, USD</option>
+              <option value="2">English, USD</option>
+              <option value="3">English, USD</option>
+              <option value="4">English, USD</option>
+              <option value="5">English, USD</option>
             </select>
-          </div>
-        </div>
-        <div className="lang-ship">
-          <select name="lang">
-            <option value="1">English, USD</option>
-            <option value="2">English, USD</option>
-            <option value="3">English, USD</option>
-            <option value="4">English, USD</option>
-            <option value="5">English, USD</option>
-          </select>
-          <select name="ship">
-            <option value="1">Ship to1</option>
-            <option value="1">Ship to2</option>
-          </select>
-        </div>
+            <select name="ship">
+              <option value="1">Ship to1</option>
+              <option value="1">Ship to2</option>
+            </select>
+          </StyledAlignFlex>
+        </StyledBetweenFlex>
       </Container>
-    </div>
+    </StyledNavigation>
   );
 };
 

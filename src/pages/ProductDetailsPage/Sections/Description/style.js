@@ -11,7 +11,6 @@ export const StyledDesc = styled.div`
   }
 
   button {
-    padding: 16px 16px 13px;
     border-radius: 0 !important;
     position: relative;
   }

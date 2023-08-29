@@ -43,7 +43,6 @@ export const StyledTotalCard = styled(StyledSection)`
   }
 
   button {
-    padding: 15px 0;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

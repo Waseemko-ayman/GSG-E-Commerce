@@ -9,7 +9,7 @@ const OutdoorAndConsumerInfo = ({ title, imageSrc }) => {
       <Image src={imageSrc} width={245} height={245} alt="HomeAndOutdoor-image" loading="lazy" />
       <div className="text">
         <h2>{title}</h2>
-        <Button text="Source now" color="dark" variant="secondary" />
+        <Button text="Source now" color="dark" variant="secondary" padding="10px" imageHidden />
       </div>
     </StyledHomeAndConsumer>
   )

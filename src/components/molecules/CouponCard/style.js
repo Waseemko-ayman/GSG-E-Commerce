@@ -17,7 +17,6 @@ export const StyledCoupon = styled(StyledSection)`
     border-radius: 6px 0 0 6px;
   }
   button {
-    width: 85px;
     height: 40px;
     border-radius: 0 6px 6px 0;
   }

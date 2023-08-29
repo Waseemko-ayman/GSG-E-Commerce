@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const StyledRelatedProduct = styled.div`
   .image {
     height: 172px;
-    background-color: var(--gray-300-color);
+    background-color: #EEE;
     padding: 20px;
     border-radius: 6px;
   }

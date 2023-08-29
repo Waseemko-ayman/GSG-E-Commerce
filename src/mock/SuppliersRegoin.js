@@ -50,7 +50,7 @@ export const SUPPLIERS_REGOIN_DATA = [
   {
     id: 9,
     src: "/assets/CNFlag.png",
-    country: "Smartwatch silver color modern",
+    country: "China",
     email: "shopname.ae",
   },
   {

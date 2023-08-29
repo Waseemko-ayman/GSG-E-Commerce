@@ -14,6 +14,8 @@ const CouponCard = () => {
           color="primary"
           variant="secondary"
           borderColor="gray"
+          width="85px"
+          imageHidden
         />
       </StyledAlignFlex>
     </StyledCoupon>

@@ -1,19 +1,9 @@
-import React from "react";
-import "./style.css";
+"use client";
+import { StyledContainer } from "./style.js";
 
-const Container = ({ children, betweenFlex, flex }) => {
+const Container = ({ children }) => {
   return (
-    <div
-      className={`main__container ${
-        betweenFlex
-          ? "main__container--betweenFlex"
-          : flex
-          ? "main__container--flex"
-          : ""
-      }`}
-    >
-      {children}
-    </div>
+    <StyledContainer className={`main__container`}>{children}</StyledContainer>
   );
 };
 

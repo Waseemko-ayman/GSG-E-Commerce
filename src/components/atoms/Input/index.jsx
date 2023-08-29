@@ -1,21 +1,21 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import "./style.css";
+import { StyledInput } from "./style";
 
 const Input = ({ type, placeholder, onChange, imageHidden, removeArrow }) => {
   return (
-    <div className="input_component">
+    <StyledInput gap="6px">
       <img
         src="/assets/email.svg"
         alt="email icon"
         className={`${imageHidden ? "image__hidden" : ""}`}
       />
-      {type === "text" || type === "number" ? (
+      {type === "text" || type === "number" || type === "search" ? (
         <input className={`${removeArrow ? "remove__arrow" : ""}`} type={type} placeholder={placeholder} onChange={onChange} />
       ) : (
         <textarea placeholder={placeholder}></textarea>
       )}
-    </div>
+    </StyledInput>
   );
 };
 

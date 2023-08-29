@@ -1,24 +1,24 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
 import Button from "@/components/atoms/Button";
-// import Input from "@/components/atoms/Input";
-import "./style.css";
+import { StyledSubscribe } from "./style.js";
+import { StyledAlignFlex, StyledFlexCenter } from "@/style/common.js";
 
 const Subscribe = () => {
   return (
-    <div className="subscribe">
+    <StyledSubscribe>
       <h3>Subscribe on our newsletter</h3>
       <p>
         Get daily news on upcoming offers from many suppliers all over the world
       </p>
-      <form>
-        <div>
+      <StyledFlexCenter as="form" gap="8px">
+        <StyledAlignFlex gap="6px">
           <img src="/assets/email.svg" alt="email icon" />
           <input type="text" placeholder="Email" />
-        </div>
-        {/* <Input type="text" placeholder="Email"/> */}
-        <Button text="Subscribe" color="secondary" variant="primary" />
-      </form>
-    </div>
+        </StyledAlignFlex>
+        <Button text="Subscribe" color="secondary" variant="primary" padding="10px" imageHidden />
+      </StyledFlexCenter>
+    </StyledSubscribe>
   );
 };
 

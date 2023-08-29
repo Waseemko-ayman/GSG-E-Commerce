@@ -1,16 +1,17 @@
-import React from "react";
-import "./style.css";
+"use client"
 import Input from "@/components/atoms/Input";
 import Button from "@/components/atoms/Button";
+import { StyledSupliersForm } from "./style";
+import { StyledFlex } from "@/style/common";
 
 const RequestSuppliersForm = () => {
   return (
-    <div className="request-suppliers-form">
+    <StyledSupliersForm>
       <h4>Send quote to suppliers</h4>
       <form>
         <Input type="text" placeholder="What item you need?" imageHidden />
         <Input type="textarea" placeholder="Type more details" imageHidden />
-        <div style={{ display: "flex" }}>
+        <StyledFlex gap="8px">
           <Input type="text" placeholder="Quantity" imageHidden />
           <select>
             <option value="1">Pcs</option>
@@ -18,15 +19,17 @@ const RequestSuppliersForm = () => {
             <option value="3">Pcs</option>
             <option value="4">Pcs</option>
           </select>
-        </div>
+        </StyledFlex>
         <Button
           text="Send inquiry"
           type="submit"
           color="secondary"
           variant="primary"
+          padding="10px" 
+          imageHidden
         />
       </form>
-    </div>
+    </StyledSupliersForm>
   );
 };
 

@@ -20,7 +20,7 @@ export const StyledPagination = styled(StyledAlignFlex)`
     font-weight: 400;
     line-height: normal;
     padding-right: 25px;
-    padding: 10px 62px 10px 0;
+    padding: 10px 20px 10px 0;
     border: none;
     outline: none;
     cursor: pointer;

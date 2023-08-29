@@ -1,25 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
+import { StyledPath } from "./style";
 
-import { StyledFlex } from "@/style/common";
-import { styled } from "styled-components";
-
-const StyledPath = styled(StyledFlex)`
-  p {
-    color: var(--gray-500-color);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-  }
-  img {
-    max-width: 100%;
-    width: 20px;
-  }
-`;
-
-const Path = ({ pathName, show=true }) => {
+const Path = ({ pathName, show = true }) => {
   return (
     <StyledPath>
       <p>{pathName}</p>

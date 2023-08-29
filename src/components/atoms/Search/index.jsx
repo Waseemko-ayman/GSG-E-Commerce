@@ -1,10 +1,12 @@
-import React from "react";
-import "./style.css";
+"use client"
+import Button from "../Button/index.jsx";
+import Input from "../Input/index.jsx";
+import { StyledSearch } from "./style.js";
 
 const Search = () => {
   return (
-    <div className="search">
-      <input type="search" placeholder="Search" />
+    <StyledSearch>
+      <Input type="search" placeholder="Search" imageHidden />
       <select name="category">
         <option value="1">All category</option>
         <option value="2">category1</option>
@@ -12,8 +14,8 @@ const Search = () => {
         <option value="4">category3</option>
         <option value="5">category4</option>
       </select>
-      <button>Search</button>
-    </div>
+      <Button text="Search" color="secondary" variant="primary" imageHidden />
+    </StyledSearch>
   );
 };
 

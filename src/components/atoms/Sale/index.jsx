@@ -1,12 +1,11 @@
-// "use client"
-import React from 'react'
-import "./style.css"
+"use client"
+import { StyleSale } from "./style.js";
 
 const Sale = ({ sale }) => {
   return (
-    <div className="sale">
-      <span>{ sale }</span>
-    </div>
+    <StyleSale>
+      <span>{sale}</span>
+    </StyleSale>
   )
 }
 

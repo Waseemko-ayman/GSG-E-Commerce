@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import Button from "@/components/atoms/Button";
 import { StyledAlignFlex } from "@/style/common";
 import { StyledPagination } from "./style";
@@ -24,16 +24,18 @@ const Pagination = () => {
           color="dark"
           variant="secondary"
           borderColor="gray"
-          text={<img src="/assets/chevron-left.svg" alt="chevron_left" />}
+          padding="10px"
+          imageSrc="/assets/chevron-left.svg"
         />
-        <Button color="dark" variant="secondary" text="1" borderColor="gray" />
-        <Button color="dark" variant="secondary" text="2" borderColor="gray" />
-        <Button color="dark" variant="secondary" text="3" borderColor="gray" />
+        <Button color="dark" variant="secondary" text="1" borderColor="gray" padding="10px" imageHidden />
+        <Button color="dark" variant="secondary" text="2" borderColor="gray" padding="10px" imageHidden />
+        <Button color="dark" variant="secondary" text="3" borderColor="gray" padding="10px" imageHidden />
         <Button
           color="dark"
           variant="secondary"
           borderColor="gray"
-          text={<img src="/assets/chevron_right.svg" alt="chevron_right" />}
+          padding="10px"
+          imageSrc="/assets/chevron_right.svg"
         />
       </StyledAlignFlex>
     </StyledPagination>

@@ -4,7 +4,6 @@ import { CREDIT_SRC } from "@/mock/CreditImage";
 import {
   StyledBetweenAlignFlex,
   StyledFlexCenter,
-  StyledSection,
 } from "@/style/common";
 import { StyledTotalCard } from "./style";
 
@@ -29,7 +28,14 @@ const TotalPriceCard = () => {
         <h4>Total:</h4>
         <span>$1357.97</span>
       </StyledBetweenAlignFlex>
-      <Button text="Checkout" color="secondary" variant="green" width="100%" />
+      <Button
+        text="Checkout"
+        color="secondary"
+        variant="green"
+        width="100%"
+        padding="15px 0"
+        imageHidden
+      />
       <StyledFlexCenter gap="15px" margin="18px 0 0">
         {CREDIT_SRC.map(({ id, src }) => (
           <StyledFlexCenter className="image" key={id}>
