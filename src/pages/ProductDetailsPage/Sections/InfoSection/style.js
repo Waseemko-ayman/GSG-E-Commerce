@@ -4,7 +4,6 @@ import { styled } from "styled-components";
 export const StyledProduct = styled(StyledPage)`
 .product_images {
   position: relative;
-  /* background-color: red; */
 }
 
 .product_images img {

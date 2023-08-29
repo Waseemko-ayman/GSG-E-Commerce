@@ -27,7 +27,9 @@ const ButtonComponent = styled.button`
       : props.color === "secondary"
       ? "#fff"
       : props.color === "dark"
-      ? "#1c1c1c"
+      ? "var(--dark-color)"
+      : props.color === "gray"
+      ? "var(--gray-500-color)"
       : ""};
   position: relative;
   border-radius: 6px;
@@ -37,7 +39,16 @@ const ButtonComponent = styled.button`
   font-weight: 700;
 `;
 
-const Button = ({ type, variant, color, borderColor, onClick, size, text, width }) => {
+const Button = ({
+  type,
+  variant,
+  color,
+  borderColor,
+  onClick,
+  size,
+  text,
+  width,
+}) => {
   return (
     <ButtonComponent
       type={type ? type : "button"}

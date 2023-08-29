@@ -1,3 +1,4 @@
+"use client"
 import { styled } from "styled-components";
 
 export const StyledPage = styled.div`
@@ -41,6 +42,13 @@ export const StyledBetweenAlignFlex = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const StyledGrid180 = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: ${(props) => props.gap};
+  width: 100%;
 `;
 
 export const StyledGrid = styled.div`
