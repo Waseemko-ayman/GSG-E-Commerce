@@ -4,7 +4,9 @@ export const ButtonComponent = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${(props) => props.width};
+  position: relative;
+  border-radius: 6px;
+  
   border: 1px solid
     ${(props) =>
       props.borderColor === "primary"
@@ -24,6 +26,8 @@ export const ButtonComponent = styled.button`
       ? "var(--orange-color)"
       : props.variant === "green"
       ? "var(--green-color)"
+      : props.variant === "facebook"
+      ? "#4267B2"
       : ""};
 
   color: ${(props) =>
@@ -35,11 +39,13 @@ export const ButtonComponent = styled.button`
       ? "var(--dark-color)"
       : props.color === "gray"
       ? "var(--gray-500-color)"
+      : props.color === "gray-800"
+      ? "var(--gray-800-color)"
       : props.color === "danger"
       ? "var(--danger-color)"
       : ""};
-  position: relative;
-  border-radius: 6px;
+
+  width: ${(props) => props.width};
   gap: ${(props) => props.gap};
   padding: ${(props) => props.padding};
   outline: none;

@@ -1,8 +1,19 @@
-import React from 'react'
+"use client"
+import FooterRegister from "@/components/molecules/FooterRegister";
+import LoginForm from "@/components/molecules/LoginForm";
+import { StyledPage } from "@/style/common";
+import { styled } from "styled-components";
+
+const StyledLogin = styled(StyledPage)`
+
+`;
 
 const LogInPage = () => {
   return (
-    <div>LogInPage</div>
+    <StyledPage>
+      <LoginForm />
+      <FooterRegister />
+    </StyledPage>
   )
 }
 

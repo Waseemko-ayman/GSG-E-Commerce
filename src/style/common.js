@@ -17,13 +17,14 @@ export const StyledAlignFlex = styled.div`
   gap: ${(props) => props.gap};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
-`;
+  `;
 
 export const StyledFlexCenter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: ${(props) => props.gap};
+  padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
 `;
 
