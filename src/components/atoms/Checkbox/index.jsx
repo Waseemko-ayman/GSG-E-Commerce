@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { StyledCheckbox } from "./style";
 
-const Checkbox = ({ text, showLink, textLink, linkPath }) => {
+const Checkbox = ({ text, showLink, textLink, linkPath, name, register }) => {
   return (
     <StyledCheckbox gap="10px">
-      <input type="checkbox" />
-      <p>{text} {showLink && ( <Link href={linkPath}>{textLink}</Link> )}</p>
+      <input type="checkbox" id={name} {...register(name)} />
+      <p>
+        {text} {showLink && <Link href={linkPath}>{textLink}</Link>}
+      </p>
     </StyledCheckbox>
   );
 };

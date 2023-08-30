@@ -56,6 +56,7 @@ export const StyledRegister = styled(StyledSection)`
 
   .agree {
     border-bottom: 1px solid var(--gray-300-color);
+    padding: 20px 0;
   }
 
   .error {

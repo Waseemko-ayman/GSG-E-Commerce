@@ -6,8 +6,6 @@ export const StyledCheckbox = styled(StyledAlignFlex)`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 20px 0;
-
   
   p {
     color: var(--dark-color);

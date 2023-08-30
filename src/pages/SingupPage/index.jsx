@@ -147,7 +147,10 @@ const SignUpPage = () => {
               showLink
               textLink="Terms and Conditions"
               linkPath="#"
+              name="checked"
+              register={register}
             />
+            {errors.checked && <p className="error">{errors.checked.message}</p>}
           </div>
 
           <HaveAccount

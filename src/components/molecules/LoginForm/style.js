@@ -41,6 +41,10 @@ export const StyledLoginForm = styled(StyledSection)`
     line-height: 18px;
   }
 
+  .remmember {
+    margin-bottom: 14px;
+  }
+
   .or {
     background-color: var(--gray-300-color);
     width: 100%;
