@@ -1,9 +1,30 @@
-import React from 'react'
+"use client"
+import Logo from "@/components/atoms/Logo";
+import { styled } from "styled-components";
+
+const StyledLoading = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  h1 {
+    color: #8cb7f5;
+    font-size: 50px;
+  }
+`;
 
 const loading = () => {
   return (
-    <div>loading...</div>
-  )
-}
+    <StyledLoading>
+      <Logo />
+    </StyledLoading>
+  );
+};
 
-export default loading
+export default loading;
