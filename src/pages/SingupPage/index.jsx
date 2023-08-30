@@ -14,7 +14,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const formSchema = Yup.object({
   name: Yup.string().required("Username is required"),
-  surname: Yup.string().required("Username is required"),
+  surname: Yup.string().required("Surname is required"),
 
   email: Yup.string()
     .matches(emailRegex, "Enter Correct Email")
