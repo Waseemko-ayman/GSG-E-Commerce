@@ -15,7 +15,7 @@ const FooterRegister = () => {
     <StyledFooterRegister as="footer">
       <Container>
         <StyledBetweenAlignFlex>
-          <StyledAlignFlex gap="5px">
+          <StyledAlignFlex gap="10px">
             {CREDIT_SRC.map(({ id, src }) => (
               <StyledFlexCenter className="image" key={id}>
                 <img src={src} alt="credit" />
