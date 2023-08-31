@@ -105,5 +105,8 @@ export const StyledLoginForm = styled(StyledSection)`
   .error {
     color: var(--danger-color);
     margin-top: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: rgba(255, 0, 0, 0.219);
   }
 `;

@@ -1,18 +1,59 @@
-"use client"
+"use client";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
+import { useForm } from "react-hook-form";
 import Input from "@/components/atoms/Input";
 import Button from "@/components/atoms/Button";
 import { StyledSupliersForm } from "./style";
 import { StyledFlex } from "@/style/common";
 
+export const formSchema = Yup.object({
+  item: Yup.string().required("Item name is required !"),
+  details: Yup.string().required("Some Details is required !"),
+
+  quantity: Yup.number().positive().integer().required("Quantity is requied !"),
+});
+
 const RequestSuppliersForm = () => {
+  const onSubmit = async (data) => {
+    // signup(data);
+    console.log(data);
+  };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(formSchema),
+  });
+
   return (
     <StyledSupliersForm>
       <h4>Send quote to suppliers</h4>
-      <form>
-        <Input type="text" placeholder="What item you need?" imageHidden />
-        <Input type="textarea" placeholder="Type more details" imageHidden />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="input_box">
+          <Input type="text" placeholder="What item you need?" imageHidden />
+          {errors.item && <p className="error">{errors.item.message}</p>}
+        </div>
+
+        <div className="input_box">
+          <Input type="textarea" placeholder="Type more details" imageHidden />
+          {errors.details && <p className="error">{errors.details.message}</p>}
+        </div>
+
         <StyledFlex gap="8px">
-          <Input type="text" placeholder="Quantity" imageHidden />
+          <div className="input_box">
+            <Input
+              type="number"
+              placeholder="Quantity"
+              imageHidden
+              removeArrow
+            />
+            {errors.quantity && (
+              <p className="error">{errors.quantity.message}</p>
+            )}
+          </div>
           <select>
             <option value="1">Pcs</option>
             <option value="2">Pcs</option>
@@ -25,7 +66,7 @@ const RequestSuppliersForm = () => {
           type="submit"
           color="secondary"
           variant="primary"
-          padding="10px" 
+          padding="10px"
           imageHidden
         />
       </form>

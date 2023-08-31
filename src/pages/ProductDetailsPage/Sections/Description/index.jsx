@@ -4,11 +4,18 @@ import { StyledAlignFlex, StyledSection } from "@/style/common";
 import { StyledDesc } from "./style";
 import LikeProductCard from "@/components/molecules/LikeProductCard";
 import { LIKE_CARD_DATA } from "@/mock/LikeCard";
+import { useState } from "react";
+import SpecificCategoryPage from "@/pages/SpecificCategoryPage";
+
+
+const Tabs = ({config}) => {
+  const [activeTa, setActiveTab] = useState(0)
+}
 
 const Description = () => {
   return (
     <StyledDesc>
-      
+        <SpecificCategoryPage />
       <StyledSection className="desc">
         <StyledAlignFlex className="tabs">
           <Button text="Description" color="gray" variant="secondary" padding="16px 16px 13px" imageHidden />

@@ -20,8 +20,8 @@ const Input = ({ type, placeholder, onChange, imageHidden, removeArrow, name, re
           type={type}
           placeholder={placeholder}
           onChange={onChange}
-          id={name}
-          {...register(name)}
+          // id={name}
+          // {...register(name)}
         />
       ) : (
         <textarea placeholder={placeholder}></textarea>

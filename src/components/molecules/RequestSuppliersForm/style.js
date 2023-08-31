@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 export const StyledSupliersForm = styled.div`
   position: relative;
   width: 491px;
-  height: 346px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 2px rgba(56, 56, 56, 0.25);
   border-radius: 6px;
@@ -18,8 +17,7 @@ export const StyledSupliersForm = styled.div`
     margin-bottom: 18px;
   }
 
-  form input,
-  form textarea {
+  .input_box {
     margin-bottom: 18px;
   }
 
@@ -38,5 +36,13 @@ export const StyledSupliersForm = styled.div`
     padding: 10px;
     outline: none;
     cursor: pointer;
+  }
+
+  .error {
+    color: var(--danger-color);
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: rgba(255, 0, 0, 0.219);
   }
 `;
