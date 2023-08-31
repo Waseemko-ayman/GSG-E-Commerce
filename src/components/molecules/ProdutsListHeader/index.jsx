@@ -6,9 +6,8 @@ import {
   StyledSection,
 } from "@/style/common";
 import { StyledProductsHeader } from "./style";
-import Button from "@/components/atoms/Button";
 
-const ProductsListHeader = () => {
+const ProductsListHeader = ({ handleClickGrid, handleClickRow }) => {
   return (
     <StyledSection padding="10px" margin="0 0 20px">
       <StyledProductsHeader>
@@ -29,14 +28,11 @@ const ProductsListHeader = () => {
           </div>
           
           <StyledAlignFlex margin="0 0 0 10px">
-            <StyledFlexCenter as="button">
+            <StyledFlexCenter as="button" onClick={handleClickGrid}>
               <img src="/assets/grid_view.svg" alt="grid_view" />
             </StyledFlexCenter>
 
-            {/* <Button variant="secondary" imageSrc="/assets/grid_view.svg" padding="10px" />
-            <Button variant="secondary" imageSrc="/assets/menu.svg" padding="10px" /> */}
-
-            <StyledFlexCenter as="button">
+            <StyledFlexCenter as="button" onClick={handleClickRow}>
               <img src="/assets/menu.svg" alt="menu" />
             </StyledFlexCenter>
           </StyledAlignFlex>

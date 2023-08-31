@@ -12,8 +12,19 @@ import {
   PRODUCTSLIST_GRAID_DATA,
 } from "@/mock/ProducsListCard";
 import { StyledGrid250, StyledGridProducts, StyledPage } from "@/style/common";
+import { useState } from "react";
 
 const ProductsListPage = () => {
+  const [convert, setConvert] = useState(true);
+
+  const handleClickGrid = () => {
+    setConvert(false);
+  };
+
+  const handleClickRow = () => {
+    setConvert(true);
+  };
+
   return (
     <StyledPage as="div">
       <Container>
@@ -21,45 +32,53 @@ const ProductsListPage = () => {
         <StyledGridProducts>
           <Sidebar />
           <div className="products">
-            <ProductsListHeader />
-            {PRODUCTSLIST_DATA.map(
-              ({
-                id,
-                src,
-                title,
-                price,
-                oldPrice,
-                rate,
-                orders,
-                description,
-              }) => (
-                <ProductsListCard
-                  key={id}
-                  imageSrc={src}
-                  productTitle={title}
-                  productPrice={price}
-                  oldPrice={oldPrice}
-                  productRating={rate}
-                  productOrders={orders}
-                  productDesc={description}
-                />
-              )
+            <ProductsListHeader
+              handleClickRow={handleClickRow}
+              handleClickGrid={handleClickGrid}
+            />
+            {convert ? (
+              <>
+                {PRODUCTSLIST_DATA.map(
+                  ({
+                    id,
+                    src,
+                    title,
+                    price,
+                    oldPrice,
+                    rate,
+                    orders,
+                    description,
+                  }) => (
+                    <ProductsListCard
+                      key={id}
+                      imageSrc={src}
+                      productTitle={title}
+                      productPrice={price}
+                      oldPrice={oldPrice}
+                      productRating={rate}
+                      productOrders={orders}
+                      productDesc={description}
+                    />
+                  )
+                )}
+              </>
+            ) : (
+              <StyledGrid250 gap="20px">
+                {PRODUCTSLIST_GRAID_DATA.map(
+                  ({ id, src, title, price, oldPrice, rate, rateSrc }) => (
+                    <ProductsListCard2
+                      key={id}
+                      imageSrc={src}
+                      productTitle={title}
+                      productPrice={price}
+                      oldPrice={oldPrice}
+                      productRating={rate}
+                      rateSrc={rateSrc}
+                    />
+                  )
+                )}
+              </StyledGrid250>
             )}
-            {/* <StyledGrid250 gap="20px">
-              {PRODUCTSLIST_GRAID_DATA.map(
-                ({ id, src, title, price, oldPrice, rate, rateSrc }) => (
-                  <ProductsListCard2
-                    key={id}
-                    imageSrc={src}
-                    productTitle={title}
-                    productPrice={price}
-                    oldPrice={oldPrice}
-                    productRating={rate}
-                    rateSrc={rateSrc}
-                  />
-                )
-              )}
-            </StyledGrid250> */}
             <Pagination />
           </div>
         </StyledGridProducts>
