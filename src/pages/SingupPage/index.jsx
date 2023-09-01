@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import Button from "@/components/atoms/Button";
 import HaveAccount from "@/components/atoms/HaveAccount";
 import Input from "@/components/atoms/Input";
-import FooterRegister from "@/components/molecules/FooterRegister";
 import { StyledAlignFlex, StyledFlexCenter, StyledPage } from "@/style/common";
 import { StyledRegister } from "./style";
 import Checkbox from "@/components/atoms/Checkbox";
@@ -160,7 +159,6 @@ const SignUpPage = () => {
           />
         </StyledRegister>
       </StyledFlexCenter>
-      <FooterRegister />
     </StyledPage>
   );
 };

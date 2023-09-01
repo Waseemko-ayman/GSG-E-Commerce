@@ -1,9 +1,17 @@
-import React from 'react'
+"use client";
+import { StyledFlexCenter } from "@/style/common";
+import { styled } from "styled-components";
+
+const StyledNotFound = styled(StyledFlexCenter)`
+  
+`;
 
 const notFound = () => {
   return (
-    <div>notFound | 404</div>
-  )
-}
+    <StyledNotFound>
+      <div>Not Found! | 404</div>
+    </StyledNotFound>
+  );
+};
 
-export default notFound
+export default notFound;

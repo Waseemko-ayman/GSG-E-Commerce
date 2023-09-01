@@ -70,14 +70,15 @@ export const StyledLoginForm = styled(StyledSection)`
   }
 
   .links a {
-    text-align: center;
+    display: flex;
+    align-items: center;
     color: var(--base-color-gray-800, #606060);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.1px;
-    padding: 10px 0;
+    padding: 10px;
     width: 100%;
     border-radius: 6px;
     position: relative;
@@ -95,11 +96,8 @@ export const StyledLoginForm = styled(StyledSection)`
     margin-top: 10px;
   }
 
-  .links img {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+  a span {
+    margin-left: 50px;
   }
 
   .error {

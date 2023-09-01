@@ -4,24 +4,10 @@ export const StyledDesc = styled.div`
   display: grid;
   grid-template-columns: 880px 1fr;
   gap: 20px;
-  margin-bottom: 15px;
-
-  .tabs {
-    border-bottom: 1px solid var(--gray-300-color);
-  }
-
-  button {
-    border-radius: 0 !important;
-    position: relative;
-  }
-
-  button:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-  }
+  margin: 20px 0;
 
   .desc-content {
-    padding: 15px;
+    padding: 18px 20px 30px;
   }
 
   p,

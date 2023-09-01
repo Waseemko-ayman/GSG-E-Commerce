@@ -116,25 +116,6 @@ const LoginForm = () => {
           />
         </form>
         <div className="or"></div>
-        {/* <Button
-            text="Continue with Google"
-            color="gray-800"
-            variant="secondary"
-            borderColor="gray"
-            imageSrc="/assets/googleIcon.png"
-            width="100%"
-            padding="10px 0"
-            gap="100px"
-          />
-          <Button
-            text="Continue with Facebook"
-            color="secondary"
-            variant="facebook"
-            borderColor="gray"
-            imageSrc="/assets/facebook.png"
-            width="100%"
-            padding="10px 0"
-          /> */}
         <StyledFlexColumn className="links">
           <Link href="https://google.com" target="_blank">
             <img src="/assets/googleIcon.png" alt="google" />
