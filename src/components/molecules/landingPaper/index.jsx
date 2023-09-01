@@ -4,15 +4,18 @@ import Paper from "@/components/atoms/Paper";
 import Button from "@/components/atoms/Button";
 import { StyledPaper } from "./style.js";
 import { StyledFlex } from "@/style/common.js";
+import useAuth from "@/app/hook/useAuth.jsx";
 
 const LandingPaper = () => {
+  const { user } = useAuth();
+
   return (
     <StyledPaper>
       <div className="account__paper">
         <StyledFlex gap="9px">
           <AccountImage />
           <p>
-            Hi, user <br /> lets get stated
+            Hi, {user?.name} <br /> lets get stated
           </p>
         </StyledFlex>
         <Button
