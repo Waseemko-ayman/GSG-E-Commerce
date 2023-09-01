@@ -1,10 +1,6 @@
-import Header from "@/components/organism/Header";
-import "../style/globals.css";
 import { Inter } from "next/font/google";
-import Navigation from "@/components/organism/Navigation";
-import Footer from "@/components/organism/Footer";
+import "../style/globals.css";
 import StyledComponentsRegistry from "./lib/registry";
-import CopyRight from "@/components/organism/CopyRight";
 
 const inter = Inter({ subsets: ["latin"] });
 
