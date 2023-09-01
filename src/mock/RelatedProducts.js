@@ -13,7 +13,7 @@ export const RELATED_DATA = [
   },
   {
     id: 3,
-    src: "/assets/offersProduct4.png",
+    src: "/assets/Headphone2.png",
     title: "Xiaomi Redmi 8 Original ",
     price: "$32.00-$40.00",
   },
@@ -25,13 +25,13 @@ export const RELATED_DATA = [
   },
   {
     id: 5,
-    src: "/assets/Recommended10.png",
+    src: "/assets/ElectricKattle.png",
     title: "Xiaomi Redmi 8 Original ",
     price: "$32.00-$40.00",
   },
   {
     id: 6,
-    src: "/assets/iphone11(2).png",
+    src: "/assets/iphone11Blue.png",
     title: "Xiaomi Redmi 8 Original ",
     price: "$32.00-$40.00",
   },

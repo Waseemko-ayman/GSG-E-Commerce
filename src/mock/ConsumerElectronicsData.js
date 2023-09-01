@@ -1,11 +1,11 @@
 import SmartWatche from "../../public/assets/smartWatch.png";
 import Laptops from "../../public/assets/Laptop.png";
-import Cameras from "../../public/assets/offersProduct3.png";
-import Headphones1 from "../../public/assets/offersProduct4.png";
+import Cameras from "../../public/assets/GoProCameras.png";
+import Headphones1 from "../../public/assets/Headphone2.png";
 import Headphones2 from "../../public/assets/Headphones.png";
-import Shaf from "../../public/assets/Recommended10.png";
+import Shaf from "../../public/assets/ElectricKattle.png";
 import Tablet from "../../public/assets/tablet.png";
-import iphone11 from "../../public/assets/iphone11.png";
+import iphone11Red from "../../public/assets/iphone11Red.png";
 
 export const CONSUMER_ELECTRONICS_DATA = [
   {
@@ -52,7 +52,7 @@ export const CONSUMER_ELECTRONICS_DATA = [
   },
   {
     id: 8,
-    src: iphone11,
+    src: iphone11Red,
     title: "SmartPhone",
     price: "10",
   },

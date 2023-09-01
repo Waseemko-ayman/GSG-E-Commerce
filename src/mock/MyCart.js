@@ -1,7 +1,7 @@
 export const MY_CART = [
   {
     id: 1,
-    src: "/assets/Recommended1.png",
+    src: "/assets/BlueT-shirts.png",
     title: "T-shirts with multiple colors, for men and lady",
     size: "medium, Color: blue,  Material: Plastic",
     seller: "Artel Market",
@@ -9,7 +9,7 @@ export const MY_CART = [
   },
   {
     id: 2,
-    src: "/assets/handback.png",
+    src: "/assets/JeansBag.png",
     title: "T-shirts with multiple colors, for men and lady",
     size: "medium, Color: blue,  Material: Plastic",
     seller: "Best factory LLC",
@@ -17,7 +17,7 @@ export const MY_CART = [
   },
   {
     id: 3,
-    src: "/assets/HomeAndOutdoor1.png",
+    src: "/assets/chair1.png",
     title: "T-shirts with multiple colors, for men and lady",
     size: "medium, Color: blue,  Material: Plastic",
     seller: "Artel Market",

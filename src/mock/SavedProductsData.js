@@ -8,7 +8,7 @@ export const SAVED_PRODUCTS = [
   {
     id: 2,
     price: "$99.50",
-    src: '/assets/iphone11(2).png',
+    src: '/assets/iphone11Blue.png',
     description: 'GoPro HERO6 4K Action Camera - Black'
   },
   {

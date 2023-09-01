@@ -1,7 +1,7 @@
 export const PRODUCTSLIST_DATA = [
   {
     id: 1,
-    src: "/assets/iphone11.png",
+    src: "/assets/iphone11Red.png",
     title: "Canon Cmera EOS 2000, Black 10x zoom",
     price: "$998.0",
     oldPrice: "$1128.00",
@@ -64,7 +64,7 @@ export const PRODUCTSLIST_DATA = [
 export const PRODUCTSLIST_GRAID_DATA = [
   {
     id: 1,
-    src: "/assets/iphone11.png",
+    src: "/assets/iphone11Red.png",
     title: "GoPro HERO6 4K Action Camera - Black",
     price: "$99.50",
     oldPrice: "$1128.00",
@@ -73,7 +73,7 @@ export const PRODUCTSLIST_GRAID_DATA = [
   },
   {
     id: 2,
-    src: "/assets/iphone11(2).png",
+    src: "/assets/iphone11Blue.png",
     title: "GoPro HERO6 4K Action Camera - Black",
     price: "$99.5",
     oldPrice: "",
@@ -118,7 +118,7 @@ export const PRODUCTSLIST_GRAID_DATA = [
   },
   {
     id: 7,
-    src: "/assets/Laptop.png",
+    src: "/assets/GoPropHero6.png",
     title: "GoPro HERO6 4K Action Camera - Black",
     price: "$99.5",
     oldPrice: "",
@@ -127,7 +127,7 @@ export const PRODUCTSLIST_GRAID_DATA = [
   },
   {
     id: 8,
-    src: "/assets/smartWatch.png",
+    src: "/assets/GoProCameras.png",
     title: "GoPro HERO6 4K Action Camera - Black",
     price: "$99.5",
     oldPrice: "$1128.00",
@@ -136,8 +136,8 @@ export const PRODUCTSLIST_GRAID_DATA = [
   },
   {
     id: 9,
-    src: "/assets/Headphone1.png",
-    title: "GoPro HERO6 4K Action Camera - Black",
+    src: "/assets/ElectricKattle.png",
+    title: "Electric heater",
     price: "$99.5",
     oldPrice: "",
     rateSrc: "/assets/rating(1).svg",
