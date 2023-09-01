@@ -8,7 +8,11 @@ export const StyledLadningCard = styled.div`
   width: 100%;
   height: 373px;
   flex: 3;
-  
+
+  @media (max-width: 768px) {
+    width: 365px;
+    height: 182.222px;
+  }
 
   .text {
     position: absolute;
@@ -18,14 +22,39 @@ export const StyledLadningCard = styled.div`
     line-height: normal;
   }
 
-  .text p {
+  @media (max-width: 768px) {
+    .text {
+      left: 25px;
+      top: 26px;
+    }
+  }
+
+  p {
     font-size: 28px;
     font-weight: 400;
   }
 
-  .text h1 {
+  @media (max-width: 768px) {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  h1 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 17px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    button {
+      padding: 8px;
+    }
   }
 `;

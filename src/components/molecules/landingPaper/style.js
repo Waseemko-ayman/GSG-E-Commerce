@@ -3,6 +3,10 @@ import { styled } from "styled-components";
 export const StyledPaper = styled.div`
   flex: 1;
 
+  @media (max-width: 992px) {
+    display: none;
+  }
+
   .account__paper {
     width: 200px;
     min-height: 95px;

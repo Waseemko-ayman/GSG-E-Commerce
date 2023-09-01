@@ -3,6 +3,10 @@ import { styled } from "styled-components";
 export const StyledLandingList = styled.div`
   width: 100%;
   flex: 1;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
   
   ul {
     list-style: none;
