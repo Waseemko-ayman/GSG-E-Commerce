@@ -97,7 +97,7 @@ export const deleteProductAction = (id) => async (dispatch) => {
   try {
     dispatch(setLoading());
     await axios.delete(`#${id}`);
-    dispatch(editProduct(data));
+    dispatch(deleteProduct(id));
   } catch (error) {
     dispatch(setError(error.message));
   }
