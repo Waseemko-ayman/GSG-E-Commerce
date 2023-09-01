@@ -20,14 +20,14 @@ const InfoSection = ({ params }) => {
       <StyledSection padding="20px 20px 40px">
         <StyledFlex gap="20px">
           <div className="product_images">
-            <img src="/assets/T-shirt1.png" alt="product" />
+            <img src="/assets/WhiteT-shirt.png" alt="product" />
             <StyledBetweenFlex gap="9px">
-              <img src="/assets/T-shirt1.png" alt="product" />
-              <img src="/assets/T-shirt2.png" alt="product" />
-              <img src="/assets/T-shirt3.png" alt="product" />
-              <img src="/assets/T-shirt4.png" alt="product" />
-              <img src="/assets/T-shirt5.png" alt="product" />
-              <img src="/assets/T-shirt6.png" alt="product" />
+              <img src="/assets/WhiteT-shirt.png" alt="product" />
+              <img src="/assets/WhiteT-shirt2.png" alt="product" />
+              <img src="/assets/WhiteT-shirt3.png" alt="product" />
+              <img src="/assets/WhiteT-shirt4.png" alt="product" />
+              <img src="/assets/WhiteT-shirt5.png" alt="product" />
+              <img src="/assets/WhiteT-shirt6.png" alt="product" />
             </StyledBetweenFlex>
           </div>
           <div className="information">
