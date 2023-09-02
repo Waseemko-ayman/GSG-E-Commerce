@@ -4,6 +4,7 @@ import Container from "../Container";
 import Link from "next/link";
 import { StyledAlignFlex, StyledBetweenFlex } from "@/style/common";
 import { StyledNavigation } from "./style.js";
+import { PATHS } from "@/constants/path";
 
 const Navigation = () => {
   return (
@@ -13,7 +14,7 @@ const Navigation = () => {
           <StyledAlignFlex gap="10px" className="nav-links">
             <img src="/assets/menu.png" alt="Menu" loading="lazy" />
             <StyledAlignFlex gap="28px">
-              <Link href="/ProductsList">All category</Link>
+              <Link href={PATHS.PRODUCTS}>All category</Link>
               <Link href="#">Hot offers</Link>
               <Link href="#">Gift boxes</Link>
               <Link href="#">Projects</Link>

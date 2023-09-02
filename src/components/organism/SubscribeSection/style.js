@@ -45,4 +45,17 @@ export const StyledSubscribe = styled.div`
     font-style: normal;
     font-weight: 400;
   }
+
+  @media (max-width: 321px) {
+    form {
+      flex-direction: column;
+    }
+    button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
 `;

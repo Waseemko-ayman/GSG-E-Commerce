@@ -1,12 +1,14 @@
+import { StyledFlexCenter } from "@/style/common";
 import { styled } from "styled-components";
 
-export const ButtonComponent = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const ButtonComponent = styled(StyledFlexCenter)`
   position: relative;
   border-radius: 6px;
-  
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+
   border: 1px solid
     ${(props) =>
       props.borderColor === "primary"
@@ -51,6 +53,14 @@ export const ButtonComponent = styled.button`
   outline: none;
   cursor: pointer;
   font-weight: 700;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  .order {
+    order: 2;
+  }
 
   .image__hidden {
     display: none;

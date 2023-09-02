@@ -82,4 +82,34 @@ export const StyledSection = styled.div`
   padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
   position: relative;
+  @media (max-width: 426px) {
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+  }
+`;
+
+export const StyledReExSupp = styled.div`
+  margin-top: 20px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+
+  h2 {
+    color: var(--dark-color);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 426px) {
+    h2 {
+      font-size: 18px;
+    }
+  }
 `;

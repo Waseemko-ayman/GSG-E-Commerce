@@ -7,15 +7,17 @@ import ProductsListHeader from "@/components/molecules/ProdutsListHeader";
 import Container from "@/components/organism/Container";
 import Sidebar from "@/components/organism/Sidebar";
 import Subscribe from "@/components/organism/SubscribeSection";
-import {
-  PRODUCTSLIST_DATA,
-  PRODUCTSLIST_GRAID_DATA,
-} from "@/mock/ProducsListCard";
-import { StyledGrid250, StyledGridProducts, StyledPage } from "@/style/common";
-import { useState } from "react";
+import { getProducts } from "@/redux/slices/products";
+import { StyledGridProducts, StyledPage } from "@/style/common";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductsListPage = () => {
   const [convert, setConvert] = useState(true);
+
+  const { products } = useSelector((state) => state.products);
+  // console.log(products)
+  const dispatch = useDispatch();
 
   const handleClickGrid = () => {
     setConvert(false);
@@ -24,6 +26,13 @@ const ProductsListPage = () => {
   const handleClickRow = () => {
     setConvert(true);
   };
+
+  useEffect(() => {
+    if (!products.length) {
+      dispatch(getProducts());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <StyledPage as="div">
@@ -36,7 +45,31 @@ const ProductsListPage = () => {
               handleClickRow={handleClickRow}
               handleClickGrid={handleClickGrid}
             />
-            {convert ? (
+            {products.map((product) =>
+              convert ? (
+                <ProductsListCard
+                  key={product?.id}
+                  imageSrc={product?.image}
+                  productTitle={product?.title}
+                  productPrice={product?.price}
+                  oldPrice={product?.discount}
+                  productRating={product?.evaluation}
+                  productOrders={product?.orders}
+                  productDesc={product?.caption}
+                />
+              ) : (
+                <ProductsListCard2
+                  key={product?.id}
+                  imageSrc={product?.image}
+                  productTitle={product?.title}
+                  productPrice={product?.price}
+                  oldPrice={product?.discount}
+                  productRating={product?.evaluation}
+                  productOrders={product?.orders}
+                />
+              )
+            )}
+            {/* {convert ? (
               <>
                 {PRODUCTSLIST_DATA.map(
                   ({
@@ -78,7 +111,7 @@ const ProductsListPage = () => {
                   )
                 )}
               </StyledGrid250>
-            )}
+            )} */}
             <Pagination />
           </div>
         </StyledGridProducts>

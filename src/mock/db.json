@@ -1,0 +1,262 @@
+{
+  "products": [
+    {
+      "userId": 1,
+      "id": 1,
+      "image": "assets/smartWatch.png",
+      "title": "Smart watches",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "100",
+      "orders": "154",
+      "discount": "1128.00",
+      "discountPercentage": "-25%",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 2,
+      "id": 2,
+      "image": "assets/Laptop.png",
+      "title": "Laptops",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "340",
+      "orders": "154",
+      "discount": "",
+      "discountPercentage": "-15%",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 3,
+      "id": 3,
+      "image": "assets/GoProCameras.png",
+      "title": "Cameras",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "99",
+      "orders": "154",
+      "discount": "1128.00",
+      "discountPercentage": "-40%",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 4,
+      "id": 4,
+      "image": "assets/Headphone2.png",
+      "title": "Headphones",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "35",
+      "orders": "154",
+      "discount": "",
+      "discountPercentage": "-25%",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 5,
+      "id": 5,
+      "image": "assets/GoPropHero6.png",
+      "title": "GoPropHero6",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "",
+      "orders": "154",
+      "discount": "",
+      "discountPercentage": "-25%",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 6,
+      "id": 6,
+      "image": "assets/chair1.png",
+      "title": "Soft chairs",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "19",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 7,
+      "id": 7,
+      "image": "assets/chair2.png",
+      "title": "Sofa & chair",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "19",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 8,
+      "id": 8,
+      "image": "assets/chair3.png",
+      "title": "Sofa & chair",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "19",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 9,
+      "id": 9,
+      "image": "assets/KitchenMixer.png",
+      "title": "Kitchen mixer",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "100",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 10,
+      "id": 10,
+      "image": "assets/Blenders.png",
+      "title": "Blenders",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "39",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 11,
+      "id": 11,
+      "image": "assets/PaperHolder.png",
+      "title": "Paper holder",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "19",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 12,
+      "id": 12,
+      "image": "assets/flowerVase.png",
+      "title": "flower vase",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "50",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 13,
+      "id": 13,
+      "image": "assets/Headphone1.png",
+      "title": "Headphones",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "200",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 14,
+      "id": 14,
+      "image": "assets/ElectricKattle.png",
+      "title": "Electric kattle",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "90",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 15,
+      "id": 15,
+      "image": "assets/tablet.png",
+      "title": "Tablet",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "499",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 16,
+      "id": 16,
+      "image": "assets/iphone11Red",
+      "title": "iphone11-Red",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "600",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 17,
+      "id": 17,
+      "image": "assets/BlueT-shirts.png",
+      "title": "T-shirts-Blue",
+      "caption": "T-shirts with multiple colors, for men",
+      "price": "$10.30",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 18,
+      "id": 18,
+      "image": "assets/BrownJacket.png",
+      "title": "Brown jacket",
+      "caption": "Brown winter coat medium size",
+      "price": "$10.30",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 19,
+      "id": 19,
+      "image": "assets/BlueFormalJacket.png",
+      "title": "Blue formal jacket",
+      "caption": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+      "price": "$200.50",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 20,
+      "id": 20,
+      "image": "assets/BlueWallet.png",
+      "title": "Blue wallet",
+      "caption": "Blue wallet for men leather metarfial",
+      "price": "$34.00",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 21,
+      "id": 21,
+      "image": "assets/JeansBag.png",
+      "title": "Jeans bag",
+      "caption": "Jeans bag for travel for men",
+      "price": "$99.00",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 22,
+      "id": 22,
+      "image": "assets/JeansShorts.png",
+      "title": "Jeans shorts",
+      "caption": "Jeans shorts for men blue color",
+      "price": "$9.99",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    },
+    {
+      "userId": 23,
+      "id": 23,
+      "image": "assets/WhiteT-shirt.png",
+      "title": "White T-shirt",
+      "caption": "Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle",
+      "price": "$98.00",
+      "orders": "154",
+      "discount": "",
+      "evaluation": "7.5"
+    }
+  ]
+}

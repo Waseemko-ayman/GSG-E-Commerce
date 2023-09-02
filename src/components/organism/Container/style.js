@@ -6,6 +6,13 @@ export const StyledContainer = styled.div`
   padding-left: 15px;
   padding-right: 15px;
 
+  @media (max-width: 768px) {
+    & {
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
   /* Small screens */
   @media (min-width: 768px) {
     & {

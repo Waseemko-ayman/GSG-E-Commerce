@@ -9,9 +9,7 @@ export const StyledLanding = styled(StyledSection)`
   justify-content: space-between;
   gap: 13px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 426px) {
     padding: 0;
-    border-radius: 0;
-    border: none;
   }
 `;

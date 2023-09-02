@@ -12,7 +12,7 @@ export const StyledProductCard = styled(StyledFlexColumn)`
   .text {
     text-align: center;
   }
-  
+
   p {
     font-size: 16px;
     font-style: normal;
@@ -22,7 +22,20 @@ export const StyledProductCard = styled(StyledFlexColumn)`
     margin: 11px 0 7px;
   }
 
+  @media (max-width: 768px) {
+    p {
+    font-size: 13px;
+    }
+  }
+
   img {
     max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 98px;
+      height: 98px;
+    }
   }
 `;

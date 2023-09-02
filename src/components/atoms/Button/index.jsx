@@ -13,10 +13,11 @@ const Button = ({
   imageSrc,
   imageHidden,
   padding,
-  gap
+  gap,
+  order
 }) => {
   return (
-    <ButtonComponent
+    <ButtonComponent as='button'
       type={type ? type : "button"}
       variant={variant}
       color={color}
@@ -30,7 +31,7 @@ const Button = ({
       <img
         src={imageSrc}
         alt="image"
-        className={`${imageHidden ? "image__hidden" : ""}`}
+        className={`${imageHidden ? "image__hidden" : order ? "order" : ""}`}
       />
       {text}
     </ButtonComponent>

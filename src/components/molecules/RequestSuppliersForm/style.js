@@ -8,6 +8,10 @@ export const StyledSupliersForm = styled.div`
   border-radius: 6px;
   padding: 30px 20px;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   h4 {
     color: var(--dark-color);
     font-size: 20px;

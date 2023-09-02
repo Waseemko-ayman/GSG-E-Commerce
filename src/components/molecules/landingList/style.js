@@ -4,7 +4,7 @@ export const StyledLandingList = styled.div`
   width: 100%;
   flex: 1;
 
-  @media (max-width: 992px) {
+  @media (max-width: 687px) {
     display: none;
   }
   

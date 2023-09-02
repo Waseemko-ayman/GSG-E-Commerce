@@ -1,16 +1,10 @@
+import { StyledReExSupp } from "@/style/common";
 import { styled } from "styled-components";
 
-export const StyledSuppliersRegoin = styled.div`
-  margin-top: 20px;
-  position: relative;
-
-  h2 {
-    color: var(--dark-color);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
-    letter-spacing: -0.2px;
-    margin-bottom: 20px;
+export const StyledSuppliersRegoin = styled(StyledReExSupp)`
+  @media (max-width: 426px) {
+    h2 + div {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
   }
 `;

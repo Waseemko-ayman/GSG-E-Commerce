@@ -2,17 +2,19 @@
 import OffersDateCards from "@/components/atoms/DealsAndOffersDateCard";
 import { StyledBetweenFlex, StyledFlex, StyledSection } from "@/style/common";
 import OffersProductCard from "@/components/atoms/OffersProductCard";
-import { StyledInfoOffers } from "./style.js";
+import { StyledBetween, StyledInfoOffers } from "./style.js";
 import { OFFERS_PRODUCT_DATA } from "@/mock/offersProductData.js";
 
 const DealsAndOffers = () => {
   return (
     <StyledSection margin="20px 0 30px">
-      <StyledBetweenFlex>
+      <StyledBetween>
         <StyledInfoOffers>
-          <h1>Deals and offers</h1>
-          <p>Hygiene equipments</p>
-          <StyledFlex>
+          <div>
+            <h1>Deals and offers</h1>
+            <p>Hygiene equipments</p>
+          </div>
+          <StyledFlex className="date">
             <OffersDateCards dateNumber="04" dateName="Days" />
             <OffersDateCards dateNumber="13" dateName="Hour" />
             <OffersDateCards dateNumber="34" dateName="Min" />
@@ -30,7 +32,7 @@ const DealsAndOffers = () => {
             />
           ))}
         </StyledFlex>
-      </StyledBetweenFlex>
+      </StyledBetween>
     </StyledSection>
   );
 };

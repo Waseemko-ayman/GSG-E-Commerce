@@ -9,7 +9,7 @@ export const StyledLadningCard = styled.div`
   height: 373px;
   flex: 3;
 
-  @media (max-width: 768px) {
+  @media (max-width: 426px) {
     width: 365px;
     height: 182.222px;
   }
@@ -21,23 +21,10 @@ export const StyledLadningCard = styled.div`
     font-style: normal;
     line-height: normal;
   }
-
-  @media (max-width: 768px) {
-    .text {
-      left: 25px;
-      top: 26px;
-    }
-  }
-
+  
   p {
     font-size: 28px;
     font-weight: 400;
-  }
-
-  @media (max-width: 768px) {
-    p {
-      font-size: 18px;
-    }
   }
 
   h1 {
@@ -46,15 +33,20 @@ export const StyledLadningCard = styled.div`
     margin-bottom: 17px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 426px) {
+    .text {
+      left: 25px;
+      top: 26px;
+    }
+    p {
+      font-size: 18px;
+    }
     h1 {
       font-size: 18px;
     }
-  }
-
-  @media (max-width: 768px) {
     button {
-      padding: 8px;
+      padding: 5px 10px;
+      border-radius: 3px;
     }
   }
 `;

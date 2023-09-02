@@ -3,6 +3,7 @@
 import Link from "next/link";
 import "./style.js";
 import { StyledLinks } from "./style.js";
+import { PATHS } from "@/constants/path.js";
 
 const LinksList = () => {
   return (
@@ -19,7 +20,7 @@ const LinksList = () => {
         <img src="/assets/icon-favorite.png" alt="person icon" loading="lazy" />
         <span>Orders</span>
       </Link>
-      <Link href="/Cart">
+      <Link href={PATHS.CART}>
         <img src="/assets/icon-shopping-cart.png" alt="person icon" loading="lazy" />
         <span>My card</span>
       </Link>

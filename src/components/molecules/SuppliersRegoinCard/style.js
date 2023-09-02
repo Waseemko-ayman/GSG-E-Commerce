@@ -2,6 +2,10 @@ import { StyledAlignFlex } from "@/style/common";
 import { styled } from "styled-components";
 
 export const StyledSuppliersRegoinCard = styled(StyledAlignFlex)`
+  @media (max-width: 426px) {
+    flex-direction: column;
+    text-align: center;
+  }
   img {
     max-width: 100%;
     width: 28px;
