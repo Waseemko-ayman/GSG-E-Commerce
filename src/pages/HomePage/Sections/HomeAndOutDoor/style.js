@@ -12,6 +12,22 @@ export const StyledGridMobile = styled(StyledGrid)`
     display: flex;
   }
 
+  @media (max-width: 529px) {
+    .outdoor__products {
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: inline mandatory;
+    }
+    .outdoor__products::-webkit-scrollbar {
+      width: 15px;
+      height: 0px;
+    }
+    .outdoor__products::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 20px;
+    }
+  }
+
   @media (min-width: 769px) {
     & + button {
       display: none;

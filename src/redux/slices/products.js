@@ -84,24 +84,4 @@ export const getSingleProductAction = (id) => async (dispatch) => {
   }
 };
 
-export const editProductAction = (data) => async (dispatch) => {
-  try {
-    dispatch(setLoading());
-    const { data } = await axios.put(`${API_URL}products/${data.id}`, data);
-    dispatch(editProduct(data));
-  } catch (error) {
-    dispatch(setError(error.message));
-  }
-};
-
-export const deleteProductAction = (id) => async (dispatch) => {
-  try {
-    dispatch(setLoading());
-    await axios.delete(`${API_URL}products/${id}`);
-    dispatch(deleteProduct(id));
-  } catch (error) {
-    dispatch(setError(error.message));
-  }
-};
-
 export default productsSlice.reducer;

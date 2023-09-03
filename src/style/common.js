@@ -47,9 +47,16 @@ export const StyledBetweenAlignFlex = styled.div`
   padding: ${(props) => props.padding};
 `;
 
-export const StyledGrid180 = styled.div`
+export const StyledGrid150 = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: ${(props) => props.gap};
+  width: 100%;
+`;
+
+export const StyledGrid180 = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: ${(props) => props.gap};
   width: 100%;
 `;

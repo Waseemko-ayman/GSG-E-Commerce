@@ -14,7 +14,7 @@ const HomeAndOutDoor = () => {
           title="Home and outdoor"
           imageSrc="/assets/HomeAndOutdoor.png"
         />
-        <StyledGridMobile>
+        <StyledGridMobile className="outdoor__products">
           {HOME_OUTDOOR_DATA.map(({ id, src, title, price }) => (
             <HomeAndOutdoorProductCard
               key={id}

@@ -1,6 +1,6 @@
 "use client";
 import OffersDateCards from "@/components/atoms/DealsAndOffersDateCard";
-import { StyledBetweenFlex, StyledFlex, StyledSection } from "@/style/common";
+import { StyledBetweenFlex, StyledFlex, StyledGrid180, StyledSection } from "@/style/common";
 import OffersProductCard from "@/components/atoms/OffersProductCard";
 import { StyledBetween, StyledInfoOffers } from "./style.js";
 import { OFFERS_PRODUCT_DATA } from "@/mock/offersProductData.js";

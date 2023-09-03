@@ -4,11 +4,27 @@ import { styled } from "styled-components";
 export const StyledInfoOffers = styled.div`
   padding: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1025px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 10px;
+  }
+
+  @media (max-width: 529px) {
+    & + div {
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: inline mandatory;
+    }
+    & + div::-webkit-scrollbar {
+      width: 15px;
+      height: 0px;
+    }
+    & + div::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 20px;
+    }
   }
 
   h1 {
@@ -45,7 +61,7 @@ export const StyledInfoOffers = styled.div`
     margin-top: 10px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     .date {
       gap: 4px;
     }
@@ -53,7 +69,7 @@ export const StyledInfoOffers = styled.div`
 `;
 
 export const StyledBetween = styled(StyledBetweenFlex)`
-  @media (max-width: 991px) {
+  @media (max-width: 1025px) {
     flex-direction: column;
     justify-content: center;
   }
