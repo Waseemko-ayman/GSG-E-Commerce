@@ -6,6 +6,7 @@ export const productsSlice = createSlice({
   name: "products",
   initialState: {
     products: [],
+    productPagination: [],
     isLoading: false,
     errorMessage: "",
     product: null,
@@ -27,22 +28,6 @@ export const productsSlice = createSlice({
       state.errorMessage = "";
     },
 
-    editProduct: (state, action) => {
-      state.products = state.products.map((product) =>
-        product.id === action.payload.id ? action.payload : product
-      );
-      state.isLoading = false;
-      state.errorMessage = "";
-    },
-
-    deleteProduct: (state, action) => {
-      state.products = state.products.filter(
-        (product) => product.id !== action.payload
-      );
-      state.isLoading = false;
-      state.errorMessage = "";
-    },
-
     setError: (state, action) => {
       state.errorMessage = action.payload;
       state.isLoading = false;
@@ -54,8 +39,6 @@ const {
   setLoading,
   getAllProducts,
   getSingleProduct,
-  editProduct,
-  deleteProduct,
   setError,
 } = productsSlice.actions;
 
@@ -63,10 +46,11 @@ const {
 // ------------------------------ Actions --------------------------------
 // -----------------------------------------------------------------------
 
-export const getProducts = () => async (dispatch) => {
+export const getProducts = (num=0, size=0) => async (dispatch) => {
   try {
     dispatch(setLoading());
-    const { data } = await axios.get(API_URL + "products");
+    const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${size}`)    
+    // const { data } = await axios.get(API_URL + "products");
     console.log(data);
     dispatch(getAllProducts(data));
   } catch (error) {
