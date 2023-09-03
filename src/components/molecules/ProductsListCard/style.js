@@ -1,11 +1,18 @@
-import { StyledFlex } from "@/style/common";
 import { styled } from "styled-components";
 
-export const StyledProductsList = styled(StyledFlex)`
+export const StyledProductsList = styled.div`
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  /* gap: 12px; */
+
+  .info {
+    width: 100%;
+  }
+
   .product_image {
     max-width: 100%;
-    width: 184.8px;
-    height: 184.8px;
+    width: 175px;
+    height: 175px;
   }
 
   .info > div {

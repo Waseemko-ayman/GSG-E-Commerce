@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Container from "@/components/organism/Container";
 import React from "react";
 import Landing from "./Sections/LandingSection";
@@ -11,21 +11,24 @@ import SuppliersRegoin from "./Sections/SuppliersByRegion";
 import Subscribe from "@/components/organism/SubscribeSection";
 import ConsumerElectronics from "./Sections/ConsumerElectronicsSection";
 import { StyledPage } from "@/style/common";
+import MainLayout from "@/components/organism/MainLayout";
 
 const HomePage = () => {
   return (
     <StyledPage as="main">
-      <Container>
-        <Landing />
-        <DealsAndOffers />
-        <HomeAndOutDoor />
-        <ConsumerElectronics />
-        <RequestSuppliers />
-        <RecommendedItem />
-        <ExtraServices />
-        <SuppliersRegoin />
-      </Container>
-      <Subscribe />
+      <MainLayout>
+        <Container>
+          <Landing />
+          <DealsAndOffers />
+          <HomeAndOutDoor />
+          <ConsumerElectronics />
+          <RequestSuppliers />
+          <RecommendedItem />
+          <ExtraServices />
+          <SuppliersRegoin />
+        </Container>
+        <Subscribe />
+      </MainLayout>
     </StyledPage>
   );
 };

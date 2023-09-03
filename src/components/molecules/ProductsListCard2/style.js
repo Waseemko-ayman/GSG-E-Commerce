@@ -6,8 +6,8 @@ export const StyledProductsListGrid = styled.div`
 
   .product_image {
     max-width: 100%;
-    width: 184.8px;
-    height: 184.8px;
+    width: 150px;
+    height: 150px;
   }
 
   .info {

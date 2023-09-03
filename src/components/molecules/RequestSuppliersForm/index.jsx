@@ -33,12 +33,24 @@ const RequestSuppliersForm = () => {
       <h4>Send quote to suppliers</h4>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="input_box">
-          <Input type="text" placeholder="What item you need?" imageHidden />
+          <Input
+            type="text"
+            placeholder="What item you need?"
+            name="item"
+            register={register}
+            imageHidden
+          />
           {errors.item && <p className="error">{errors.item.message}</p>}
         </div>
 
         <div className="input_box">
-          <Input type="textarea" placeholder="Type more details" imageHidden />
+          <Input
+            type="textarea"
+            placeholder="Type more details"
+            name="details"
+            register={register}
+            imageHidden
+          />
           {errors.details && <p className="error">{errors.details.message}</p>}
         </div>
 
@@ -49,6 +61,8 @@ const RequestSuppliersForm = () => {
               placeholder="Quantity"
               imageHidden
               removeArrow
+              name="quantity"
+              register={register}
             />
             {errors.quantity && (
               <p className="error">{errors.quantity.message}</p>

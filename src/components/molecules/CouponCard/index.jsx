@@ -8,7 +8,7 @@ const CouponCard = () => {
     <StyledCoupon padding="20px">
       <h3>Have a coupon?</h3>
       <StyledAlignFlex>
-        <Input type="text" placeholder="Add coupon" imageHidden />
+        <Input type="text" placeholder="Add coupon" imageHidden name="coupon" />
         <Button
           text="Apply"
           color="primary"

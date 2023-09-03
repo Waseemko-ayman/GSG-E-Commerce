@@ -4,7 +4,7 @@ import Paper from "@/components/atoms/Paper";
 import Button from "@/components/atoms/Button";
 import { StyledPaper } from "./style.js";
 import { StyledFlex } from "@/style/common.js";
-import useAuth from "@/app/hook/useAuth.jsx";
+import useAuth from "@/hook/useAuth.jsx";
 
 const LandingPaper = () => {
   const { user } = useAuth();

@@ -1,7 +1,8 @@
 import { useReducer } from "react";
 import { ROLES } from "@/constants";
-// import { AUTH_ACTIONS, AUTH_API_PATHS } from "../Constants/auth";
 import axios from "axios";
+import { AUTH_API_URL } from "@/config/api";
+import { AUTH_API_PATHS } from "@/constants/auth";
 
 const getisAuth = () => localStorage.getItem("isAuth") || false;
 const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
@@ -96,28 +97,11 @@ const useAuth = () => {
     dispatch({ type: AUTH_ACTIONS.LOGOUT });
   };
 
-  // Get Profile Data
-  const getProfileData = async () => {
-    const token = localStorage.getItem('token');
-    if(!token) return
-      dispatch({ type: AUTH_ACTIONS.SET_LOADING });
-      try {
-        const { data } = await axios.get(AUTH_API_URL + AUTH_API_PATHS.PROFILE, config);
-        dispatch({ type: AUTH_ACTIONS.AUTHORIZE, payload: data?.data || data });
-        return data
-      } catch (error) {
-        dispatch({ type: AUTH_ACTIONS.SET_ERROR, payload: error.message });
-      }
-  }
-
-  // console.log(state)
-
   return {
     ...state,
     login,
     signup,
     logout,
-    getProfileData,
   };
 };
 

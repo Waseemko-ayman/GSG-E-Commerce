@@ -19,7 +19,7 @@ const ProductsListCard = ({
 }) => {
   return (
     <StyledSection margin="0 0 10px 0" padding="20px">
-      <StyledProductsList gap="12px">
+      <StyledProductsList>
         <img src={imageSrc} alt="smart electronic" className="product_image" />
 
         <div className="info">
@@ -34,7 +34,7 @@ const ProductsListCard = ({
             <h3>{productPrice}</h3>
             <del>{oldPrice}</del>
           </StyledAlignFlex>
-
+          
           <StyledAlignFlex gap="12px" className="rating">
             <StyledAlignFlex gap="6px">
               <img src="/assets/rating(1).svg" alt="shopping_cart" />

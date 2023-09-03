@@ -1,3 +1,4 @@
+import { API_URL } from "@/config/api";
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 

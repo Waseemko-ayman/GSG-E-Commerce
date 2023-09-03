@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { StyledInput } from "./style";
 
-const Input = ({ type, placeholder, onChange, imageHidden, removeArrow, name, register }) => {
+const Input = ({ type, placeholder, onChange, imageHidden, removeArrow, name, register = () => {} }) => {
   return (
     <StyledInput gap="6px">
       <img
@@ -20,8 +20,8 @@ const Input = ({ type, placeholder, onChange, imageHidden, removeArrow, name, re
           type={type}
           placeholder={placeholder}
           onChange={onChange}
-          // id={name}
-          // {...register(name)}
+          id={name}
+          {...register(name)}
         />
       ) : (
         <textarea placeholder={placeholder}></textarea>

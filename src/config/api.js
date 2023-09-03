@@ -1,1 +1,2 @@
-export const API_URL = process.env.REACT_APP_API_URL;
+export const API_URL = "http://localhost:3003/";
+export const AUTH_API_URL = "https://react-tt-api.onrender.com/api/";

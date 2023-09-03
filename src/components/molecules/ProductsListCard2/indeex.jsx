@@ -31,7 +31,7 @@ const ProductsListCard2 = ({
               </StyledAlignFlex>
 
               <StyledAlignFlex gap="6px" className="rating">
-                <img src={rateSrc} alt="rate" />
+                <img src="/assets/rating(1).svg" alt="shopping_cart" />
                 <span>{productRating}</span>
               </StyledAlignFlex>
             </div>
