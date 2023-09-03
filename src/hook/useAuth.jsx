@@ -5,13 +5,13 @@ import { AUTH_API_URL } from "@/config/api";
 import { AUTH_ACTIONS, AUTH_API_PATHS } from "@/constants/auth";
 
 const getisAuth = () => localStorage.getItem("isAuth") || false;
-const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
+// const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
 const getToken = () => localStorage.getItem("token") || null;
 const getRole = () => localStorage.getItem("role") || ROLES.GUEST;
 
 const initialState = {
   isAuth: getisAuth(),
-  user: getUser(),
+  // user: getUser(),
   token: getToken(),
   role: getRole(),
   isLoading: false,
