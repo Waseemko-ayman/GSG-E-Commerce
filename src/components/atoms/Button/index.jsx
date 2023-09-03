@@ -7,6 +7,7 @@ const Button = ({
   color,
   borderColor,
   onClick,
+  disabled,
   size,
   text,
   width,
@@ -23,6 +24,7 @@ const Button = ({
       color={color}
       borderColor={borderColor}
       onClick={onClick}
+      disabled={disabled}
       size={size}
       width={width}
       padding={padding}

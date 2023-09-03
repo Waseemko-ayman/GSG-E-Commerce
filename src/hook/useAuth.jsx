@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import { ROLES } from "@/constants";
 import axios from "axios";
 import { AUTH_API_URL } from "@/config/api";
-import { AUTH_API_PATHS } from "@/constants/auth";
+import { AUTH_ACTIONS, AUTH_API_PATHS } from "@/constants/auth";
 
 const getisAuth = () => localStorage.getItem("isAuth") || false;
 const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
