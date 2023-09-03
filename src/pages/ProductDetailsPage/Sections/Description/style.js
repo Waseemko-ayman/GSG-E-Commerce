@@ -6,6 +6,14 @@ export const StyledDesc = styled.div`
   gap: 20px;
   margin: 20px 0;
 
+  @media (min-width: 769px) and (max-width: 1189px) {
+    grid-template-columns: 650px 1fr;
+  }
+
+  @media (max-width: 769px) {
+    grid-template-columns: 1fr;
+  }
+
   .desc-content {
     padding: 18px 20px 30px;
   }
@@ -19,6 +27,14 @@ export const StyledDesc = styled.div`
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.2px;
+  }
+
+  @media (max-width: 426px) {
+    p,
+    table td,
+    ul li {
+      font-size: 14px;
+    }
   }
 
   table {
@@ -44,6 +60,15 @@ export const StyledDesc = styled.div`
 
   ul li:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 426px) {
+    tr td:nth-child(odd) {
+      width: 130px;
+    }
+    tr td:nth-child(even) {
+      width: 230px;
+    }
   }
 
   .sidebar {

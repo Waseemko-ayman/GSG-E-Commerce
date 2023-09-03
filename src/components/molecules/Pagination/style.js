@@ -27,9 +27,6 @@ export const StyledPagination = styled(StyledAlignFlex)`
   }
 
   button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 0 !important;
     width: 44px;
     height: 40px;

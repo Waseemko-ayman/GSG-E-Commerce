@@ -84,6 +84,18 @@ export const StyledLoginForm = styled(StyledSection)`
     position: relative;
   }
 
+  @media (min-width: 323px) and (max-width: 376px) {
+    .links a {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 323px) {
+    .links a {
+      font-size: 14px;
+    }
+  }
+  
   .links a:first-child {
     color: var(--gray-800-color);
     background-color: var(--white-color);
@@ -98,6 +110,12 @@ export const StyledLoginForm = styled(StyledSection)`
 
   a span {
     margin-left: 50px;
+  }
+  
+  @media (max-width: 323px) {
+    a span {
+      margin-left: 30px;
+    }
   }
 
   .error {

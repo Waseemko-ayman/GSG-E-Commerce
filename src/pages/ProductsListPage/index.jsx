@@ -7,8 +7,9 @@ import ProductsListHeader from "@/components/molecules/ProdutsListHeader";
 import Container from "@/components/organism/Container";
 import Sidebar from "@/components/organism/Sidebar";
 import Subscribe from "@/components/organism/SubscribeSection";
+import { PRODUCTSLIST_DATA, PRODUCTSLIST_GRAID_DATA } from "@/mock/ProducsListCard";
 import { getProducts } from "@/redux/slices/products";
-import { StyledGridProducts, StyledPage } from "@/style/common";
+import { StyledGrid250, StyledGridProducts, StyledPage } from "@/style/common";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -45,7 +46,7 @@ const ProductsListPage = () => {
               handleClickRow={handleClickRow}
               handleClickGrid={handleClickGrid}
             />
-            {products.map((product) =>
+            {/* {products.map((product) =>
               convert ? (
                 <ProductsListCard
                   key={product?.id}
@@ -68,8 +69,8 @@ const ProductsListPage = () => {
                   productOrders={product?.orders}
                 />
               )
-            )}
-            {/* {convert ? (
+            )} */}
+            {convert ? (
               <>
                 {PRODUCTSLIST_DATA.map(
                   ({
@@ -111,7 +112,7 @@ const ProductsListPage = () => {
                   )
                 )}
               </StyledGrid250>
-            )} */}
+            )}
             <Pagination />
           </div>
         </StyledGridProducts>

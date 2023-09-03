@@ -9,9 +9,20 @@ const StyledNotFound = styled(StyledFlexCenter)`
   left: 50%;
   transform: translate(-50%, -50%);
 
+  @media (max-width: 426px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
   img {
     max-width: 100%;
     width: 100px;
+  }
+
+  @media (max-width: 426px) {
+    img {
+      width: 80px;
+    }
   }
 
   .error__text {
@@ -40,6 +51,20 @@ const StyledNotFound = styled(StyledFlexCenter)`
     line-height: 1.4;
     text-transform: capitalize;
     margin-top: 20px;
+  }
+
+  @media (max-width: 426px) {
+    .error__text {
+      border: none;
+      padding-left: 0;
+    }
+    
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      margin-top: 10px;
+    }
   }
 `;
 

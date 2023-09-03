@@ -19,10 +19,16 @@ export const StyledCopyRight = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-right: 25px;
-    padding: 10px 10px;
+    padding-right: 15px;
     border: none;
     outline: none;
     cursor: pointer;
+  }
+
+  @media (min-width: 322px) and (max-width: 769px) {
+    div {
+      padding: 0 20px;
+      /* justify-content: space-around; */
+    }
   }
 `;

@@ -10,7 +10,21 @@ export const StyledFooterContent = styled(StyledFlex)`
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 25px;
-  
+
+  @media (max-width: 769px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 321px) {
+    .info {
+      text-align: center;
+    }
+    .info div,
+    a {
+      justify-content: center;
+    }
+  }
+
   .info p {
     color: var(--gray-600-color);
     font-size: 16px;
@@ -34,5 +48,18 @@ export const StyledFooterContent = styled(StyledFlex)`
     display: block;
     margin-bottom: 8px;
     cursor: pointer;
+  }
+
+  .lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 25px;
+  }
+
+  @media (max-width: 321px) {
+    .lists {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      text-align: center;
+    }
   }
 `;

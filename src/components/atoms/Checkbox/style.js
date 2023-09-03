@@ -13,4 +13,10 @@ export const StyledCheckbox = styled(StyledAlignFlex)`
   a {
     color: var(--primary-color);
   }
+
+  @media (max-width: 321px) {
+    p {
+      font-size: 14px;
+    }
+  }
 `;

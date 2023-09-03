@@ -17,6 +17,16 @@ const StyledLoading = styled.div`
     color: #8cb7f5;
     font-size: 50px;
   }
+
+  @media (max-width: 427px) {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+  }
 `;
 
 const loading = () => {

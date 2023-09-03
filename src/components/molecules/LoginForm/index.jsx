@@ -121,7 +121,7 @@ const LoginForm = () => {
             <img src="/assets/googleIcon.png" alt="google" />
             <span>Continue with Google</span>
           </Link>
-          <Link href="https://google.com" target="_blank">
+          <Link href="https://facebook.com" target="_blank">
             <img src="/assets/facebook.png" alt="google" />
             <span>Continue with Facebook</span>
           </Link>

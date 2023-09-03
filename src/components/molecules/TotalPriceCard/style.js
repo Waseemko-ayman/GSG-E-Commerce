@@ -49,6 +49,19 @@ export const StyledTotalCard = styled(StyledSection)`
     line-height: normal;
   }
 
+  @media (min-width: 321px) and (max-width: 769px) {
+    button {
+      padding: 10px 0;
+    }
+  }
+
+  @media (max-width: 321px) {
+    button {
+      padding: 8px 0;
+      font-size: 15px;
+    }
+  }
+
   .image {
     border: 1px solid var(--gray-300-color);
     border-radius: 4px;

@@ -15,7 +15,7 @@ export const StyledSubscribe = styled.div`
     letter-spacing: -0.2px;
   }
 
-  p {
+  h3 + p {
     max-width: 100%;
     width: 617px;
     margin: auto;
@@ -31,10 +31,9 @@ export const StyledSubscribe = styled.div`
   form div {
     background-color: var(--white-color);
     border-radius: 6px;
-    border: 1px solid var(--gray-300-color);
     width: 274px;
     height: 40px;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   form div input {
@@ -44,6 +43,15 @@ export const StyledSubscribe = styled.div`
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
+    padding: 10px 10px 10px 0;
+  }
+
+  .error {
+    color: var(--danger-color);
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    text-align: left;
   }
 
   @media (max-width: 321px) {
@@ -52,10 +60,6 @@ export const StyledSubscribe = styled.div`
     }
     button {
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
     }
   }
 `;

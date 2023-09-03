@@ -28,4 +28,10 @@ export const StyledRelatedProduct = styled.div`
   span {
     color: var(--gray-500-color);
   }
+
+  @media (max-width: 426px) {
+    .info {
+      text-align: center;
+    }
+  }
 `;

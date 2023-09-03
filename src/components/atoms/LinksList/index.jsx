@@ -22,7 +22,7 @@ const LinksList = () => {
       </Link>
       <Link href={PATHS.CART}>
         <img src="/assets/icon-shopping-cart.png" alt="person icon" loading="lazy" />
-        <span>My card</span>
+        <span>My cart</span>
       </Link>
     </StyledLinks>
   );

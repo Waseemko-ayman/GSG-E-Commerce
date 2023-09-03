@@ -1,6 +1,5 @@
 "use client";
 import { StyledBetweenAlignFlex } from "@/style/common";
-import { styled } from "styled-components";
 import Container from "../Container";
 import { StyledCopyRight } from "./style";
 

@@ -17,7 +17,7 @@ const InfoSection = ({ params }) => {
   return (
     <StyledProduct>
       <PathSection />
-      <StyledSection padding="20px 20px 40px">
+      <StyledSection padding="20px 20px 40px" className="styled_section">
         <StyledFlex gap="20px">
           <div className="product_images">
             <img src="/assets/WhiteT-shirt.png" alt="product" />
@@ -30,6 +30,7 @@ const InfoSection = ({ params }) => {
               <img src="/assets/WhiteT-shirt6.png" alt="product" />
             </StyledBetweenFlex>
           </div>
+
           <div className="information">
             <StyledAlignFlex className="check">
               <img src="/assets/check.svg" alt="check" /> In slock
@@ -50,8 +51,8 @@ const InfoSection = ({ params }) => {
                   className="dot"
                 />
                 <StyledAlignFlex gap="9px">
-                  {" "}
-                  <img src="/assets/message.svg" alt="message" /> 32 reviews
+                  <img src="/assets/message.svg" alt="message" /> 
+                  <p>32 reviews</p>
                 </StyledAlignFlex>
               </StyledAlignFlex>
 
@@ -62,12 +63,11 @@ const InfoSection = ({ params }) => {
                   className="dot"
                 />
                 <StyledAlignFlex gap="9px">
-                  {" "}
                   <img
                     src="/assets/shopping_basket.svg"
                     alt="shopping_basket"
                   />{" "}
-                  154 sold
+                  <p>154 sold</p>
                 </StyledAlignFlex>
               </StyledAlignFlex>
             </StyledAlignFlex>

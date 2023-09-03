@@ -10,7 +10,7 @@ const ServicesCard = ({ imageSrc, titleService, decription }) => {
           <img src={imageSrc} alt="services" />
         </StyledFlexCenter>
         <div className="text">
-          <h4>{titleService}</h4>
+          <h3>{titleService}</h3>
           <p>{decription}</p>
         </div>
       </StyledFlexCenter>

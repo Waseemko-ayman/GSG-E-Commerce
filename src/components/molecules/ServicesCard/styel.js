@@ -20,6 +20,28 @@ export const StyledServicesCard = styled(StyledAlignFlex)`
     color: var(--dark-color);
   }
   p {
-    color: var(--gray-400-color, #A9ACB0);
+    color: var(--gray-400-color, #a9acb0);
+  }
+
+  @media (min-width: 322px) and (max-width: 769px) {
+    .image {
+      width: 40px;
+      height: 40px;
+    }
+    h3,
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 321px) {
+    .image {
+      width: 40px;
+      height: 40px;
+    }
+    h3,
+    p {
+      font-size: 13px;
+    }
   }
 `;

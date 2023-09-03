@@ -45,7 +45,7 @@ export const StyledRequestSuppliers = styled(StyledBetweenFlex)`
     margin-bottom: 15px;
   }
 
-  p {
+  .text p {
     width: 390px;
     font-size: 16px;
     font-weight: 400;

@@ -17,4 +17,9 @@ export const StyledGridMobile = styled(StyledGrid)`
       display: none;
     }
   }
+  @media (max-width: 768px) {
+    & + button {
+      justify-content: flex-start;
+    }
+  }
 `;

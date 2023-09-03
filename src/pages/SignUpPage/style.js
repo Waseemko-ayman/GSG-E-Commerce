@@ -33,6 +33,18 @@ export const StyledRegister = styled(StyledSection)`
     margin: 5px 0 15px;
   }
 
+  @media (max-width: 321px) {
+    .box:first-of-type,
+    .box:nth-child(3) div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .box:first-of-type div,
+    .box:nth-child(3) div {
+      width: 100%;
+    }
+  }
+
   .selects {
     color: var(--dark-color);
     background-color: var(--white-color);
@@ -40,6 +52,15 @@ export const StyledRegister = styled(StyledSection)`
     border-radius: 6px 0 0 6px;
     padding: 0 10px;
     cursor: pointer;
+  }
+
+  @media (max-width: 321px) {
+    .selects {
+      border-radius: 0;
+    }
+    select {
+      width: 100%;
+    }
   }
 
   .selects select {
@@ -62,5 +83,19 @@ export const StyledRegister = styled(StyledSection)`
   .error {
     color: var(--danger-color);
     margin-top: 5px;
+  }
+
+  input[type="number"] {
+    border-radius: 0 6px 6px 0;
+  }
+
+  @media (max-width: 321px) {
+    input,
+    .selects {
+      border-radius: 0;
+    }
+    input[type="number"] {
+      border-radius: 0;
+    }
   }
 `;

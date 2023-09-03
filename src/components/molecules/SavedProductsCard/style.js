@@ -11,6 +11,12 @@ export const StyledSavedProducts = styled.div`
     width: 200px;
     height: 200px;
   }
+  @media (max-width: 321px) {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
   .info {
     margin-top: 10px;
   }
@@ -38,5 +44,18 @@ export const StyledSavedProducts = styled.div`
   button {
     padding: 9px;
     width: 156.58px;
+  }
+
+  @media (max-width: 426px) {
+    .info {
+      text-align: center;
+    }
+    p {
+      margin: 10px auto 12px;
+    }
+    button {
+      width: 145px;
+      margin: auto;
+    }
   }
 `;

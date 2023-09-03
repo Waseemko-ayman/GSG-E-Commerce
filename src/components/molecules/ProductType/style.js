@@ -10,6 +10,15 @@ export const StyledProductType = styled(StyledAlignFlex)`
   grid-template-columns: 2fr 5fr;
   margin-bottom: 10px;
 
+  @media (max-width: 320px) {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  @media (min-width: 321px) and (max-width: 426px) {
+    grid-template-columns: 2fr 3fr;
+  }
+
   p:first-of-type {
     color: var(--gray-500-color);
   }

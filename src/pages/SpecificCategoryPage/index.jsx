@@ -18,6 +18,13 @@ const StyledTabs = styled(StyledSection)`
     line-height: normal;
     text-transform: capitalize;
   }
+
+  @media (max-width: 426px) {
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+      font-size: 13px;
+    }
+  }
+
   .css-19kzrtu {
     padding: 0;
   }

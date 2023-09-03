@@ -5,10 +5,6 @@ export const ButtonComponent = styled(StyledFlexCenter)`
   position: relative;
   border-radius: 6px;
 
-  @media (max-width: 768px) {
-    justify-content: flex-start;
-  }
-
   border: 1px solid
     ${(props) =>
       props.borderColor === "primary"
