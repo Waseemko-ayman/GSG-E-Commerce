@@ -1,5 +1,6 @@
 'use client'
 import React, {useEffect, useState} from 'react'
+import KeyboardArrowUpSharpIcon from '@mui/icons-material/KeyboardArrowUpSharp';
 import { StyledFloading } from './style';
 
 const FloatingButton = () => {
@@ -24,7 +25,7 @@ const FloatingButton = () => {
   return (
     <StyledFloading>
       {scrollToTop && (
-        <button onClick={scrollUp}>Up</button>
+        <button onClick={scrollUp}><KeyboardArrowUpSharpIcon color="inherit" fontSize="large" /></button>
       )}
     </StyledFloading>
   )
