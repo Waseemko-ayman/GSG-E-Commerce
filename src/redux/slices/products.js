@@ -6,7 +6,6 @@ export const productsSlice = createSlice({
   name: "products",
   initialState: {
     products: [],
-    productPagination: [],
     isLoading: false,
     errorMessage: "",
     product: null,
@@ -49,10 +48,9 @@ const {
 export const getProducts = (num=0, size=0) => async (dispatch) => {
   try {
     dispatch(setLoading());
-    const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${size}`)    
-    // const { data } = await axios.get(API_URL + "products");
-    console.log(data);
-    dispatch(getAllProducts(data));
+      const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${size}`)    
+      // const { data } = await axios.get(API_URL + "products");
+      dispatch(getAllProducts(data));
   } catch (error) {
     dispatch(setError(error.message));
   }
