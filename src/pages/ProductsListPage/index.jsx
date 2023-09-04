@@ -1,5 +1,4 @@
 "use client";
-import Pagination from "@/components/molecules/Pagination";
 import { StyledPagination } from "@/components/molecules/Pagination/style";
 import PathSection from "@/components/molecules/PathSection";
 import ProductsListCard from "@/components/molecules/ProductsListCard";
@@ -8,11 +7,7 @@ import ProductsListHeader from "@/components/molecules/ProdutsListHeader";
 import Container from "@/components/organism/Container";
 import Sidebar from "@/components/organism/Sidebar";
 import Subscribe from "@/components/organism/SubscribeSection";
-import {
-  PRODUCTSLIST_DATA,
-  PRODUCTSLIST_GRAID_DATA,
-} from "@/mock/ProducsListCard";
-import { getPaginationAction, getProducts } from "@/redux/slices/products";
+import { getProducts } from "@/redux/slices/products";
 import { StyledAlignFlex, StyledGrid250, StyledGridProducts, StyledPage } from "@/style/common";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,8 +20,6 @@ const ProductsListPage = () => {
 
   const { products } = useSelector((state) => state.products);
   console.log(products);
-  // const { productPagination } = useSelector((state) => state.productPagination);
-  // console.log(productPagination);
 
   const prevSubmit = () => {
     setNum((prev) => (num > 1 ? prev - 1 : num));
@@ -90,7 +83,6 @@ const ProductsListPage = () => {
                 ))}
               </StyledGrid250>
             )}
-            {/* <Pagination /> */}
             <StyledPagination gap="9px">
               <div className="selects">
                 <select onChange={(e) => { setSize(e.target.value); console.log(size); }} name='size'>
