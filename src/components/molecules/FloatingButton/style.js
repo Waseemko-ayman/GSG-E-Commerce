@@ -18,8 +18,6 @@ export const StyledFloading = styled.div`
 
   @media (max-width: 768px) {
     button {
-      width: 55px;
-      height: 55px;
       bottom: 50px;
       right: 30px;
     }

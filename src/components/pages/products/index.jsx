@@ -18,7 +18,7 @@ const ProductsListPage = () => {
   const [num, setNum] = useState(1);
   const [size, setSize] = useState(6);
   const { products } = useSelector((state) => state.products);
-  const prevSubmit = () => {
+const prevSubmit = () => {
     setNum((prev) => (num > 1 ? prev - 1 : num));
     console.log(num);
   };

@@ -8,6 +8,7 @@ import {
 } from "@/style/common";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { StyledProductsListGrid } from "./style";
+import { useRouter } from "next/navigation";
 
 const ProductsListCard2 = ({
   imageSrc,
@@ -17,6 +18,7 @@ const ProductsListCard2 = ({
   productRating,
   productId,
 }) => {
+  const router = useRouter();
   return (
     <StyledSection>
       <StyledProductsListGrid>
