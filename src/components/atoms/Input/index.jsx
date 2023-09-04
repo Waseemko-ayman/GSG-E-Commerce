@@ -2,12 +2,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { StyledInput } from "./style";
 
-const Input = ({ type, placeholder, onChange, imageHidden, removeArrow, name, register = () => {} }) => {
+const Input = ({ imageSrc, type, placeholder, onChange, imageHidden, removeArrow, name, register = () => {} }) => {
   return (
     <StyledInput gap="6px">
       <img
-        src="/assets/email.svg"
-        alt="email icon"
+        src={imageSrc}
+        alt="icon"
         className={`${imageHidden ? "image__hidden" : ""}`}
       />
       {type === "text" ||

@@ -11,12 +11,26 @@ export const StyledInfoOffers = styled.div`
     padding: 20px 10px;
   }
 
-  @media (max-width: 529px) {
+  @media (max-width: 991px) {
     & + div {
       overflow-x: auto;
       overscroll-behavior-inline: contain;
       scroll-snap-type: inline mandatory;
     }
+  }
+
+  @media (min-width: 427px) and (max-width: 991px) {
+    & + div::-webkit-scrollbar {
+      width: 15px;
+      height: 3px;
+    }
+    & + div::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 20px;
+    }
+  }
+
+  @media (max-width: 426px) {
     & + div::-webkit-scrollbar {
       width: 15px;
       height: 0px;

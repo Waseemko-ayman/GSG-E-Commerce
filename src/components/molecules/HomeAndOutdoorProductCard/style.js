@@ -6,6 +6,18 @@ export const StyledOutdoorCard = styled(StyledBetweenAlignFlex)`
   border-right: 1px solid var(--gray-300-color);
   border-bottom: 1px solid var(--gray-300-color);
   padding: 10px;
+  
+  @media (min-width: 770px) and (max-width: 992px) {
+    min-width: 220px;
+  }
+  
+  @media (min-width: 427px) and (max-width: 769px) {
+    min-width: 190px;
+  }
+  
+  @media (max-width: 426px) {
+    min-width: 160px;
+  }
 
   .text {
     font-style: normal;

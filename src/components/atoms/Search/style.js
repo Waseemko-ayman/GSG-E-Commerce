@@ -16,6 +16,18 @@ export const StyledSearch = styled(StyledAlignFlex)`
     padding: 5px 10px;
   }
 
+  @media (min-width: 770px) and (max-width: 1024px) {
+    input {
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 769px) {
+    input {
+      width: 190px;
+    }
+  }
+
   select {
     border: none;
     border-left: 1px solid var(--primary-color);

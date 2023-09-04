@@ -39,7 +39,7 @@ const Subscribe = () => {
       </p>
       <StyledFlexCenter as="form" onSubmit={handleSubmit(onSubmit)} gap="8px">
         <div>
-          <Input type="email" placeholder="Email" name="email" register={register} />
+          <Input type="email" placeholder="Email" name="email" imageSrc="/assets/email.svg" register={register} />
           {errors.email && <p className="error">{errors.email.message}</p>}
         </div>
         <Button text="Subscribe" color="secondary" variant="primary" padding="10px" imageHidden />

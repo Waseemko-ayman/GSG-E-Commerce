@@ -90,10 +90,10 @@ export const StyledSection = styled.div`
   margin: ${(props) => props.margin};
   position: relative;
   @media (max-width: 426px) {
-    overflow: hidden;
     border: none;
     border-radius: 0;
   }
+  overflow: hidden;
 `;
 
 export const StyledReExSupp = styled.div`

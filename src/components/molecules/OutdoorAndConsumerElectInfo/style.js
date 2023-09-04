@@ -3,11 +3,11 @@ import { styled } from "styled-components";
 export const StyledHomeAndConsumer = styled.div`
   width: 245px;
 
-  @media (min-width: 769px) {
+  @media (min-width: 992px) {
     height: 245px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     & {
       width: 100%;
     }
@@ -33,7 +33,7 @@ export const StyledHomeAndConsumer = styled.div`
     margin-bottom: 18px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .text {
       position: relative;
       margin-bottom: 40px;

@@ -6,13 +6,13 @@ import Search from "@/components/atoms/Search";
 import { StyledHeader } from "./style.js";
 import { StyledBetweenAlignFlex } from "@/style/common";
 
-const Header = ({ show = true }) => {
+const Header = () => {
   return (
     <StyledHeader as="header">
       <Container>
         <StyledBetweenAlignFlex>
           <Logo />
-          {show && <Search />}
+          <Search />
           <LinksList />
         </StyledBetweenAlignFlex>
       </Container>

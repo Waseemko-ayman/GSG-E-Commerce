@@ -11,5 +11,6 @@ export const StyledLanding = styled(StyledSection)`
 
   @media (max-width: 426px) {
     padding: 0;
+    margin-top: 0;
   }
 `;

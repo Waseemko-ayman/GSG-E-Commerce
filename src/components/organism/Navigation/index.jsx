@@ -5,28 +5,44 @@ import Link from "next/link";
 import { StyledAlignFlex, StyledBetweenFlex } from "@/style/common";
 import { StyledNavigation } from "./style.js";
 import { PATHS } from "@/constants/path";
+import { useState } from "react";
 
 const Navigation = () => {
+  const [showNav, setShowNav] = useState(true);
+
+  const toggleNav = () => {
+    setShowNav((prevState) =>
+      prevState === true ? false : true
+    );
+  };
+
   return (
     <StyledNavigation>
       <Container>
-        <StyledBetweenFlex>
+        <StyledBetweenFlex className="nav-links1">
           <StyledAlignFlex gap="10px" className="nav-links">
-            <img src="/assets/menu.png" alt="Menu" loading="lazy" />
-            <StyledAlignFlex gap="28px">
-              <Link href={PATHS.PRODUCTS}>All category</Link>
-              <Link href="#">Hot offers</Link>
-              <Link href="#">Gift boxes</Link>
-              <Link href="#">Projects</Link>
-              <Link href="#">Menu item</Link>
-              <select name="help">
-                <option value="1">Help</option>
-                <option value="2">Help</option>
-                <option value="3">Help</option>
-                <option value="4">Help</option>
-                <option value="5">Help</option>
-              </select>
-            </StyledAlignFlex>
+            <img
+              src="/assets/menu.png"
+              alt="Menu"
+              loading="lazy"
+              onClick={toggleNav}
+            />
+            {showNav && (
+              <StyledAlignFlex gap="20px">
+                <Link href={PATHS.PRODUCTS}>All category</Link>
+                <Link href="#">Hot offers</Link>
+                <Link href="#">Gift boxes</Link>
+                <Link href="#">Projects</Link>
+                <Link href="#">Menu item</Link>
+                <select name="help">
+                  <option value="1">Help</option>
+                  <option value="2">Help</option>
+                  <option value="3">Help</option>
+                  <option value="4">Help</option>
+                  <option value="5">Help</option>
+                </select>
+              </StyledAlignFlex>
+            )}
           </StyledAlignFlex>
           <StyledAlignFlex gap="32px" className="lang-ship">
             <select name="lang">

@@ -6,4 +6,8 @@ export const StyledHeader = styled(StyledAlignFlex)`
   height: 86px;
   color: var(--dark-color);
   background-color: var(--white-color);
+
+  .main__container > div {
+    gap: 15px;
+  }
 `;
