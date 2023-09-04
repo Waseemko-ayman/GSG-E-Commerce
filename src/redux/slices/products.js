@@ -68,18 +68,4 @@ export const getSingleProductAction = (id) => async (dispatch) => {
   }
 };
 
-// export const getPaginationAction = (num, size) => async (dispatch) => {
-//   try {
-//     dispatch(setLoading());
-//     const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${size}`)
-
-//     // console.log("pagination", num ,"  ||     size: " ,  size )
-//     console.log(data);
-//     // dispatch(getPagination(data))
-//     dispatch(getAllProducts(data))
-//   } catch (error) {
-//     dispatch(setError(error.message));
-//   }
-// }
-
 export default productsSlice.reducer;

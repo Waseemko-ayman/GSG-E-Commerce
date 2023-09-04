@@ -1,4 +1,4 @@
-import ProductsListPage from "@/pages/ProductsListPage";
+import ProductsListPage from "@/components/pages/products";
 
 const ProductsList = () => <ProductsListPage />;
 

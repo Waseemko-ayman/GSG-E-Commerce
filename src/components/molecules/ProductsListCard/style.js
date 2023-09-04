@@ -105,12 +105,30 @@ export const StyledProductsList = styled.div`
     margin: 15px 0 8px;
   }
 
+  .transition {
+    margin-top: 10px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
   h4 {
     color: var(--primary-color);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    cursor: pointer;
+  }
+
+  .transition svg {
+    animation: transition 0.7s linear infinite alternate;
+  }
+
+  @keyframes transition {
+    from {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(10px);
+    }
   }
 `;

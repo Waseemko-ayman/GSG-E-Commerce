@@ -1,4 +1,4 @@
-import CartPage from '@/pages/CratPage'
+import CartPage from '@/components/pages/CratPage'
 
 export const metadata = {
   title: "Bran || Cart",

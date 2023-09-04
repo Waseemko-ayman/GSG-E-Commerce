@@ -11,7 +11,7 @@ export const StyledProductsListGrid = styled.div`
   }
 
   .info {
-    padding: 20px;
+    padding: 20px 20px 10px;
     margin-top: 16px;
     border-top: 1px solid var(--gray-300-color);
     text-align: left;
@@ -79,5 +79,32 @@ export const StyledProductsListGrid = styled.div`
     font-size: 15px;
     font-style: normal;
     line-height: 24px;
+  }
+
+  .transition {
+    margin-top: 10px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  h4 {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .transition svg {
+    animation: transition .7s linear infinite alternate;
+  }
+
+  @keyframes transition {
+    from {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(10px);
+    }
   }
 `;

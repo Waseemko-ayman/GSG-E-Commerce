@@ -9,10 +9,12 @@ import Sidebar from "@/components/organism/Sidebar";
 import Subscribe from "@/components/organism/SubscribeSection";
 import { getProducts } from "@/redux/slices/products";
 import { StyledAlignFlex, StyledGrid250, StyledGridProducts, StyledPage } from "@/style/common";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const ProductsListPage = () => {
+  const router = useRouter();
   const [convert, setConvert] = useState(true);
   const [num, setNum] = useState(1);
   const [size, setSize] = useState(10);
@@ -28,7 +30,6 @@ const ProductsListPage = () => {
     setNum((prev) => (num < Math.ceil(products.length / size) ? prev + 1 : num));
   };
 
-  // const 
   const dispatch = useDispatch();
 
   const handleClickGrid = () => {
@@ -66,6 +67,7 @@ const ProductsListPage = () => {
                   productRating={product?.evaluation}
                   productOrders={product?.orders}
                   productDesc={product?.caption}
+                  productId={product?.id}
                 />
               ))
             ) : (
@@ -79,6 +81,7 @@ const ProductsListPage = () => {
                     oldPrice={product?.discount}
                     productRating={product?.evaluation}
                     productOrders={product?.orders}
+                    productId={product?.id}
                   />
                 ))}
               </StyledGrid250>

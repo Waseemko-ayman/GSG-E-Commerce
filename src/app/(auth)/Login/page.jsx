@@ -1,4 +1,4 @@
-import LogInPage from "@/pages/LoginPage";
+import LogInPage from "@/components/pages/LoginPage";
 
 export const metadata = {
   title: "Bran || Login",
