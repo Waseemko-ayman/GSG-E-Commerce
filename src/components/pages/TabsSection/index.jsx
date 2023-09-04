@@ -86,6 +86,7 @@ export default function TabsSection() {
           </Tabs>
         </Box>
         <div className="desc-content">
+          ** 1 **
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -158,6 +159,7 @@ export default function TabsSection() {
           </Tabs>
         </Box>
         <div className="desc-content">
+          ** 2 **
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -167,15 +169,13 @@ export default function TabsSection() {
             pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            nisi ut aliquip ex ea commodo consequat.
           </p>
           <table>
             <tbody>
               <tr>
                 <td>Model</td>
-                <td>#8786867</td>
+                <td>#4593425</td>
               </tr>
               <tr>
                 <td>Style</td>
@@ -183,7 +183,7 @@ export default function TabsSection() {
               </tr>
               <tr>
                 <td>Certificate</td>
-                <td>ISO-898921212</td>
+                <td>ISO-885603272</td>
               </tr>
               <tr>
                 <td>Size</td>
@@ -191,7 +191,7 @@ export default function TabsSection() {
               </tr>
               <tr>
                 <td>Memory</td>
-                <td>36GB RAM</td>
+                <td>43GB RAM</td>
               </tr>
             </tbody>
           </table>
@@ -230,6 +230,7 @@ export default function TabsSection() {
           </Tabs>
         </Box>
         <div className="desc-content">
+        ** 3 **
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -238,10 +239,7 @@ export default function TabsSection() {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            Ut enim ad minim veniam
           </p>
           <table>
             <tbody>
@@ -302,6 +300,7 @@ export default function TabsSection() {
           </Tabs>
         </Box>
         <div className="desc-content">
+        ** 4 **
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -311,9 +310,7 @@ export default function TabsSection() {
             pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            nisi
           </p>
           <table>
             <tbody>
