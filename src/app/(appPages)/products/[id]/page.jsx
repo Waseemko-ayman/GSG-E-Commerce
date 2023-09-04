@@ -1,4 +1,4 @@
-import ProductDetailsPage from "@/pages/ProductDetailsPage";
+import ProductDetailsPage from "@/components/pages/ProductDetailsPage";
 
 const ProductDetails = (props) => <ProductDetailsPage {...props} />;
 

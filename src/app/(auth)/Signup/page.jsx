@@ -1,4 +1,4 @@
-import SignUpPage from "@/pages/SignUpPage";
+import SignUpPage from "@/components/pages/SignUpPage";
 
 export const metadata = {
   title: "Bran || Signup",

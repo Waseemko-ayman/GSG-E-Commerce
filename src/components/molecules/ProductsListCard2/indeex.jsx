@@ -1,12 +1,12 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import {
-  StyledBetweenAlignFlex,
   StyledAlignFlex,
   StyledSection,
   StyledFlexCenter,
   StyledBetweenFlex,
 } from "@/style/common";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { StyledProductsListGrid } from "./style";
 
 const ProductsListCard2 = ({
@@ -15,7 +15,7 @@ const ProductsListCard2 = ({
   productPrice,
   oldPrice,
   productRating,
-  rateSrc,
+  productId,
 }) => {
   return (
     <StyledSection>
@@ -40,6 +40,10 @@ const ProductsListCard2 = ({
             </StyledFlexCenter>
           </StyledBetweenFlex>
           <p>{productTitle}</p>
+          <StyledAlignFlex className="transition">
+            <h4 onClick={() => router.push(`/products/${productId}`)}>View details</h4>
+            <ArrowForwardIcon color="primary" fontSize="medium" />
+          </StyledAlignFlex>
         </div>
       </StyledProductsListGrid>
     </StyledSection>

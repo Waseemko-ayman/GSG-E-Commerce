@@ -6,9 +6,12 @@ import {
   StyledSection,
   StyledFlexCenter,
 } from "@/style/common";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { StyledProductsList } from "./style";
+import { useRouter } from "next/navigation";
 
 const ProductsListCard = ({
+  productId,
   imageSrc,
   productTitle,
   productPrice,
@@ -17,6 +20,7 @@ const ProductsListCard = ({
   productOrders,
   productDesc,
 }) => {
+  const router = useRouter();
   return (
     <StyledSection margin="0 0 10px 0" padding="20px">
       <StyledProductsList>
@@ -53,7 +57,10 @@ const ProductsListCard = ({
           </StyledAlignFlex>
 
           <p>{productDesc}</p>
-          <h4>View details</h4>
+          <StyledAlignFlex className="transition">
+            <h4 onClick={() => router.push(`/products/${productId}`)}>View details</h4>
+            <ArrowForwardIcon color="primary" fontSize="medium" />
+          </StyledAlignFlex>
         </div>
       </StyledProductsList>
     </StyledSection>
