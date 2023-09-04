@@ -62,6 +62,7 @@ export const getSingleProductAction = (id) => async (dispatch) => {
   try {
     dispatch(setLoading());
     const { data } = await axios.get(`${API_URL}products/${id}`);
+    console.log(data);
     dispatch(getSingleProduct(data));
   } catch (error) {
     dispatch(setError(error.message));

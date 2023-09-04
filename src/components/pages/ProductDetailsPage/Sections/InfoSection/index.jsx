@@ -1,33 +1,36 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 import { StyledProduct } from "./style";
 import PathSection from "@/components/molecules/PathSection";
 import {
   StyledAlignFlex,
   StyledBetweenFlex,
   StyledFlex,
+  StyledFlexCenter,
   StyledSection,
 } from "@/style/common";
 import ProductType from "@/components/molecules/ProductType";
 import { CUSTOMIZATION, PRICE, TYPE } from "@/mock/ProductType";
 import ProductsDetailsCard from "@/components/molecules/ProductDetailsCard";
 
-const InfoSection = ({ params }) => {
-  // const myProduct = PRODUCTSLIST_DATA.find((item) => item.id === +params.id);
+
+const InfoSection = ({ product }) => {
   return (
     <StyledProduct>
       <PathSection />
       <StyledSection padding="20px 20px 40px" className="styled_section">
         <StyledFlex gap="20px">
           <div className="product_images">
-            <img src="/assets/WhiteT-shirt.png" alt="product" />
+            <StyledFlexCenter className="image">
+              <img src={`/${product?.image}`} alt="product" />
+            </StyledFlexCenter>
             <StyledBetweenFlex gap="9px">
-              <img src="/assets/WhiteT-shirt.png" alt="product" />
-              <img src="/assets/WhiteT-shirt2.png" alt="product" />
-              <img src="/assets/WhiteT-shirt3.png" alt="product" />
-              <img src="/assets/WhiteT-shirt4.png" alt="product" />
-              <img src="/assets/WhiteT-shirt5.png" alt="product" />
-              <img src="/assets/WhiteT-shirt6.png" alt="product" />
+              <img src={`/${product?.image}`} alt={product?.title} />
+              <img src={`/${product?.image}`} alt={product?.title} />
+              <img src={`/${product?.image}`} alt={product?.title} />
+              <img src={`/${product?.image}`} alt={product?.title} />
+              <img src={`/${product?.image}`} alt={product?.title} />
+              <img src={`/${product?.image}`} alt={product?.title} />
             </StyledBetweenFlex>
           </div>
 
@@ -36,12 +39,12 @@ const InfoSection = ({ params }) => {
               <img src="/assets/check.svg" alt="check" /> In slock
             </StyledAlignFlex>
 
-            <h3>Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h3>
+            <h3>{product?.title}</h3>
 
             <StyledAlignFlex gap="12px" className="rating">
               <StyledAlignFlex gap="6px">
                 <img src="/assets/rating(1).svg" alt="shopping_cart" />
-                <span>9.3</span>
+                <span>{product?.evaluation}</span>
               </StyledAlignFlex>
 
               <StyledAlignFlex gap="9px">
@@ -67,17 +70,18 @@ const InfoSection = ({ params }) => {
                     src="/assets/shopping_basket.svg"
                     alt="shopping_basket"
                   />{" "}
-                  <p>154 sold</p>
+                  <p>{product?.orders} sold</p>
                 </StyledAlignFlex>
               </StyledAlignFlex>
             </StyledAlignFlex>
 
             <StyledFlex padding="15px" className="prices">
               <div className="pcs">
-                <span>$98.00</span>
+                <span>{product?.price}.00</span>
                 <span>50-100 pcs</span>
               </div>
               <div className="pcs">
+                {/* <span>$90.00</span> */}
                 <span>$90.00</span>
                 <span>100-700 pcs</span>
               </div>

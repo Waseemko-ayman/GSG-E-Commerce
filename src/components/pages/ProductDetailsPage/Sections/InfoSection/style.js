@@ -12,15 +12,20 @@ export const StyledProduct = styled(StyledPage)`
     }
   }
 
-  .product_images img {
+  .product_images .image {
     max-width: 100%;
+    width: 345px;
+    height: 345px;
     border: 1px solid var(--gray-300-color);
     border-radius: 6px;
+    margin-bottom: 15px;
   }
 
-  .product_images > img {
-    width: 345px;
-    margin-bottom: 15px;
+  .product_images .image img {
+    /* max-width: 100%; */
+    width: 245px;
+    height: 200px;
+    
   }
 
   .product_images div {
