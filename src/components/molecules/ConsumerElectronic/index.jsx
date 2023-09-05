@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import { StyledOutdoorCard } from "./style.js";
+import { StyledOutdoorCard } from "../HomeAndOutdoorProductCard/style";
 
-const HomeAndOutdoorProductCard = ({ productName, productPrice, imageSrc }) => {
+const ConsumerElectronic = ({ productName, productPrice, imageSrc }) => {
   return (
     <StyledOutdoorCard>
       <div className="text">
@@ -12,9 +12,9 @@ const HomeAndOutdoorProductCard = ({ productName, productPrice, imageSrc }) => {
           <span>USD {productPrice}</span>
         </div>
       </div>
-      <Image src={`/${imageSrc}`} width={80} height={80} alt="HomeAndOutdoor-image" loading="lazy" />
+      <Image src={imageSrc} width={80} height={80} alt="HomeAndOutdoor-image" loading="lazy" />
     </StyledOutdoorCard>
   );
 };
 
-export default HomeAndOutdoorProductCard;
+export default ConsumerElectronic;

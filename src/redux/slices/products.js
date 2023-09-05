@@ -34,23 +34,43 @@ export const productsSlice = createSlice({
   },
 });
 
-const {
-  setLoading,
-  getAllProducts,
-  getSingleProduct,
-  setError,
-} = productsSlice.actions;
+const { setLoading, getAllProducts, getSingleProduct, setError } =
+  productsSlice.actions;
 
 // -----------------------------------------------------------------------
 // ------------------------------ Actions --------------------------------
 // -----------------------------------------------------------------------
 
-export const getProducts = (num=0, size=0) => async (dispatch) => {
+export const getProducts = (page, limit, category) => async (dispatch) => {
+  let path = "";
+  const params = [
+    {
+      title: "_page",
+      value: page,
+    },
+    {
+      title: "_limit",
+      value: limit,
+    },
+    {
+      title: "category",
+      value: category,
+    },
+  ];
+
+  let foundParams = params.filter((el) => el.value);
+  // console.log(foundParams)// page , limit
+  foundParams = foundParams.map((el) => el.title + "=" + el.value);
+  // console.log(foundParams)// page , limit
+
+  path = foundParams.join("&");
+  // console.log(path)// page , limit
+
   try {
     dispatch(setLoading());
-      const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${size}`)    
-      // const { data } = await axios.get(API_URL + "products");
-      dispatch(getAllProducts(data));
+    // const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${limit}`)
+    const { data } = await axios.get(`${API_URL}products?${path}`);
+    dispatch(getAllProducts(data));
   } catch (error) {
     dispatch(setError(error.message));
   }
@@ -60,7 +80,7 @@ export const getSingleProductAction = (id) => async (dispatch) => {
   try {
     dispatch(setLoading());
     const { data } = await axios.get(`${API_URL}products/${id}`);
-    console.log(data);
+    // console.log(data);
     dispatch(getSingleProduct(data));
   } catch (error) {
     dispatch(setError(error.message));

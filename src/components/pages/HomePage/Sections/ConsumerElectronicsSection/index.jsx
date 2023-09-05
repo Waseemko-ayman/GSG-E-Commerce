@@ -5,8 +5,20 @@ import HomeAndOutdoorProductCard from "@/components/molecules/HomeAndOutdoorProd
 import { CONSUMER_ELECTRONICS_DATA } from "@/mock/ConsumerElectronicsData";
 import { StyledFlexMobile, StyledGridMobile } from "../HomeAndOutDoor/style";
 import Button from "@/components/atoms/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getProducts } from "@/redux/slices/products";
 
 const ConsumerElectronics = () => {
+  const { products } = useSelector((state) => state.products);
+  // console.log(products);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProducts(2, 8))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <StyledSection margin="20px 0 30px">
       <StyledFlexMobile>
@@ -15,12 +27,12 @@ const ConsumerElectronics = () => {
           imageSrc="/assets/ConsumerElectronics.png"
         />
         <StyledGridMobile>
-          {CONSUMER_ELECTRONICS_DATA.map(({ id, src, title, price }) => (
+          {products.map((product) => (
             <HomeAndOutdoorProductCard
-              key={id}
-              imageSrc={src}
-              productName={title}
-              productPrice={price}
+              key={product?.id}
+              // imageSrc={product?.image}
+              productName={product?.title}
+              productPrice={product?.price}
             />
           ))}
         </StyledGridMobile>
