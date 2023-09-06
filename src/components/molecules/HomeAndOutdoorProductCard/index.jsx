@@ -12,7 +12,7 @@ const HomeAndOutdoorProductCard = ({ productName, productPrice, imageSrc }) => {
           <span>USD {productPrice}</span>
         </div>
       </div>
-      <Image src={`/${imageSrc}`} width={80} height={80} alt="HomeAndOutdoor-image" loading="lazy" />
+      <Image src={imageSrc} width={80} height={80} alt="HomeAndOutdoor-image" loading="lazy" />
     </StyledOutdoorCard>
   );
 };

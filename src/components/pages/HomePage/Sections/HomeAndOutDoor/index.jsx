@@ -2,19 +2,19 @@
 import HomeAndOutdoorProductCard from "@/components/molecules/HomeAndOutdoorProductCard";
 import { StyledSection } from "@/style/common";
 import OutdoorAndConsumerInfo from "@/components/molecules/OutdoorAndConsumerElectInfo";
-import { HOME_OUTDOOR_DATA } from "@/mock/HomeAndOutdoorData";
 import { StyledFlexMobile, StyledGridMobile } from "./style";
 import Button from "@/components/atoms/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getProducts } from "@/redux/slices/products";
+import { getFurnitureProducts } from "@/redux/slices/products";
 
 const HomeAndOutDoor = () => {
   const { products } = useSelector((state) => state.products);
+  console.log(products)
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProducts(1, 8, "furniture"))
+    dispatch(getFurnitureProducts(1, 8, "furniture"))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

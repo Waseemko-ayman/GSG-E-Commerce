@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { StyledOutdoorCard } from "../HomeAndOutdoorProductCard/style";
 
-const ConsumerElectronic = ({ productName, productPrice, imageSrc }) => {
+const ConsumerElectronicCard = ({ productName, productPrice, imageSrc }) => {
   return (
     <StyledOutdoorCard>
       <div className="text">
@@ -17,4 +17,4 @@ const ConsumerElectronic = ({ productName, productPrice, imageSrc }) => {
   );
 };
 
-export default ConsumerElectronic;
+export default ConsumerElectronicCard;
