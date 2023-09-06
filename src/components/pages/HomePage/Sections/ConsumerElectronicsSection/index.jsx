@@ -15,7 +15,7 @@ const ConsumerElectronics = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProducts(2, 8))
+    dispatch(getProducts(2, 8, "electronics"))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
