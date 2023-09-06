@@ -91,6 +91,10 @@ export const StyledPaginationButtons = styled.div`
     border-radius: 50%;
     background-color: #f3e2f3;
   }
+  span:hover{
+    transition: all 0.3s ease;
+    background-color: #f0f0a3;
+  }
 `
 
 export const StyledSection = styled.div`

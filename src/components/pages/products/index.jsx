@@ -20,10 +20,17 @@ const ProductsListPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [size, setSize] = useState(6);
   const { products } = useSelector((state) => state.products);
+  const totalProducts = 23;
   const HandleToggle = () => {
     setConvert(!convert);
   };
-
+  const handlePageChange = (type) => {
+    type === 'prev'
+      ?
+      setCurrentPage((prev) => (currentPage > 1 ? prev - 1 : currentPage))
+      :
+      setCurrentPage((prev) => (currentPage < Math.ceil(23 / size) ? prev + 1 : currentPage));
+  }
   useEffect(() => {
     if (Math.ceil(totalProducts / size) < currentPage) {
       /**
@@ -86,13 +93,14 @@ const ProductsListPage = () => {
               </div>
               <StyledAlignFlex>
                 {/* {
-                  currentPage === 1 ? 
-                  "sad"
-                  // <button onClick={() => handlePageChange('prev')} disabled>-</button>
-                  :
-                  <button onClick={() => handlePageChange('prev')}>-</button>
+                  currentPage === 1 ?
+                    // "sad"
+                    <ArrowBackIosNewIcon disabled onClick={() => handlePageChange('prev')} disabled />
+                    // <button onClick={() => handlePageChange('prev')} disabled>-</button>
+                    :
+                    <button onClick={() => handlePageChange('prev')}>-</button>
                 } */}
-                <ArrowBackIosNewIcon onClick={() => handlePageChange('prev')} />
+                <ArrowBackIosNewIcon onClick={() => handlePageChange('prev')} disabled />
                 {
                   Array(Math.ceil(totalProducts / size))
                     .fill(0)
