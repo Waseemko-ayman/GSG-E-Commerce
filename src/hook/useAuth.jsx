@@ -3,15 +3,17 @@ import { ROLES } from "@/constants";
 import axios from "axios";
 import { AUTH_API_URL } from "@/config/api";
 import { AUTH_ACTIONS, AUTH_API_PATHS } from "@/constants/auth";
+import Swal from "sweetalert2";
+import { redirect } from 'next/navigation'
 
 const getisAuth = () => localStorage.getItem("isAuth") || false;
-// const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
+const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
 const getToken = () => localStorage.getItem("token") || null;
 const getRole = () => localStorage.getItem("role") || ROLES.GUEST;
 
 const initialState = {
   isAuth: getisAuth(),
-  // user: getUser(),
+  user: getUser(),
   token: getToken(),
   role: getRole(),
   isLoading: false,
@@ -75,8 +77,21 @@ const useAuth = () => {
     dispatch({ type: AUTH_ACTIONS.SET_LOADING });
     try {
       const { data } = await axios.post(AUTH_API_URL + AUTH_API_PATHS.LOGIN, body);
+      // console.log(data)
       dispatch({ type: AUTH_ACTIONS.AUTHORIZE, payload: data?.data || data });
+      Swal.fire({
+        icon : "success",
+        title: 'Logged in Successfully',
+        showConfirmButton: false,
+        timer: 2000
+      });
     } catch (error) {
+      Swal.fire({
+        icon : "error",
+        title: 'The data is incorrect!',
+        showConfirmButton: false,
+        timer: 2000
+      });
       dispatch({ type: AUTH_ACTIONS.SET_ERROR, payload: error.message });
     }
   };
@@ -86,7 +101,14 @@ const useAuth = () => {
     dispatch({ type: AUTH_ACTIONS.SET_LOADING });
     try {
       const { data } = await axios.post(AUTH_API_URL + AUTH_API_PATHS.SIGNUP, body);
+      // console.log(data);
       dispatch({ type: AUTH_ACTIONS.AUTHORIZE, payload: data?.data || data });
+      Swal.fire({
+        icon : "success",
+        title: 'Registered Successfully',
+        showConfirmButton: false,
+        timer: 2000
+      });
     } catch (error) {
       dispatch({ type: AUTH_ACTIONS.SET_ERROR, payload: error.message });
     }

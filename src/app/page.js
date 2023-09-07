@@ -1,5 +1,5 @@
-import HomePage from "@/components/pages/HomePage";
+import LayoutAuth from "@/components/organism/LayoutAuth";
 
-const Home = () => <HomePage />
+const Home = () => <LayoutAuth />
 
 export default Home;
