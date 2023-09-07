@@ -19,6 +19,7 @@ const ProductsListCard = ({
   productRating,
   productOrders,
   productDesc,
+  handleAddToCard
 }) => {
   const router = useRouter();
   return (
@@ -30,7 +31,7 @@ const ProductsListCard = ({
           <StyledBetweenAlignFlex>
             <h2>{productTitle}</h2>
             <StyledFlexCenter className="image">
-              <img src="/assets/favorite_border.svg" alt="favorite_border" />
+              <img src="/assets/favorite_border.svg" alt="favorite_border" onClick={handleAddToCard} />
             </StyledFlexCenter>
           </StyledBetweenAlignFlex>
 

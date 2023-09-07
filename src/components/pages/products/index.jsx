@@ -7,6 +7,7 @@ import ProductsListHeader from "@/components/molecules/ProdutsListHeader";
 import Container from "@/components/organism/Container";
 import Sidebar from "@/components/organism/Sidebar";
 import Subscribe from "@/components/organism/SubscribeSection";
+import { addToCart } from "@/redux/slices/cartItem";
 import { getProducts } from "@/redux/slices/products";
 import { StyledAlignFlex, StyledGrid250, StyledGridProducts, StyledPage, StyledPaginationButtons } from "@/style/common";
 import { useEffect, useState } from "react";
@@ -21,9 +22,11 @@ const ProductsListPage = () => {
   const [size, setSize] = useState(6);
   const { products } = useSelector((state) => state.products);
   const totalProducts = 23;
+
   const HandleToggle = () => {
     setConvert(!convert);
   };
+  
   const handlePageChange = (type) => {
     type === 'prev'
       ?
@@ -65,6 +68,7 @@ const ProductsListPage = () => {
                   productOrders={product?.orders}
                   productDesc={product?.caption}
                   productId={product?.id}
+                  handleAddToCard={() => handleAddToCard(product)}
                 />
               ))
             ) : (
@@ -85,10 +89,15 @@ const ProductsListPage = () => {
             )}
             <StyledPagination gap="9px">
               <div className="selects">
-                <select onChange={(e) => { setSize(e.target.value); console.log(size); }} name='size'>
-                  <option value="6" selected>6</option>
-                  <option value="8">8</option>
-                  <option value="10">10</option>
+                <select
+                  onChange={(e) => {
+                    setLimit(e.target.value);
+                  }}
+                  name="limit"
+                >
+                  <option value="6" selected>Show 6</option>
+                  <option value="8">Show 8</option>
+                  <option value="10">Show 10</option>
                 </select>
               </div>
               <StyledAlignFlex>

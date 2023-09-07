@@ -5,7 +5,6 @@ export const AUTH_API_PATHS = {
 
 export const AUTH_ACTIONS = {
   GET: 'GET',
-  DELETE: 'DELETE',
   LOGOUT: 'LOGOUT',
   SET_LOADING: 'SET_LOADING',
   SET_ERROR: "SET_ERROR",

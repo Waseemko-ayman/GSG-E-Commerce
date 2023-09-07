@@ -21,6 +21,18 @@ export const productsSlice = createSlice({
       state.errorMessage = "";
     },
 
+    getAllFurnitureProducts: (state, action) => {
+      state.products = action.payload;
+      state.isLoading = false;
+      state.errorMessage = "";
+    },
+
+    getAllClothesProducts: (state, action) => {
+      state.products = action.payload;
+      state.isLoading = false;
+      state.errorMessage = "";
+    },
+
     getSingleProduct: (state, action) => {
       state.product = action.payload;
       state.isLoading = false;
@@ -37,6 +49,8 @@ export const productsSlice = createSlice({
 const {
   setLoading,
   getAllProducts,
+  getAllFurnitureProducts,
+  getAllClothesProducts,
   getSingleProduct,
   setError,
 } = productsSlice.actions;
@@ -45,12 +59,106 @@ const {
 // ------------------------------ Actions --------------------------------
 // -----------------------------------------------------------------------
 
-export const getProducts = (num=0, size=0) => async (dispatch) => {
+export const getProducts = (page, limit, category) => async (dispatch) => {
+  let path = "";
+  const params = [
+    {
+      title: "_page",
+      value: page,
+    },
+    {
+      title: "_limit",
+      value: limit,
+    },
+    {
+      title: "category",
+      value: category,
+    },
+  ];
+
+  let foundParams = params.filter((el) => el.value);
+  // console.log(foundParams)// page , limit
+  foundParams = foundParams.map((el) => el.title + "=" + el.value);
+  // console.log(foundParams)// page , limit
+
+  path = foundParams.join("&");
+  // console.log(path)// page , limit
+
   try {
     dispatch(setLoading());
-      const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${size}`)    
-      // const { data } = await axios.get(API_URL + "products");
-      dispatch(getAllProducts(data));
+    // const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${limit}`)
+    const { data } = await axios.get(`${API_URL}products?${path}`);
+    dispatch(getAllProducts(data));
+  } catch (error) {
+    dispatch(setError(error.message));
+  }
+};
+
+export const getFurnitureProducts = (page, limit, category) => async (dispatch) => {
+  let path = "";
+  const params = [
+    {
+      title: "_page",
+      value: page,
+    },
+    {
+      title: "_limit",
+      value: limit,
+    },
+    {
+      title: "category",
+      value: category,
+    },
+  ];
+
+  let foundParams = params.filter((el) => el.value);
+  // console.log(foundParams)// page , limit
+  foundParams = foundParams.map((el) => el.title + "=" + el.value);
+  // console.log(foundParams)// page , limit
+
+  path = foundParams.join("&");
+  // console.log(path)// page , limit
+
+  try {
+    dispatch(setLoading());
+    // const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${limit}`)
+    const { data } = await axios.get(`${API_URL}products?${path}`);
+    dispatch(getAllFurnitureProducts(data));
+  } catch (error) {
+    dispatch(setError(error.message));
+  }
+};
+
+export const getClothesProducts = (page, limit, category) => async (dispatch) => {
+  let path = "";
+  const params = [
+    {
+      title: "_page",
+      value: page,
+    },
+    {
+      title: "_limit",
+      value: limit,
+    },
+    {
+      title: "category",
+      value: category,
+    },
+  ];
+
+  let foundParams = params.filter((el) => el.value);
+  // console.log(foundParams)// page , limit
+  foundParams = foundParams.map((el) => el.title + "=" + el.value);
+  // console.log(foundParams)// page , limit
+
+  path = foundParams.join("&");
+  // console.log(path)// page , limit
+
+  try {
+    dispatch(setLoading());
+    // const { data } = await axios.get(`${API_URL}products?_page=${num}&_limit=${limit}`)
+    const { data } = await axios.get(`${API_URL}products?${path}`);
+    dispatch(getAllClothesProducts(data));
   } catch (error) {
     dispatch(setError(error.message));
   }
@@ -60,7 +168,7 @@ export const getSingleProductAction = (id) => async (dispatch) => {
   try {
     dispatch(setLoading());
     const { data } = await axios.get(`${API_URL}products/${id}`);
-    console.log(data);
+    // console.log(data);
     dispatch(getSingleProduct(data));
   } catch (error) {
     dispatch(setError(error.message));

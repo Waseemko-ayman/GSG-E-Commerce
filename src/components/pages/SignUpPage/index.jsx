@@ -8,6 +8,7 @@ import Input from "@/components/atoms/Input";
 import { StyledAlignFlex, StyledFlexCenter, StyledPage } from "@/style/common";
 import { StyledRegister } from "./style";
 import Checkbox from "@/components/atoms/Checkbox";
+import { useAuthContext } from "@/context/AuthContext";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -54,19 +55,21 @@ export const formSchema = Yup.object({
 });
 
 const SignUpPage = () => {
-
-  const onSubmit = async (data) => {
-    // signup(data);
-    console.log(data);
-  };
+  const { signup, isLoading } = useAuthContext();
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(formSchema),
   });
+
+  const onSubmit = async (data) => {
+    signup(data);
+    reset();
+  };
 
   return (
     <StyledPage>
@@ -131,7 +134,7 @@ const SignUpPage = () => {
               {errors.repeatPassword && <p className="error">{errors.repeatPassword.message}</p>}
             </div>
             <Button
-              text="Register now"
+              text={isLoading ? "Loading..." : "Register now"}
               type="submit"
               color="secondary"
               variant="primary"

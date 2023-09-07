@@ -14,36 +14,17 @@ import {
 } from "@/style/common";
 import Link from "next/link";
 import { StyledLoginForm } from "./style";
+import { useAuthContext } from "@/context/AuthContext";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const formSchema = Yup.object({
-  username: Yup.string().required("Username is required"),
 
   email: Yup.string()
     .matches(emailRegex, "Enter Correct Email")
     .required("Email is required"),
 
-  phone: Yup.number().positive().integer().required("Phone is requied"),
-
-  password: Yup.string()
-    .required("Password is required")
-    .min(8, "Password must be at least 8 characters long")
-    .max(15, "Password must be at least 15 characters long")
-    // .length(10)
-    .matches(
-      RegExp("(.*[a-z].*)"),
-      "Password must contain at least one Lowercase letter"
-    )
-    .matches(
-      RegExp("(.*[A-Z].*)"),
-      "Password must contain at least one Uppercase letter"
-    )
-    .matches(RegExp("(.*\\d.*)"), "Password must contain at least one Number ")
-    .matches(
-      RegExp('[!@#$%^&*(),.?":{}|<>]'),
-      "Password must contain at least one Special character"
-    ),
+  password: Yup.string().required("Password is required"),
 
   checked: Yup.boolean().oneOf(
     [true, false],
@@ -52,10 +33,7 @@ export const formSchema = Yup.object({
 });
 
 const LoginForm = () => {
-  const onSubmit = async (data) => {
-    // signup(data);
-    console.log(data);
-  };
+  const { login, isLoading } = useAuthContext();
 
   const {
     register,
@@ -65,22 +43,26 @@ const LoginForm = () => {
     resolver: yupResolver(formSchema),
   });
 
+  const onSubmit = async (data) => {
+    login(data);
+  };
+
   return (
     <StyledFlexCenter>
       <StyledLoginForm padding="30px">
         <h1>Sign in</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="box">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="email">Email</label>
             <Input
-              type="text"
+              type="email"
               placeholder="Email or phone"
-              name="username"
+              name="email"
               imageHidden
               register={register}
             />
-            {errors.username && (
-              <p className="error">{errors.username.message}</p>
+            {errors.email && (
+              <p className="error">{errors.email.message}</p>
             )}
           </div>
           <div className="box">
@@ -101,13 +83,10 @@ const LoginForm = () => {
           </div>
           <div className="remmember">
             <Checkbox text="Remember me" name="checked" register={register} />
-            {errors.checked && (
-              <p className="error">{errors.checked.message}</p>
-            )}
           </div>
           <Button
+            text={isLoading ? "Loading..." : "Log in"}
             type="submit"
-            text="Log in"
             color="secondary"
             variant="primary"
             width="100%"

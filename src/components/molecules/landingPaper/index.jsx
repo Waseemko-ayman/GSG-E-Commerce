@@ -7,6 +7,7 @@ import { StyledFlex } from "@/style/common.js";
 import useAuth from "@/hook/useAuth.jsx";
 import Link from "next/link.js";
 import { PATHS } from "@/constants/path.js";
+import { useAuthContext } from "@/context/AuthContext.jsx";
 
 const LandingPaper = () => {
   const { user } = useAuth();
