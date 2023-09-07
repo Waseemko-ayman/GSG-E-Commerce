@@ -27,26 +27,29 @@ export const StyledPagination = styled(StyledAlignFlex)`
   }
 
   button {
-    border-radius: 0 !important;
     width: 44px;
     height: 40px;
   }
 
-  button:hover {
+  button {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-300-color);
+  }
+
+  .arrow:hover {
     background: var(--gray-300-color);
     color: var(--dark-color);
   }
 
-  button img {
-    max-width: 100%;
-    width: 24px;
-  }
-
-  button:nth-child(1) {
+  .arrow:first-of-type {
     border-radius: 6px 0 0 6px !important;
   }
 
-  button:nth-child(5) {
+  .arrow:last-of-type {
     border-radius: 0 6px 6px 0 !important;
   }
 `;

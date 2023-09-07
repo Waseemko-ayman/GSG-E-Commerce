@@ -17,7 +17,7 @@ export const StyledAlignFlex = styled.div`
   gap: ${(props) => props.gap};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
-  `;
+`;
 
 export const StyledFlexCenter = styled.div`
   display: flex;
@@ -80,22 +80,6 @@ export const StyledGridProducts = styled.div`
   grid-template-columns: 240px 1fr;
   gap: 25px;
 `;
-
-export const StyledPaginationButtons = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 0 .3rem;
-  width: 70%;
-  span{
-    padding: 10px;
-    border-radius: 50%;
-    background-color: #f3e2f3;
-  }
-  span:hover{
-    transition: all 0.3s ease;
-    background-color: #f0f0a3;
-  }
-`
 
 export const StyledSection = styled.div`
   box-shadow: 0 0 10px #efefef;

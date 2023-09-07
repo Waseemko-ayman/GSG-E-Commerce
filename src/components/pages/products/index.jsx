@@ -9,11 +9,17 @@ import Sidebar from "@/components/organism/Sidebar";
 import Subscribe from "@/components/organism/SubscribeSection";
 import { addToCart } from "@/redux/slices/cartItem";
 import { getProducts } from "@/redux/slices/products";
-import { StyledAlignFlex, StyledGrid250, StyledGridProducts, StyledPage, StyledPaginationButtons } from "@/style/common";
+import {
+  StyledAlignFlex,
+  StyledGrid250,
+  StyledGridProducts,
+  StyledPage,
+  StyledPaginationButtons,
+} from "@/style/common";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ProductsListPage = () => {
   const dispatch = useDispatch();
@@ -26,21 +32,21 @@ const ProductsListPage = () => {
   const HandleToggle = () => {
     setConvert(!convert);
   };
-  
+
   const handlePageChange = (type) => {
-    type === 'prev'
-      ?
-      setCurrentPage((prev) => (currentPage > 1 ? prev - 1 : currentPage))
-      :
-      setCurrentPage((prev) => (currentPage < Math.ceil(23 / size) ? prev + 1 : currentPage));
-  }
+    type === "prev"
+      ? setCurrentPage((prev) => (currentPage > 1 ? prev - 1 : currentPage))
+      : setCurrentPage((prev) =>
+          currentPage < Math.ceil(23 / size) ? prev + 1 : currentPage
+        );
+  };
   useEffect(() => {
     if (Math.ceil(totalProducts / size) < currentPage) {
       /**
-       *To handle bug that apear when size=6 and reach the last page 
-       *when change the size to 10, the currentPage of pages will be less than when size=6 
+       *To handle bug that apear when size=6 and reach the last page
+       *when change the size to 10, the currentPage of pages will be less than when size=6
        */
-      setCurrentPage(Math.ceil(totalProducts / size))
+      setCurrentPage(Math.ceil(totalProducts / size));
     }
     dispatch(getProducts(currentPage, size));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -95,39 +101,46 @@ const ProductsListPage = () => {
                   }}
                   name="limit"
                 >
-                  <option value="6" selected>Show 6</option>
+                  <option value="6" selected>
+                    Show 6
+                  </option>
                   <option value="8">Show 8</option>
                   <option value="10">Show 10</option>
                 </select>
               </div>
               <StyledAlignFlex>
-                {/* {
-                  currentPage === 1 ?
-                    // "sad"
-                    <ArrowBackIosNewIcon disabled onClick={() => handlePageChange('prev')} disabled />
-                    // <button onClick={() => handlePageChange('prev')} disabled>-</button>
-                    :
-                    <button onClick={() => handlePageChange('prev')}>-</button>
-                } */}
-                <ArrowBackIosNewIcon onClick={() => handlePageChange('prev')} disabled />
-                {
-                  Array(Math.ceil(totalProducts / size))
-                    .fill(0)
-                    .map((_, i) => {
-                      return (
-                        <StyledPaginationButtons key={i}>
-                          {
-                            (i + 1) === currentPage ?
-                              <span style={{ backgroundColor: "#312531", color: "#fff" }}>{i + 1}</span>
-                              :
-                              <span>{i + 1}</span>
-                          }
-                        </StyledPaginationButtons>
-                      )
-                    })
-                }
-                {/* <button onClick={() => handlePageChange('next')}>+</button> */}
-                <ArrowForwardIosIcon onClick={() => handlePageChange('next')} />
+                <button
+                  onClick={() => handlePageChange("prev")}
+                  className="arrow"
+                >
+                  <ArrowBackIosNewIcon disabled />
+                </button>
+                {Array(Math.ceil(totalProducts / size))
+                  .fill(0)
+                  .map((_, i) => {
+                    return (
+                      <div key={i}>
+                        {i + 1 === currentPage ? (
+                          <button
+                            style={{
+                              backgroundColor: "#e3e8ee",
+                              color: "#8B96A5",
+                            }}
+                          >
+                            {i + 1}
+                          </button>
+                        ) : (
+                          <button>{i + 1}</button>
+                        )}
+                      </div>
+                    );
+                  })}
+                <button
+                  onClick={() => handlePageChange("next")}
+                  className="arrow"
+                >
+                  <ArrowForwardIosIcon />
+                </button>
               </StyledAlignFlex>
             </StyledPagination>
           </div>
