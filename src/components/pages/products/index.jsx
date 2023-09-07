@@ -97,7 +97,7 @@ const ProductsListPage = () => {
               <div className="selects">
                 <select
                   onChange={(e) => {
-                    setLimit(e.target.value);
+                    setSize(e.target.value);
                   }}
                   name="limit"
                 >
