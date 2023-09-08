@@ -28,24 +28,6 @@ export const StyledSubscribe = styled.div`
     margin-bottom: 20px;
   }
 
-  form div {
-    background-color: var(--white-color);
-    border-radius: 6px;
-    width: 274px;
-    height: 40px;
-    padding: 0 5px;
-  }
-
-  form div input {
-    border: none;
-    outline: none;
-    color: var(--gray-500-color);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    padding: 10px 10px 10px 0;
-  }
-
   .error {
     color: var(--danger-color);
     margin-top: 5px;
