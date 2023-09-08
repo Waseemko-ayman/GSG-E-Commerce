@@ -15,11 +15,11 @@ import {
 import Link from "next/link";
 import { StyledLoginForm } from "./style";
 import { useAuthContext } from "@/context/AuthContext";
+import { useState } from "react";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const formSchema = Yup.object({
-
   email: Yup.string()
     .matches(emailRegex, "Enter Correct Email")
     .required("Email is required"),
@@ -33,6 +33,7 @@ export const formSchema = Yup.object({
 });
 
 const LoginForm = () => {
+  const [showPass, setShowPass] = useState(false);
   const { login, isLoading } = useAuthContext();
 
   const {
@@ -45,6 +46,10 @@ const LoginForm = () => {
 
   const onSubmit = async (data) => {
     login(data);
+  };
+
+  const hadnleShowPass = () => {
+    setShowPass(!showPass);
   };
 
   return (
@@ -61,9 +66,7 @@ const LoginForm = () => {
               imageHidden
               register={register}
             />
-            {errors.email && (
-              <p className="error">{errors.email.message}</p>
-            )}
+            {errors.email && <p className="error">{errors.email.message}</p>}
           </div>
           <div className="box">
             <StyledBetweenAlignFlex>
@@ -71,10 +74,12 @@ const LoginForm = () => {
               <Link href="#">Forgot Password</Link>
             </StyledBetweenAlignFlex>
             <Input
-              type="password"
+              type={showPass ? "text" : "password"}
               placeholder="Type here"
               name="password"
-              imageHidden
+              leftImageHidden
+              rightImage={showPass ? "/assets/eye.svg" : "/assets/eye-off.svg"}
+              onClick={hadnleShowPass}
               register={register}
             />
             {errors.password && (

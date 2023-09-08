@@ -13,10 +13,11 @@ const Input = ({
   rightImageHidden,
   removeArrow,
   name,
+  onClick,
   register = () => {},
 }) => {
   return (
-    <StyledInput gap="6px">
+    <StyledInput gap="8px">
       <img
         src={leftImage}
         alt="icon"
@@ -28,7 +29,7 @@ const Input = ({
       type === "number" ||
       type === "search" ? (
         <input
-          className={`${removeArrow ? "remove__arrow" : rightImageHidden ? "right_image_hidden" : ""}`}
+          className={`${removeArrow ? "remove__arrow" : ""}`}
           type={type}
           placeholder={placeholder}
           onChange={onChange}
@@ -41,7 +42,8 @@ const Input = ({
       <img
         src={rightImage}
         alt="icon"
-        className={`${imageHidden ? "image__hidden" : ""}`}
+        className={`${imageHidden ? "image__hidden" : rightImageHidden ? "right_image_hidden" : ""}`}
+        onClick={onClick}
       />
     </StyledInput>
   );

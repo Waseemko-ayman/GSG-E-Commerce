@@ -7,6 +7,7 @@ export const StyledInput = styled(StyledAlignFlex)`
   background-color: var(--white-color);
   border-radius: 6px;
   border: 1px solid var(--gray-300-color);
+  padding: 0 10px;
   overflow: hidden;
 
   input,
@@ -16,7 +17,7 @@ export const StyledInput = styled(StyledAlignFlex)`
     color: var(--dark-color);
     font-size: 18px;
     outline: none;
-    padding: 10px;
+    padding: 10px 0;
     border: none;
   }
 
