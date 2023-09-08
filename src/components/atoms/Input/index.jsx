@@ -2,13 +2,25 @@
 /* eslint-disable @next/next/no-img-element */
 import { StyledInput } from "./style";
 
-const Input = ({ imageSrc, type, placeholder, onChange, imageHidden, removeArrow, name, register = () => {} }) => {
+const Input = ({
+  leftImage,
+  rightImage,
+  type,
+  placeholder,
+  onChange,
+  imageHidden,
+  leftImageHidden,
+  rightImageHidden,
+  removeArrow,
+  name,
+  register = () => {},
+}) => {
   return (
     <StyledInput gap="6px">
       <img
-        src={imageSrc}
+        src={leftImage}
         alt="icon"
-        className={`${imageHidden ? "image__hidden" : ""}`}
+        className={`${imageHidden ? "image__hidden" : leftImageHidden ? "left_image_hidden" : ""}`}
       />
       {type === "text" ||
       type === "email" ||
@@ -16,7 +28,7 @@ const Input = ({ imageSrc, type, placeholder, onChange, imageHidden, removeArrow
       type === "number" ||
       type === "search" ? (
         <input
-          className={`${removeArrow ? "remove__arrow" : ""}`}
+          className={`${removeArrow ? "remove__arrow" : rightImageHidden ? "right_image_hidden" : ""}`}
           type={type}
           placeholder={placeholder}
           onChange={onChange}
@@ -26,6 +38,11 @@ const Input = ({ imageSrc, type, placeholder, onChange, imageHidden, removeArrow
       ) : (
         <textarea placeholder={placeholder}></textarea>
       )}
+      <img
+        src={rightImage}
+        alt="icon"
+        className={`${imageHidden ? "image__hidden" : ""}`}
+      />
     </StyledInput>
   );
 };
