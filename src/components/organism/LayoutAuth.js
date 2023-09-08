@@ -11,14 +11,13 @@ const LayoutAuth = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(role)
     if(role === ROLES.USER || role === ROLES.ADMIN) {
       router.replace(PATHS.HOME)
     } else if(role === ROLES.GUEST) {
-      router.replace(PATHS.SIGNUP)
+      router.replace(PATHS.LOGIN)
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [role])
+  }, [])
 
   return (
     <></>
