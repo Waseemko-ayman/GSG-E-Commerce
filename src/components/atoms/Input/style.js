@@ -22,7 +22,7 @@ export const StyledInput = styled(StyledAlignFlex)`
   }
 
   input {
-    height: inherit;
+    height: 40px;
   }
 
   textarea {
