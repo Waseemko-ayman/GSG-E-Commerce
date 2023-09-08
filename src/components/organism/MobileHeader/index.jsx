@@ -39,7 +39,8 @@ const MobileHeader = () => {
             type="search"
             placeholder="Search"
             name="search"
-            imageSrc="/assets/graySearch.svg"
+            leftImage="/assets/graySearch.svg"
+            rightImageHidden
           />
         </div>
       </div>
