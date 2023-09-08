@@ -4,7 +4,8 @@ import axios from "axios";
 import { AUTH_API_URL } from "@/config/api";
 import { AUTH_ACTIONS, AUTH_API_PATHS } from "@/constants/auth";
 import Swal from "sweetalert2";
-import { redirect } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
+import { PATHS } from "@/constants/path";
 
 const getisAuth = () => localStorage.getItem("isAuth") || false;
 const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
@@ -71,6 +72,8 @@ const useAuth = () => {
   const [state, dispatch] = useReducer(reduce, initialState);
   const token = state.token || localStorage.getItem('token');
   const config = {headers: {Authorization: `Bearer ${token}`}};
+  
+  const router = useRouter();
 
   // Login
   const login = async (body) => {
@@ -85,6 +88,7 @@ const useAuth = () => {
         showConfirmButton: false,
         timer: 2000
       });
+      router.replace(PATHS.HOME);
     } catch (error) {
       Swal.fire({
         icon : "error",
@@ -109,6 +113,7 @@ const useAuth = () => {
         showConfirmButton: false,
         timer: 2000
       });
+      router.replace(PATHS.LOGIN);
     } catch (error) {
       dispatch({ type: AUTH_ACTIONS.SET_ERROR, payload: error.message });
     }
