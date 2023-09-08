@@ -7,13 +7,16 @@ export const StyledSearch = styled(StyledAlignFlex)`
   display: flex;
   align-items: center;
   border-radius: 10px;
+  overflow: hidden;
 
   input {
     background: transparent;
-    border: none;
+    border: none !important;
+    border-radius: 0 !important;
     flex: 1;
-    width: 421px;
+    width: 400px;
     padding: 5px 10px;
+    height: 40px;
   }
 
   @media (min-width: 770px) and (max-width: 1024px) {
@@ -38,9 +41,9 @@ export const StyledSearch = styled(StyledAlignFlex)`
   }
 
   button {
-    border-radius: 0 7px 7px 0;
+    border-radius: 0 6px 6px 0;
     border: none;
-    width: 90px;
+    width: 140px;
     height: 100%;
   }
 `;
