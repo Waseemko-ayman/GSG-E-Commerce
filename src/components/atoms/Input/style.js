@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 export const StyledInput = styled(StyledAlignFlex)`
   max-width: 100%;
   width: 100%;
+  background-color: var(--white-color);
   border-radius: 6px;
   border: 1px solid var(--gray-300-color);
   padding: 0 10px;
