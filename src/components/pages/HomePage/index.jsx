@@ -16,7 +16,6 @@ import MainLayout from "@/components/organism/MainLayout";
 const HomePage = () => {
   return (
     <StyledPage as="main">
-      <MainLayout>
         <Container>
           <Landing />
           <DealsAndOffers />
@@ -28,7 +27,6 @@ const HomePage = () => {
           <SuppliersRegoin />
         </Container>
         <Subscribe />
-      </MainLayout>
     </StyledPage>
   );
 };
