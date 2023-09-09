@@ -5,12 +5,15 @@ import Button from "@/components/atoms/Button";
 import { StyledPaper } from "./style.js";
 import { StyledFlex } from "@/style/common.js";
 import useAuth from "@/hook/useAuth.jsx";
-import Link from "next/link.js";
-import { PATHS } from "@/constants/path.js";
 import { useAuthContext } from "@/context/AuthContext.jsx";
 
 const LandingPaper = () => {
   const { user } = useAuth();
+  const { logout } = useAuthContext();
+
+  const handleLogout = () => {
+    logout();
+  };
 
   return (
     <StyledPaper>
@@ -29,16 +32,15 @@ const LandingPaper = () => {
           padding="7px 0"
           imageHidden
         />
-        <Link href={PATHS.LOGIN}>
-          <Button
-            text="Log in"
-            color="primary"
-            variant="secondary"
-            width="100%"
-            padding="7px 0"
-            imageHidden
-          />
-        </Link>
+        <Button
+          text="Log out"
+          color="primary"
+          variant="secondary"
+          width="100%"
+          padding="7px 0"
+          onClick={handleLogout}
+          imageHidden
+        />
       </div>
       <Paper textPaper="Get US $10 off with a new supplier" variant="orange" />
       <Paper
