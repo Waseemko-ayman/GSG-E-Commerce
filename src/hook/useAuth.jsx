@@ -7,11 +7,10 @@ import Swal from "sweetalert2";
 import { redirect, useRouter } from 'next/navigation'
 import { PATHS } from "@/constants/path";
 
-
-var getisAuth = () => false;
-var getUser = () => null;
-var getToken = () => null;
-var getRole = () => ROLES.GUEST;
+const getisAuth = () => localStorage.getItem("isAuth") || false;
+const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
+const getToken = () => localStorage.getItem("token") || null;
+const getRole = () => localStorage.getItem("role") || ROLES.GUEST;
 
 var initialState = {
   isAuth: getisAuth(),
@@ -21,20 +20,6 @@ var initialState = {
   isLoading: false,
   error: null,
 };
-if (typeof window !== 'undefined') {
-  getisAuth = () => localStorage.getItem("isAuth") ;
-  getUser = () => JSON.parse(localStorage.getItem("user")) 
-  getToken = () => localStorage.getItem("token") ;
-  getRole = () => localStorage.getItem("role") ;
-  initialState = {
-    isAuth: getisAuth(),
-    user: getUser(),
-    token: getToken(),
-    role: getRole(),
-    isLoading: false,
-    error: null,
-  };
-}
 const reduce = (state, action) => {
   switch (action.type) {
     case AUTH_ACTIONS.SET_LOADING:
@@ -84,7 +69,7 @@ const reduce = (state, action) => {
 
 const useAuth = () => {
   const [state, dispatch] = useReducer(reduce, initialState);
-  const token = state.token || typeof window !== 'undefined' ? localStorage.getItem('token'): null;
+  const token = state.token || localStorage.getItem('token');
   const config = { headers: { Authorization: `Bearer ${token}` } };
 
   const router = useRouter();
