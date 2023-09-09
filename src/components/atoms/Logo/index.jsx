@@ -7,7 +7,7 @@ import { PATHS } from "@/constants/path";
 const Logo = () => {
   return (
     <StyledLogo>
-      <Link href={PATHS.HOME} gap="6px">
+      <Link href={PATHS.HOME}>
         <img src="/assets/logo.png" alt="Brand" loading="lazy" />
         <h1>Brand</h1>
       </Link>
