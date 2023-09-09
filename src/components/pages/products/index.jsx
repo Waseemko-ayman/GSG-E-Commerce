@@ -1,5 +1,4 @@
 "use client";
-import { StyledPagination } from "@/components/molecules/Pagination/style";
 import PathSection from "@/components/molecules/PathSection";
 import ProductsListCard from "@/components/molecules/ProductsListCard";
 import ProductsListCard2 from "@/components/molecules/ProductsListCard2/indeex";
@@ -13,6 +12,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { StyledPagination } from "./style";
 
 const ProductsListPage = () => {
   const dispatch = useDispatch();
@@ -92,14 +92,6 @@ const ProductsListPage = () => {
                 </select>
               </div>
               <StyledAlignFlex>
-                {/* {
-                  currentPage === 1 ?
-                    // "sad"
-                    <ArrowBackIosNewIcon disabled onClick={() => handlePageChange('prev')} disabled />
-                    // <button onClick={() => handlePageChange('prev')} disabled>-</button>
-                    :
-                    <button onClick={() => handlePageChange('prev')}>-</button>
-                } */}
                 <ArrowBackIosNewIcon onClick={() => handlePageChange('prev')} disabled />
                 {
                   Array(Math.ceil(totalProducts / size))
@@ -117,7 +109,6 @@ const ProductsListPage = () => {
                       )
                     })
                 }
-                {/* <button onClick={() => handlePageChange('next')}>+</button> */}
                 <ArrowForwardIosIcon onClick={() => handlePageChange('next')} />
               </StyledAlignFlex>
             </StyledPagination>
