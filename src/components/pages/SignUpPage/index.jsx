@@ -127,7 +127,7 @@ const SignUpPage = () => {
               <StyledAlignFlex>
                 <div className="selects">
                   <select>
-                    <option value="1" selected>
+                    <option value="1" defaultValue>
                       PL +970
                     </option>
                     <option value="2">EG +20</option>

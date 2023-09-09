@@ -37,7 +37,7 @@ const Pagination = () => {
     <StyledPagination gap="9px">
       <div className="selects">
         <select onChange={(e) => { setSize(e.target.value); console.log(size); }} name='size'>
-          <option value="6" selected>6</option>
+          <option value="6" defaultValue>6</option>
           <option value="8">8</option>
           <option value="10">10</option>
         </select>

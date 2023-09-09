@@ -2,19 +2,18 @@
 import { StyledPagination } from "@/components/molecules/Pagination/style";
 import PathSection from "@/components/molecules/PathSection";
 import ProductsListCard from "@/components/molecules/ProductsListCard";
-import ProductsListCard2 from "@/components/molecules/ProductsListCard2/indeex";
+import ProductsListCard2 from "@/components/molecules/ProductsListCard2";
 import ProductsListHeader from "@/components/molecules/ProdutsListHeader";
 import Container from "@/components/organism/Container";
 import Sidebar from "@/components/organism/Sidebar";
 import Subscribe from "@/components/organism/SubscribeSection";
-import { addToCart } from "@/redux/slices/cartItem";
+// import { addToCart } from "@/redux/slices/cartItem";
 import { getProducts } from "@/redux/slices/products";
 import {
   StyledAlignFlex,
   StyledGrid250,
   StyledGridProducts,
   StyledPage,
-  StyledPaginationButtons,
 } from "@/style/common";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -101,7 +100,7 @@ const ProductsListPage = () => {
                   }}
                   name="limit"
                 >
-                  <option value="6" selected>
+                  <option value="6" defaultValue>
                     Show 6
                   </option>
                   <option value="8">Show 8</option>
