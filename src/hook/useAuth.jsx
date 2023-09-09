@@ -4,7 +4,7 @@ import axios from "axios";
 import { AUTH_API_URL } from "@/config/api";
 import { AUTH_ACTIONS, AUTH_API_PATHS } from "@/constants/auth";
 import Swal from "sweetalert2";
-import { redirect, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { PATHS } from "@/constants/path";
 
 const getisAuth = () => localStorage.getItem("isAuth") || false;
@@ -121,6 +121,7 @@ const useAuth = () => {
   // Logout
   const logout = () => {
     dispatch({ type: AUTH_ACTIONS.LOGOUT });
+    router.replace(PATHS.LOGIN);
   };
 
   return {
