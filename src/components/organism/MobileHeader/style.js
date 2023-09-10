@@ -15,15 +15,11 @@ export const StyledMobileHeader = styled(StyledAlignFlex)`
   }
 
   .search {
-    margin-top: 15px;
-  }
-
-  .search {
     background-color: var(--secondary-color);
     border-radius: 6px;
     width: 100%;
-    padding: 0 5px;
     border: 1px solid var(--gray-300-color);
+    margin-top: 15px;
   }
 
   input {

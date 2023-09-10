@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 export const StyledProductsList = styled.div`
   display: grid;
   grid-template-columns: 200px 1fr;
-  /* gap: 12px; */
 
   .info {
     width: 100%;

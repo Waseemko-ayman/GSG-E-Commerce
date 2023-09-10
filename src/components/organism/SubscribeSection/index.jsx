@@ -1,4 +1,4 @@
-"use client"
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -17,7 +17,6 @@ export const formSchema = Yup.object({
 });
 
 const Subscribe = () => {
-
   const onSubmit = async (data) => {
     // signup(data);
     console.log(data);
@@ -39,10 +38,23 @@ const Subscribe = () => {
       </p>
       <StyledFlexCenter as="form" onSubmit={handleSubmit(onSubmit)} gap="8px">
         <div>
-          <Input type="email" placeholder="Email" name="email" imageSrc="/assets/email.svg" register={register} />
+          <Input
+            type="email"
+            placeholder="Email"
+            name="email"
+            leftImage="/assets/email.svg"
+            rightImageHidden
+            register={register}
+          />
           {errors.email && <p className="error">{errors.email.message}</p>}
         </div>
-        <Button text="Subscribe" color="secondary" variant="primary" padding="10px" imageHidden />
+        <Button
+          text="Subscribe"
+          color="secondary"
+          variant="primary"
+          padding="10px"
+          imageHidden
+        />
       </StyledFlexCenter>
     </StyledSubscribe>
   );

@@ -17,10 +17,12 @@ import LanguageSharpIcon from "@mui/icons-material/LanguageSharp";
 import HeadsetMicSharpIcon from "@mui/icons-material/HeadsetMicSharp";
 import ImportContactsSharpIcon from "@mui/icons-material/ImportContactsSharp";
 import { styled } from "styled-components";
-import { StyledAlignFlex } from "@/style/common";
+import { StyledAlignFlex, StyledFlex } from "@/style/common";
 import Link from "next/link";
 import { PATHS } from "@/constants/path";
 import AccountImage from "@/components/atoms/AccountImage";
+import useAuth from "@/hook/useAuth";
+import { useAuthContext } from "@/context/AuthContext";
 
 const StyledDrawer = styled.div`
   .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
@@ -30,8 +32,8 @@ const StyledDrawer = styled.div`
 `;
 
 const StyledHeader = styled.div`
-    background-color: var(--secondary-color);
-    padding: 20px;
+  background-color: var(--secondary-color);
+  padding: 20px;
 
   .links {
     margin-top: 5px;
@@ -41,13 +43,30 @@ const StyledHeader = styled.div`
     color: var(--dark-color);
     padding-top: 1px;
   }
-  a:first-child {
+  a:first-child{
     padding-right: 4px;
-    border-right: 1px solid var(--dark-color);
+    border-right: 1px solid var(--dark-color) !important;
+  }
+
+  button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    outline: none;
+    padding: 6px 0;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
   }
 `;
 
 export default function TemporaryDrawer() {
+  const { token, user } = useAuth();
+  const { logout } = useAuthContext();
+
+  const handleLogout = () => {
+    logout();
+  };
   const [state, setState] = React.useState({
     left: false,
   });
@@ -71,10 +90,21 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <StyledHeader>
-        <AccountImage />
+        <StyledFlex gap="9px">
+          <AccountImage />
+          <p>
+            Hi, {user?.name} <br /> lets get stated
+          </p>
+        </StyledFlex>
         <StyledAlignFlex gap="4px" className="links">
-          <Link href={PATHS.LOGIN}>Sign in</Link>
-          <Link href={PATHS.SIGNUP}>Register</Link>
+          {token ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <>
+              <Link href={PATHS.LOGIN}>Sign in</Link>
+              <Link href={PATHS.SIGNUP}>Register</Link>
+            </>
+          )}
         </StyledAlignFlex>
       </StyledHeader>
       <List>

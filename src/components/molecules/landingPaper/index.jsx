@@ -1,13 +1,19 @@
-"use client"
+"use client";
 import AccountImage from "@/components/atoms/AccountImage";
 import Paper from "@/components/atoms/Paper";
 import Button from "@/components/atoms/Button";
 import { StyledPaper } from "./style.js";
 import { StyledFlex } from "@/style/common.js";
 import useAuth from "@/hook/useAuth.jsx";
+import { useAuthContext } from "@/context/AuthContext.jsx";
 
 const LandingPaper = () => {
   const { user } = useAuth();
+  const { logout } = useAuthContext();
+
+  const handleLogout = () => {
+    logout();
+  };
 
   return (
     <StyledPaper>
@@ -27,11 +33,12 @@ const LandingPaper = () => {
           imageHidden
         />
         <Button
-          text="Log in"
+          text="Log out"
           color="primary"
           variant="secondary"
           width="100%"
           padding="7px 0"
+          onClick={handleLogout}
           imageHidden
         />
       </div>

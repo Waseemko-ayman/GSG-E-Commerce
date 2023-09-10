@@ -1,4 +1,18 @@
 {
+  "category": [
+    {
+      "id": 1,
+      "label":"electronics"
+    },
+    {
+      "id": 2,
+      "label":"furniture"
+    },
+    {
+      "id": 3,
+      "label":"clothes"
+    }
+  ],
   "products": [
     {
       "userId": 1,
@@ -10,7 +24,8 @@
       "orders": "154",
       "discount": "$1128.00",
       "discountPercentage": "-25%",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 2,
@@ -22,7 +37,8 @@
       "orders": "154",
       "discount": "",
       "discountPercentage": "-15%",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 3,
@@ -34,7 +50,8 @@
       "orders": "154",
       "discount": "$1128.00",
       "discountPercentage": "-40%",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 4,
@@ -46,7 +63,8 @@
       "orders": "154",
       "discount": "",
       "discountPercentage": "-25%",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 5,
@@ -58,7 +76,8 @@
       "orders": "154",
       "discount": "",
       "discountPercentage": "-25%",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 6,
@@ -69,7 +88,8 @@
       "price": "$19",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "furniture"
     },
     {
       "userId": 7,
@@ -80,7 +100,8 @@
       "price": "$19",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "furniture"
     },
     {
       "userId": 8,
@@ -91,7 +112,8 @@
       "price": "$19",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "furniture"
     },
     {
       "userId": 9,
@@ -102,7 +124,8 @@
       "price": "$100",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "furniture"
     },
     {
       "userId": 10,
@@ -113,7 +136,8 @@
       "price": "$39",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "furniture"
     },
     {
       "userId": 11,
@@ -124,7 +148,8 @@
       "price": "$19",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "furniture"
     },
     {
       "userId": 12,
@@ -135,7 +160,8 @@
       "price": "$50",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "furniture"
     },
     {
       "userId": 13,
@@ -146,7 +172,8 @@
       "price": "$200",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 14,
@@ -157,7 +184,8 @@
       "price": "$90",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 15,
@@ -168,7 +196,8 @@
       "price": "$499",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 16,
@@ -179,7 +208,8 @@
       "price": "600",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "electronics"
     },
     {
       "userId": 17,
@@ -190,7 +220,8 @@
       "price": "$10.30",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "clothes"
     },
     {
       "userId": 18,
@@ -201,7 +232,8 @@
       "price": "$10.30",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "clothes"
     },
     {
       "userId": 19,
@@ -212,7 +244,8 @@
       "price": "$200.50",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "clothes"
     },
     {
       "userId": 20,
@@ -223,7 +256,8 @@
       "price": "$34.00",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "clothes"
     },
     {
       "userId": 21,
@@ -234,7 +268,8 @@
       "price": "$99.00",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "clothes"
     },
     {
       "userId": 22,
@@ -245,7 +280,8 @@
       "price": "$9.99",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "clothes"
     },
     {
       "userId": 23,
@@ -256,7 +292,8 @@
       "price": "$98.00",
       "orders": "154",
       "discount": "",
-      "evaluation": "7.5"
+      "evaluation": "7.5",
+      "category": "clothes"
     }
   ]
 }

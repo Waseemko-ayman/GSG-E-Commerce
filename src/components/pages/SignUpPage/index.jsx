@@ -8,6 +8,8 @@ import Input from "@/components/atoms/Input";
 import { StyledAlignFlex, StyledFlexCenter, StyledPage } from "@/style/common";
 import { StyledRegister } from "./style";
 import Checkbox from "@/components/atoms/Checkbox";
+import { useAuthContext } from "@/context/AuthContext";
+import { useState } from "react";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -19,10 +21,7 @@ export const formSchema = Yup.object({
     .matches(emailRegex, "Enter Correct Email")
     .required("Email is required"),
 
-  phone: Yup.number()
-    .positive()
-    .integer()
-    .required("Phone is requied"),
+  phone: Yup.number().positive().integer().required("Phone is requied"),
 
   password: Yup.string()
     .required("Password is required")
@@ -54,19 +53,31 @@ export const formSchema = Yup.object({
 });
 
 const SignUpPage = () => {
-
-  const onSubmit = async (data) => {
-    // signup(data);
-    console.log(data);
-  };
+  const [showPass, setShowPass] = useState(false);
+  const [showRePass, setShowRePass] = useState(false);
+  const { signup, isLoading } = useAuthContext();
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(formSchema),
   });
+
+  const onSubmit = async (data) => {
+    signup(data);
+    reset();
+  };
+
+  const hadnleShowPass = () => {
+    setShowPass(!showPass);
+  };
+
+  const hadnleShowRePass = () => {
+    setShowRePass(!showRePass);
+  };
 
   return (
     <StyledPage>
@@ -77,18 +88,38 @@ const SignUpPage = () => {
             <StyledAlignFlex gap="9px" className="box">
               <div>
                 <label htmlFor="name">Name</label>
-                <Input type="text" placeholder="Type here" name="name" imageHidden register={register} />
+                <Input
+                  type="text"
+                  placeholder="Type here"
+                  name="name"
+                  imageHidden
+                  register={register}
+                />
                 {errors.name && <p className="error">{errors.name.message}</p>}
               </div>
               <div>
                 <label htmlFor="surname">Surname</label>
-                <Input type="text" placeholder="Type here" name="surname" imageHidden register={register} />
-                {errors.surname && <p className="error">{errors.surname.message}</p>}
+                <Input
+                  type="text"
+                  placeholder="Type here"
+                  name="surname"
+                  imageHidden
+                  register={register}
+                />
+                {errors.surname && (
+                  <p className="error">{errors.surname.message}</p>
+                )}
               </div>
             </StyledAlignFlex>
             <div className="box">
               <label htmlFor="email">Your e-mail</label>
-              <Input type="email" placeholder="example@mail.com" name="email" imageHidden register={register} />
+              <Input
+                type="email"
+                placeholder="example@mail.com"
+                name="email"
+                imageHidden
+                register={register}
+              />
               {errors.email && <p className="error">{errors.email.message}</p>}
             </div>
             <div className="box">
@@ -96,7 +127,7 @@ const SignUpPage = () => {
               <StyledAlignFlex>
                 <div className="selects">
                   <select>
-                    <option value="1" selected>
+                    <option value="1" defaultValue>
                       PL +970
                     </option>
                     <option value="2">EG +20</option>
@@ -117,21 +148,39 @@ const SignUpPage = () => {
             <div className="box">
               <label htmlFor="password">Password</label>
               <Input
-                type="password"
+                type={showPass ? "text" : "password"}
                 placeholder="At least 6 characters."
                 name="password"
-                imageHidden
+                leftImageHidden
+                rightImage={
+                  showPass ? "/assets/eye.svg" : "/assets/eye-off.svg"
+                }
+                onClick={hadnleShowPass}
                 register={register}
               />
-              {errors.password && <p className="error">{errors.password.message}</p>}
+              {errors.password && (
+                <p className="error">{errors.password.message}</p>
+              )}
             </div>
             <div className="box">
               <label htmlFor="repeatPassword">Repeat Password</label>
-              <Input type="password" placeholder="Type here" name="repeatPassword" imageHidden register={register} />
-              {errors.repeatPassword && <p className="error">{errors.repeatPassword.message}</p>}
+              <Input
+                type={showRePass ? "text" : "password"}
+                placeholder="Type here"
+                name="repeatPassword"
+                leftImageHidden
+                rightImage={
+                  showRePass ? "/assets/eye.svg" : "/assets/eye-off.svg"
+                }
+                onClick={hadnleShowRePass}
+                register={register}
+              />
+              {errors.repeatPassword && (
+                <p className="error">{errors.repeatPassword.message}</p>
+              )}
             </div>
             <Button
-              text="Register now"
+              text={isLoading ? "Loading..." : "Register now"}
               type="submit"
               color="secondary"
               variant="primary"
@@ -149,7 +198,9 @@ const SignUpPage = () => {
               name="checked"
               register={register}
             />
-            {errors.checked && <p className="error">{errors.checked.message}</p>}
+            {errors.checked && (
+              <p className="error">{errors.checked.message}</p>
+            )}
           </div>
 
           <HaveAccount

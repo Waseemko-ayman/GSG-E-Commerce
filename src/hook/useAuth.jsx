@@ -3,21 +3,23 @@ import { ROLES } from "@/constants";
 import axios from "axios";
 import { AUTH_API_URL } from "@/config/api";
 import { AUTH_ACTIONS, AUTH_API_PATHS } from "@/constants/auth";
+import Swal from "sweetalert2";
+import { useRouter } from 'next/navigation'
+import { PATHS } from "@/constants/path";
 
 const getisAuth = () => localStorage.getItem("isAuth") || false;
-// const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
+const getUser = () => JSON.parse(localStorage.getItem("user")) || null;
 const getToken = () => localStorage.getItem("token") || null;
 const getRole = () => localStorage.getItem("role") || ROLES.GUEST;
 
-const initialState = {
+var initialState = {
   isAuth: getisAuth(),
-  // user: getUser(),
+  user: getUser(),
   token: getToken(),
   role: getRole(),
   isLoading: false,
   error: null,
 };
-
 const reduce = (state, action) => {
   switch (action.type) {
     case AUTH_ACTIONS.SET_LOADING:
@@ -68,15 +70,31 @@ const reduce = (state, action) => {
 const useAuth = () => {
   const [state, dispatch] = useReducer(reduce, initialState);
   const token = state.token || localStorage.getItem('token');
-  const config = {headers: {Authorization: `Bearer ${token}`}};
+  const config = { headers: { Authorization: `Bearer ${token}` } };
+
+  const router = useRouter();
 
   // Login
   const login = async (body) => {
     dispatch({ type: AUTH_ACTIONS.SET_LOADING });
     try {
       const { data } = await axios.post(AUTH_API_URL + AUTH_API_PATHS.LOGIN, body);
+      // console.log(data)
       dispatch({ type: AUTH_ACTIONS.AUTHORIZE, payload: data?.data || data });
+      Swal.fire({
+        icon: "success",
+        title: 'Logged in Successfully',
+        showConfirmButton: false,
+        timer: 2000
+      });
+      router.replace(PATHS.HOME);
     } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: 'The data is incorrect!',
+        showConfirmButton: false,
+        timer: 2000
+      });
       dispatch({ type: AUTH_ACTIONS.SET_ERROR, payload: error.message });
     }
   };
@@ -86,7 +104,15 @@ const useAuth = () => {
     dispatch({ type: AUTH_ACTIONS.SET_LOADING });
     try {
       const { data } = await axios.post(AUTH_API_URL + AUTH_API_PATHS.SIGNUP, body);
+      // console.log(data);
       dispatch({ type: AUTH_ACTIONS.AUTHORIZE, payload: data?.data || data });
+      Swal.fire({
+        icon: "success",
+        title: 'Registered Successfully',
+        showConfirmButton: false,
+        timer: 2000
+      });
+      router.replace(PATHS.LOGIN);
     } catch (error) {
       dispatch({ type: AUTH_ACTIONS.SET_ERROR, payload: error.message });
     }
@@ -95,6 +121,7 @@ const useAuth = () => {
   // Logout
   const logout = () => {
     dispatch({ type: AUTH_ACTIONS.LOGOUT });
+    router.replace(PATHS.LOGIN);
   };
 
   return {

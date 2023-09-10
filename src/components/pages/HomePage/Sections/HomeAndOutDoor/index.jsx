@@ -2,9 +2,9 @@
 import HomeAndOutdoorProductCard from "@/components/molecules/HomeAndOutdoorProductCard";
 import { StyledSection } from "@/style/common";
 import OutdoorAndConsumerInfo from "@/components/molecules/OutdoorAndConsumerElectInfo";
-import { HOME_OUTDOOR_DATA } from "@/mock/HomeAndOutdoorData";
 import { StyledFlexMobile, StyledGridMobile } from "./style";
 import Button from "@/components/atoms/Button";
+import { HOME_OUTDOOR_DATA } from "@/mock/HomeAndOutdoorData";
 
 const HomeAndOutDoor = () => {
   return (

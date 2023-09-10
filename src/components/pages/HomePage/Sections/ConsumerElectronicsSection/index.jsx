@@ -1,10 +1,10 @@
 "use client";
 import { StyledSection } from "@/style/common";
 import OutdoorAndConsumerInfo from "@/components/molecules/OutdoorAndConsumerElectInfo";
-import HomeAndOutdoorProductCard from "@/components/molecules/HomeAndOutdoorProductCard";
-import { CONSUMER_ELECTRONICS_DATA } from "@/mock/ConsumerElectronicsData";
 import { StyledFlexMobile, StyledGridMobile } from "../HomeAndOutDoor/style";
 import Button from "@/components/atoms/Button";
+import ConsumerElectronicCard from "@/components/molecules/ConsumerElectronicCard";
+import { CONSUMER_ELECTRONICS_DATA } from "@/mock/ConsumerElectronicsData";
 
 const ConsumerElectronics = () => {
   return (
@@ -16,7 +16,7 @@ const ConsumerElectronics = () => {
         />
         <StyledGridMobile>
           {CONSUMER_ELECTRONICS_DATA.map(({ id, src, title, price }) => (
-            <HomeAndOutdoorProductCard
+            <ConsumerElectronicCard
               key={id}
               imageSrc={src}
               productName={title}

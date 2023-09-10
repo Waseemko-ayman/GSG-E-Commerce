@@ -2,17 +2,23 @@ import { StyledAlignFlex } from "@/style/common";
 import { styled } from "styled-components";
 
 export const StyledInput = styled(StyledAlignFlex)`
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--white-color);
+  border-radius: 6px;
+  border: 1px solid var(--gray-300-color);
+  padding: 0 10px;
+  overflow: hidden;
+
   input,
   textarea {
     max-width: 100%;
     width: 100%;
     color: var(--dark-color);
-    background-color: var(--white-color);
-    border-radius: 6px;
-    border: 1px solid var(--gray-300-color);
     font-size: 18px;
-    padding: 10px;
     outline: none;
+    padding: 10px 0;
+    border: none;
   }
 
   input {
@@ -37,7 +43,9 @@ export const StyledInput = styled(StyledAlignFlex)`
     width: 22px;
   }
 
-  .image__hidden {
+  .image__hidden,
+  .left_image_hidden,
+  .right_image_hidden {
     display: none;
   }
 
