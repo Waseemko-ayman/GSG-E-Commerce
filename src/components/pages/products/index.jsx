@@ -1,5 +1,4 @@
 "use client";
-import { StyledPagination } from "@/components/molecules/Pagination/style";
 import PathSection from "@/components/molecules/PathSection";
 import ProductsListCard from "@/components/molecules/ProductsListCard";
 import ProductsListCard2 from "@/components/molecules/ProductsListCard2";
@@ -17,8 +16,9 @@ import {
 } from "@/style/common";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { StyledPagination } from "./style";
 
 const ProductsListPage = () => {
   const dispatch = useDispatch();
