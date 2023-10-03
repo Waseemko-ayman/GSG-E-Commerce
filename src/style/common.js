@@ -38,6 +38,7 @@ export const StyledFlexColumn = styled.div`
 export const StyledBetweenFlex = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: ${(props) => props.gap};
 `;
 
 export const StyledBetweenAlignFlex = styled.div`

@@ -16,6 +16,18 @@ export const StyledNavigation = styled(StyledAlignFlex)`
     width: 24px;
     height: 24px;
     cursor: pointer;
+    z-index: 100;
+    background-color: var(--white-color);
+  }
+
+  .nav-links img + div {
+    overflow-x: hidden;
+    transform: translateX(-570px);
+    transition: all 0.3s;
+  }
+
+  .nav-links img + div.showNavigation {
+    transform: translateX(0);
   }
 
   .nav-links a {
@@ -34,25 +46,62 @@ export const StyledNavigation = styled(StyledAlignFlex)`
     cursor: pointer;
   }
 
-  @media (min-width: 427px) and (max-width: 992px) {
+  select:nth-child(1),
+  select:nth-child(2) {
+    width: 140px;
+  }
+
+  @media (min-width: 668px) {
+    .nav-links {
+      overflow-x: hidden;
+    }
+  }
+
+  @media (min-width: 654px) and (max-width: 991px) {
     .nav-links {
       gap: 4px;
     }
     .nav-links > img + div {
-      gap: 15px;
+      gap: 8px;
     }
     .nav-links a {
-      font-size: 14px;
+      font-size: 12px;
     }
-    .lang-ship {
-      gap: 18px;
+    .currency-ship {
+      gap: 15px;
     }
     select {
-      font-size: 15px;
+      font-size: 12px;
+    }
+    select:nth-child(1),
+    select:nth-child(2) {
+      width: 110px;
     }
   }
 
-  @media (max-width: 767px) {
+  @media (min-width: 768px) and (max-width: 991px) {
+    .nav-links {
+      gap: 4px;
+    }
+    .nav-links > img + div {
+      gap: 10px;
+    }
+    .nav-links a {
+      font-size: 13px;
+    }
+    .currency-ship {
+      gap: 15px;
+    }
+    select {
+      font-size: 13px;
+    }
+    select:nth-child(1),
+    select:nth-child(2) {
+      width: 110px;
+    }
+  }
+
+  @media (max-width: 667px) {
     height: 55px;
     padding: 0 15px 10px;
     border: none;
@@ -68,11 +117,11 @@ export const StyledNavigation = styled(StyledAlignFlex)`
 
     .nav-links a {
       width: 120px;
-      padding: 10px 15px;
+      padding: 8px 5px;
       color: var(--primary-color);
       background: var(--gray-200, #eff2f4);
       text-align: center;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       line-height: normal;
       border-radius: 6px;

@@ -4,8 +4,6 @@ import { StyledBetweenFlex } from "@/style/common";
 import { useState } from "react";
 import { StyledSidbarFilters } from "./style";
 
-
-
 const SidebarFilters = ({ title, children }) => {
 
   const [showChildren, setShowChildren] = useState(false);
