@@ -2,7 +2,7 @@
 import { StyledPagination } from "@/components/molecules/Pagination/style";
 import PathSection from "@/components/molecules/PathSection";
 import ProductsListCard from "@/components/molecules/ProductsListCard";
-import ProductsListCard2 from "@/components/molecules/ProductsListCard2/indeex";
+import ProductsListCard2 from "@/components/molecules/ProductsListCard2";
 import ProductsListHeader from "@/components/molecules/ProdutsListHeader";
 import Container from "@/components/organism/Container";
 import Sidebar from "@/components/organism/Sidebar";
@@ -14,7 +14,6 @@ import {
   StyledGrid250,
   StyledGridProducts,
   StyledPage,
-  StyledPaginationButtons,
 } from "@/style/common";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

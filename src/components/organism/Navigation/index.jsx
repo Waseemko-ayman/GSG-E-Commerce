@@ -5,21 +5,29 @@ import Link from "next/link";
 import { StyledAlignFlex, StyledBetweenFlex } from "@/style/common";
 import { StyledNavigation } from "./style.js";
 import { PATHS } from "@/constants/path";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getCurrencys } from "@/redux/slices/currencys";
 
 const Navigation = () => {
+  const dispatch = useDispatch();
   const [showNav, setShowNav] = useState(true);
+  const { currencys } = useSelector((state) => state.currencys);
+  // console.log(currencys)
 
   const toggleNav = () => {
-    setShowNav((prevState) =>
-      prevState === true ? false : true
-    );
+    setShowNav((prevState) => (prevState === true ? false : true));
   };
+
+  useEffect(() => {
+    dispatch(getCurrencys());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <StyledNavigation>
       <Container>
-        <StyledBetweenFlex className="nav-links1">
+        <StyledBetweenFlex gap="10px" className="nav-links1">
           <StyledAlignFlex gap="10px" className="nav-links">
             <img
               src="/assets/menu.png"
@@ -27,34 +35,38 @@ const Navigation = () => {
               loading="lazy"
               onClick={toggleNav}
             />
-            {showNav && (
-              <StyledAlignFlex gap="20px">
-                <Link href={PATHS.PRODUCTS}>All category</Link>
-                <Link href="#">Hot offers</Link>
-                <Link href="#">Gift boxes</Link>
-                <Link href="#">Projects</Link>
-                <Link href="#">Menu item</Link>
-                <select name="help">
-                  <option value="1">Help</option>
-                  <option value="2">Help</option>
-                  <option value="3">Help</option>
-                  <option value="4">Help</option>
-                  <option value="5">Help</option>
-                </select>
-              </StyledAlignFlex>
-            )}
+            <StyledAlignFlex
+              gap="20px"
+              className={showNav ? "showNavigation" : ""}
+            >
+              <Link href={PATHS.PRODUCTS}>All category</Link>
+              <Link href="#">Hot offers</Link>
+              <Link href="#">Gift boxes</Link>
+              <Link href="#">Projects</Link>
+              <Link href="#">Menu item</Link>
+              <select name="help">
+                <option value="1">Help</option>
+                <option value="2">Help</option>
+                <option value="3">Help</option>
+                <option value="4">Help</option>
+                <option value="5">Help</option>
+              </select>
+            </StyledAlignFlex>
           </StyledAlignFlex>
-          <StyledAlignFlex gap="32px" className="lang-ship">
-            <select name="lang">
-              <option value="1">English, USD</option>
-              <option value="2">English, USD</option>
-              <option value="3">English, USD</option>
-              <option value="4">English, USD</option>
-              <option value="5">English, USD</option>
+          <StyledAlignFlex gap="32px" className="currency-ship">
+            <select name="currency">
+              {currencys.map((currency) => (
+                <option key={currency?.id} value={currency?.countryName}>
+                  {currency?.countryName}, {currency?.currencyCode}
+                </option>
+              ))}
             </select>
             <select name="ship">
-              <option value="1">Ship to1</option>
-              <option value="1">Ship to2</option>
+              {currencys.map((currency) => (
+                <option key={currency?.id} value={currency?.countryName}>
+                  Ship to {currency?.countryName}
+                </option>
+              ))}
             </select>
           </StyledAlignFlex>
         </StyledBetweenFlex>

@@ -2,15 +2,15 @@
   "category": [
     {
       "id": 1,
-      "label":"electronics"
+      "label": "electronics"
     },
     {
       "id": 2,
-      "label":"furniture"
+      "label": "furniture"
     },
     {
       "id": 3,
-      "label":"clothes"
+      "label": "clothes"
     }
   ],
   "products": [
@@ -294,6 +294,1257 @@
       "discount": "",
       "evaluation": "7.5",
       "category": "clothes"
+    }
+  ],
+  "currencys": [
+    {
+      "id": 1,
+      "countryName": "Andorra",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 2,
+      "countryName": "United Arab Emirates",
+      "currencyCode": "AED"
+    },
+    {
+      "id": 3,
+      "countryName": "Afghanistan",
+      "currencyCode": "AFN"
+    },
+    {
+      "id": 4,
+      "countryName": "Antigua and Barbuda",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 5,
+      "countryName": "Anguilla",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 6,
+      "countryName": "Albania",
+      "currencyCode": "ALL"
+    },
+    {
+      "id": 7,
+      "countryName": "Armenia",
+      "currencyCode": "AMD"
+    },
+    {
+      "id": 8,
+      "countryName": "Angola",
+      "currencyCode": "AOA"
+    },
+    {
+      "id": 9,
+      "countryName": "Antarctica",
+      "currencyCode": ""
+    },
+    {
+      "id": 10,
+      "countryName": "Argentina",
+      "currencyCode": "ARS"
+    },
+    {
+      "id": 11,
+      "countryName": "American Samoa",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 12,
+      "countryName": "Austria",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 13,
+      "countryName": "Australia",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 14,
+      "countryName": "Aruba",
+      "currencyCode": "AWG"
+    },
+    {
+      "id": 15,
+      "countryName": "Åland",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 16,
+      "countryName": "Azerbaijan",
+      "currencyCode": "AZN"
+    },
+    {
+      "id": 17,
+      "countryName": "Bosnia and Herzegovina",
+      "currencyCode": "BAM"
+    },
+    {
+      "id": 18,
+      "countryName": "Barbados",
+      "currencyCode": "BBD"
+    },
+    {
+      "id": 19,
+      "countryName": "Bangladesh",
+      "currencyCode": "BDT"
+    },
+    {
+      "id": 20,
+      "countryName": "Belgium",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 21,
+      "countryName": "Burkina Faso",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 22,
+      "countryName": "Bulgaria",
+      "currencyCode": "BGN"
+    },
+    {
+      "id": 23,
+      "countryName": "Bahrain",
+      "currencyCode": "BHD"
+    },
+    {
+      "id": 24,
+      "countryName": "Burundi",
+      "currencyCode": "BIF"
+    },
+    {
+      "id": 25,
+      "countryName": "Benin",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 26,
+      "countryName": "Saint Barthélemy",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 27,
+      "countryName": "Bermuda",
+      "currencyCode": "BMD"
+    },
+    {
+      "id": 28,
+      "countryName": "Brunei",
+      "currencyCode": "BND"
+    },
+    {
+      "id": 29,
+      "countryName": "Bolivia",
+      "currencyCode": "BOB"
+    },
+    {
+      "id": 30,
+      "countryName": "Bonaire",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 31,
+      "countryName": "Brazil",
+      "currencyCode": "BRL"
+    },
+    {
+      "id": 32,
+      "countryName": "Bahamas",
+      "currencyCode": "BSD"
+    },
+    {
+      "id": 33,
+      "countryName": "Bhutan",
+      "currencyCode": "BTN"
+    },
+    {
+      "id": 34,
+      "countryName": "Bouvet Island",
+      "currencyCode": "NOK"
+    },
+    {
+      "id": 35,
+      "countryName": "Botswana",
+      "currencyCode": "BWP"
+    },
+    {
+      "id": 36,
+      "countryName": "Belarus",
+      "currencyCode": "BYR"
+    },
+    {
+      "id": 37,
+      "countryName": "Belize",
+      "currencyCode": "BZD"
+    },
+    {
+      "id": 38,
+      "countryName": "Canada",
+      "currencyCode": "CAD"
+    },
+    {
+      "id": 39,
+      "countryName": "Cocos [Keeling] Islands",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 40,
+      "countryName": "Democratic Republic of the Congo",
+      "currencyCode": "CDF"
+    },
+    {
+      "id": 41,
+      "countryName": "Central African Republic",
+      "currencyCode": "XAF"
+    },
+    {
+      "id": 42,
+      "countryName": "Republic of the Congo",
+      "currencyCode": "XAF"
+    },
+    {
+      "id": 43,
+      "countryName": "Switzerland",
+      "currencyCode": "CHF"
+    },
+    {
+      "id": 44,
+      "countryName": "Ivory Coast",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 45,
+      "countryName": "Cook Islands",
+      "currencyCode": "NZD"
+    },
+    {
+      "id": 46,
+      "countryName": "Chile",
+      "currencyCode": "CLP"
+    },
+    {
+      "id": 47,
+      "countryName": "Cameroon",
+      "currencyCode": "XAF"
+    },
+    {
+      "id": 48,
+      "countryName": "China",
+      "currencyCode": "CNY"
+    },
+    {
+      "id": 49,
+      "countryName": "Colombia",
+      "currencyCode": "COP"
+    },
+    {
+      "id": 50,
+      "countryName": "Costa Rica",
+      "currencyCode": "CRC"
+    },
+    {
+      "id": 51,
+      "countryName": "Cuba",
+      "currencyCode": "CUP"
+    },
+    {
+      "id": 52,
+      "countryName": "Cape Verde",
+      "currencyCode": "CVE"
+    },
+    {
+      "id": 53,
+      "countryName": "Curacao",
+      "currencyCode": "ANG"
+    },
+    {
+      "id": 54,
+      "countryName": "Christmas Island",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 55,
+      "countryName": "Cyprus",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 56,
+      "countryName": "Czech Republic",
+      "currencyCode": "CZK"
+    },
+    {
+      "id": 57,
+      "countryName": "Germany",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 58,
+      "countryName": "Djibouti",
+      "currencyCode": "DJF"
+    },
+    {
+      "id": 59,
+      "countryName": "Denmark",
+      "currencyCode": "DKK"
+    },
+    {
+      "id": 60,
+      "countryName": "Dominica",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 61,
+      "countryName": "Dominican Republic",
+      "currencyCode": "DOP"
+    },
+    {
+      "id": 62,
+      "countryName": "Algeria",
+      "currencyCode": "DZD"
+    },
+    {
+      "id": 63,
+      "countryName": "Ecuador",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 64,
+      "countryName": "Estonia",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 65,
+      "countryName": "Egypt",
+      "currencyCode": "EGP"
+    },
+    {
+      "id": 66,
+      "countryName": "Western Sahara",
+      "currencyCode": "MAD"
+    },
+    {
+      "id": 67,
+      "countryName": "Eritrea",
+      "currencyCode": "ERN"
+    },
+    {
+      "id": 68,
+      "countryName": "Spain",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 69,
+      "countryName": "Ethiopia",
+      "currencyCode": "ETB"
+    },
+    {
+      "id": 70,
+      "countryName": "Finland",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 71,
+      "countryName": "Fiji",
+      "currencyCode": "FJD"
+    },
+    {
+      "id": 72,
+      "countryName": "Falkland Islands",
+      "currencyCode": "FKP"
+    },
+    {
+      "id": 73,
+      "countryName": "Micronesia",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 74,
+      "countryName": "Faroe Islands",
+      "currencyCode": "DKK"
+    },
+    {
+      "id": 75,
+      "countryName": "France",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 76,
+      "countryName": "Gabon",
+      "currencyCode": "XAF"
+    },
+    {
+      "id": 77,
+      "countryName": "United Kingdom",
+      "currencyCode": "GBP"
+    },
+    {
+      "id": 78,
+      "countryName": "Grenada",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 79,
+      "countryName": "Georgia",
+      "currencyCode": "GEL"
+    },
+    {
+      "id": 80,
+      "countryName": "French Guiana",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 81,
+      "countryName": "Guernsey",
+      "currencyCode": "GBP"
+    },
+    {
+      "id": 82,
+      "countryName": "Ghana",
+      "currencyCode": "GHS"
+    },
+    {
+      "id": 83,
+      "countryName": "Gibraltar",
+      "currencyCode": "GIP"
+    },
+    {
+      "id": 84,
+      "countryName": "Greenland",
+      "currencyCode": "DKK"
+    },
+    {
+      "id": 85,
+      "countryName": "Gambia",
+      "currencyCode": "GMD"
+    },
+    {
+      "id": 86,
+      "countryName": "Guinea",
+      "currencyCode": "GNF"
+    },
+    {
+      "id": 87,
+      "countryName": "Guadeloupe",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 88,
+      "countryName": "Equatorial Guinea",
+      "currencyCode": "XAF"
+    },
+    {
+      "id": 89,
+      "countryName": "Greece",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 90,
+      "countryName": "South Georgia and the South Sandwich Islands",
+      "currencyCode": "GBP"
+    },
+    {
+      "id": 91,
+      "countryName": "Guatemala",
+      "currencyCode": "GTQ"
+    },
+    {
+      "id": 92,
+      "countryName": "Guam",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 93,
+      "countryName": "Guinea-Bissau",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 94,
+      "countryName": "Guyana",
+      "currencyCode": "GYD"
+    },
+    {
+      "id": 95,
+      "countryName": "Gaza Strip",
+      "currencyCode": "ILS"
+    },
+    {
+      "id": 96,
+      "countryName": "Hong Kong",
+      "currencyCode": "HKD"
+    },
+    {
+      "id": 97,
+      "countryName": "Heard Island and McDonald Islands",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 98,
+      "countryName": "Honduras",
+      "currencyCode": "HNL"
+    },
+    {
+      "id": 99,
+      "countryName": "Croatia",
+      "currencyCode": "HRK"
+    },
+    {
+      "id": 100,
+      "countryName": "Haiti",
+      "currencyCode": "HTG"
+    },
+    {
+      "id": 101,
+      "countryName": "Hungary",
+      "currencyCode": "HUF"
+    },
+    {
+      "id": 102,
+      "countryName": "Indonesia",
+      "currencyCode": "IDR"
+    },
+    {
+      "id": 103,
+      "countryName": "Ireland",
+      "currencyCode": "EUR"
+    },
+    {
+      "countryName": "Ireland",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 104,
+      "countryName": "Isle of Man",
+      "currencyCode": "GBP"
+    },
+    {
+      "id": 105,
+      "countryName": "India",
+      "currencyCode": "INR"
+    },
+    {
+      "id": 106,
+      "countryName": "British Indian Ocean Territory",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 107,
+      "countryName": "Iraq",
+      "currencyCode": "IQD"
+    },
+    {
+      "id": 108,
+      "countryName": "Iran",
+      "currencyCode": "IRR"
+    },
+    {
+      "id": 109,
+      "countryName": "Iceland",
+      "currencyCode": "ISK"
+    },
+    {
+      "id": 110,
+      "countryName": "Italy",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 111,
+      "countryName": "Jersey",
+      "currencyCode": "GBP"
+    },
+    {
+      "id": 112,
+      "countryName": "Jamaica",
+      "currencyCode": "JMD"
+    },
+    {
+      "id": 113,
+      "countryName": "Jordan",
+      "currencyCode": "JOD"
+    },
+    {
+      "id": 114,
+      "countryName": "Japan",
+      "currencyCode": "JPY"
+    },
+    {
+      "id": 115,
+      "countryName": "Kenya",
+      "currencyCode": "KES"
+    },
+    {
+      "id": 116,
+      "countryName": "Kyrgyzstan",
+      "currencyCode": "KGS"
+    },
+    {
+      "id": 117,
+      "countryName": "Cambodia",
+      "currencyCode": "KHR"
+    },
+    {
+      "id": 118,
+      "countryName": "Kiribati",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 119,
+      "countryName": "Comoros",
+      "currencyCode": "KMF"
+    },
+    {
+      "id": 120,
+      "countryName": "Saint Kitts and Nevis",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 121,
+      "countryName": "North Korea",
+      "currencyCode": "KPW"
+    },
+    {
+      "id": 122,
+      "countryName": "South Korea",
+      "currencyCode": "KRW"
+    },
+    {
+      "id": 123,
+      "countryName": "Kuwait",
+      "currencyCode": "KWD"
+    },
+    {
+      "id": 124,
+      "countryName": "Cayman Islands",
+      "currencyCode": "KYD"
+    },
+    {
+      "id": 125,
+      "countryName": "Kazakhstan",
+      "currencyCode": "KZT"
+    },
+    {
+      "id": 126,
+      "countryName": "Lebanon",
+      "currencyCode": "LBP"
+    },
+    {
+      "id": 127,
+      "countryName": "Saint Lucia",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 128,
+      "countryName": "Liechtenstein",
+      "currencyCode": "CHF"
+    },
+    {
+      "id": 129,
+      "countryName": "Sri Lanka",
+      "currencyCode": "LKR"
+    },
+    {
+      "id": 130,
+      "countryName": "Liberia",
+      "currencyCode": "LRD"
+    },
+    {
+      "id": 131,
+      "countryName": "Lesotho",
+      "currencyCode": "LSL"
+    },
+    {
+      "id": 132,
+      "countryName": "Lithuania",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 133,
+      "countryName": "Luxembourg",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 134,
+      "countryName": "Latvia",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 135,
+      "countryName": "Libya",
+      "currencyCode": "LYD"
+    },
+    {
+      "id": 136,
+      "countryName": "Morocco",
+      "currencyCode": "MAD"
+    },
+    {
+      "id": 137,
+      "countryName": "Monaco",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 138,
+      "countryName": "Moldova",
+      "currencyCode": "MDL"
+    },
+    {
+      "id": 139,
+      "countryName": "Montenegro",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 140,
+      "countryName": "Saint Martin",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 141,
+      "countryName": "Madagascar",
+      "currencyCode": "MGA"
+    },
+    {
+      "id": 142,
+      "countryName": "Marshall Islands",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 143,
+      "countryName": "Macedonia",
+      "currencyCode": "MKD"
+    },
+    {
+      "id": 144,
+      "countryName": "Mali",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 145,
+      "countryName": "Myanmar [Burma]",
+      "currencyCode": "MMK"
+    },
+    {
+      "id": 146,
+      "countryName": "Mongolia",
+      "currencyCode": "MNT"
+    },
+    {
+      "id": 147,
+      "countryName": "Macao",
+      "currencyCode": "MOP"
+    },
+    {
+      "id": 148,
+      "countryName": "Northern Mariana Islands",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 149,
+      "countryName": "Martinique",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 150,
+      "countryName": "Mauritania",
+      "currencyCode": "MRO"
+    },
+    {
+      "id": 151,
+      "countryName": "Montserrat",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 152,
+      "countryName": "Malta",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 153,
+      "countryName": "Mauritius",
+      "currencyCode": "MUR"
+    },
+    {
+      "id": 154,
+      "countryName": "Maldives",
+      "currencyCode": "MVR"
+    },
+    {
+      "id": 155,
+      "countryName": "Malawi",
+      "currencyCode": "MWK"
+    },
+    {
+      "id": 156,
+      "countryName": "Mexico",
+      "currencyCode": "MXN"
+    },
+    {
+      "id": 157,
+      "countryName": "Malaysia",
+      "currencyCode": "MYR"
+    },
+    {
+      "id": 158,
+      "countryName": "Mozambique",
+      "currencyCode": "MZN"
+    },
+    {
+      "id": 159,
+      "countryName": "Namibia",
+      "currencyCode": "NAD"
+    },
+    {
+      "id": 160,
+      "countryName": "New Caledonia",
+      "currencyCode": "XPF"
+    },
+    {
+      "id": 161,
+      "countryName": "Niger",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 162,
+      "countryName": "Norfolk Island",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 163,
+      "countryName": "Nigeria",
+      "currencyCode": "NGN"
+    },
+    {
+      "id": 164,
+      "countryName": "Nicaragua",
+      "currencyCode": "NIO"
+    },
+    {
+      "id": 165,
+      "countryName": "Netherlands",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 166,
+      "countryName": "Norway",
+      "currencyCode": "NOK"
+    },
+    {
+      "id": 167,
+      "countryName": "Nepal",
+      "currencyCode": "NPR"
+    },
+    {
+      "id": 168,
+      "countryName": "Nauru",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 169,
+      "countryName": "Niue",
+      "currencyCode": "NZD"
+    },
+    {
+      "id": 170,
+      "countryName": "New Zealand",
+      "currencyCode": "NZD"
+    },
+    {
+      "id": 171,
+      "countryName": "Oman",
+      "currencyCode": "OMR"
+    },
+    {
+      "id": 172,
+      "countryName": "Panama",
+      "currencyCode": "PAB"
+    },
+    {
+      "id": 173,
+      "countryName": "Peru",
+      "currencyCode": "PEN"
+    },
+    {
+      "id": 174,
+      "countryName": "French Polynesia",
+      "currencyCode": "XPF"
+    },
+    {
+      "id": 175,
+      "countryName": "Papua New Guinea",
+      "currencyCode": "PGK"
+    },
+    {
+      "id": 176,
+      "countryName": "Philippines",
+      "currencyCode": "PHP"
+    },
+    {
+      "id": 177,
+      "countryName": "Pakistan",
+      "currencyCode": "PKR"
+    },
+    {
+      "id": 178,
+      "countryName": "Poland",
+      "currencyCode": "PLN"
+    },
+    {
+      "id": 179,
+      "countryName": "Saint Pierre and Miquelon",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 180,
+      "countryName": "Pitcairn Islands",
+      "currencyCode": "NZD"
+    },
+    {
+      "id": 181,
+      "countryName": "Puerto Rico",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 182,
+      "countryName": "Palestine",
+      "currencyCode": "ILS"
+    },
+    {
+      "id": 183,
+      "countryName": "Portugal",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 184,
+      "countryName": "Palau",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 185,
+      "countryName": "Paraguay",
+      "currencyCode": "PYG"
+    },
+    {
+      "id": 186,
+      "countryName": "Qatar",
+      "currencyCode": "QAR"
+    },
+    {
+      "id": 187,
+      "countryName": "Réunion",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 188,
+      "countryName": "Romania",
+      "currencyCode": "RON"
+    },
+    {
+      "id": 189,
+      "countryName": "Serbia",
+      "currencyCode": "RSD"
+    },
+    {
+      "id": 190,
+      "countryName": "Russia",
+      "currencyCode": "RUB"
+    },
+    {
+      "id": 191,
+      "countryName": "Rwanda",
+      "currencyCode": "RWF"
+    },
+    {
+      "id": 192,
+      "countryName": "Saudi Arabia",
+      "currencyCode": "SAR"
+    },
+    {
+      "id": 193,
+      "countryName": "Solomon Islands",
+      "currencyCode": "SBD"
+    },
+    {
+      "id": 194,
+      "countryName": "Seychelles",
+      "currencyCode": "SCR"
+    },
+    {
+      "id": 195,
+      "countryName": "Sudan",
+      "currencyCode": "SDG"
+    },
+    {
+      "id": 196,
+      "countryName": "Sweden",
+      "currencyCode": "SEK"
+    },
+    {
+      "id": 197,
+      "countryName": "Singapore",
+      "currencyCode": "SGD"
+    },
+    {
+      "id": 198,
+      "countryName": "Saint Helena",
+      "currencyCode": "SHP"
+    },
+    {
+      "id": 199,
+      "countryName": "Slovenia",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 200,
+      "countryName": "Svalbard and Jan Mayen",
+      "currencyCode": "NOK"
+    },
+    {
+      "id": 201,
+      "countryName": "Slovakia",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 202,
+      "countryName": "Sierra Leone",
+      "currencyCode": "SLL"
+    },
+    {
+      "id": 203,
+      "countryName": "San Marino",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 204,
+      "countryName": "Senegal",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 205,
+      "countryName": "Somalia",
+      "currencyCode": "SOS"
+    },
+    {
+      "id": 206,
+      "countryName": "Suriname",
+      "currencyCode": "SRD"
+    },
+    {
+      "id": 207,
+      "countryName": "South Sudan",
+      "currencyCode": "SSP"
+    },
+    {
+      "id": 208,
+      "countryName": "São Tomé and Príncipe",
+      "currencyCode": "STD"
+    },
+    {
+      "id": 209,
+      "countryName": "El Salvador",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 210,
+      "countryName": "Sint Maarten",
+      "currencyCode": "ANG"
+    },
+    {
+      "id": 211,
+      "countryName": "Syria",
+      "currencyCode": "SYP"
+    },
+    {
+      "id": 212,
+      "countryName": "Swaziland",
+      "currencyCode": "SZL"
+    },
+    {
+      "id": 213,
+      "countryName": "Turks and Caicos Islands",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 214,
+      "countryName": "Chad",
+      "currencyCode": "XAF"
+    },
+    {
+      "id": 215,
+      "countryName": "French Southern Territories",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 216,
+      "countryName": "Togo",
+      "currencyCode": "XOF"
+    },
+    {
+      "id": 217,
+      "countryName": "Thailand",
+      "currencyCode": "THB"
+    },
+    {
+      "id": 218,
+      "countryName": "Tajikistan",
+      "currencyCode": "TJS"
+    },
+    {
+      "id": 219,
+      "countryName": "Tokelau",
+      "currencyCode": "NZD"
+    },
+    {
+      "id": 220,
+      "countryName": "East Timor",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 221,
+      "countryName": "Turkmenistan",
+      "currencyCode": "TMT"
+    },
+    {
+      "id": 222,
+      "countryName": "Tunisia",
+      "currencyCode": "TND"
+    },
+    {
+      "id": 223,
+      "countryName": "Tonga",
+      "currencyCode": "TOP"
+    },
+    {
+      "id": 224,
+      "countryName": "Turkey",
+      "currencyCode": "TRY"
+    },
+    {
+      "id": 225,
+      "countryName": "Trinidad and Tobago",
+      "currencyCode": "TTD"
+    },
+    {
+      "id": 226,
+      "countryName": "Tuvalu",
+      "currencyCode": "AUD"
+    },
+    {
+      "id": 227,
+      "countryName": "Taiwan",
+      "currencyCode": "TWD"
+    },
+    {
+      "id": 228,
+      "countryName": "Tanzania",
+      "currencyCode": "TZS"
+    },
+    {
+      "id": 229,
+      "countryName": "Ukraine",
+      "currencyCode": "UAH"
+    },
+    {
+      "id": 230,
+      "countryName": "Uganda",
+      "currencyCode": "UGX"
+    },
+    {
+      "id": 231,
+      "countryName": "U.S. Minor Outlying Islands",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 232,
+      "countryName": "United States",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 233,
+      "countryName": "Uruguay",
+      "currencyCode": "UYU"
+    },
+    {
+      "id": 234,
+      "countryName": "Uzbekistan",
+      "currencyCode": "UZS"
+    },
+    {
+      "id": 235,
+      "countryName": "Vatican City",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 236,
+      "countryName": "Saint Vincent and the Grenadines",
+      "currencyCode": "XCD"
+    },
+    {
+      "id": 237,
+      "countryName": "Venezuela",
+      "currencyCode": "VEF"
+    },
+    {
+      "id": 238,
+      "countryName": "British Virgin Islands",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 239,
+      "countryName": "U.S. Virgin Islands",
+      "currencyCode": "USD"
+    },
+    {
+      "id": 240,
+      "countryName": "Vietnam",
+      "currencyCode": "VND"
+    },
+    {
+      "id": 241,
+      "countryName": "Vanuatu",
+      "currencyCode": "VUV"
+    },
+    {
+      "id": 242,
+      "countryName": "Wallis and Futuna",
+      "currencyCode": "XPF"
+    },
+    {
+      "id": 243,
+      "countryName": "Samoa",
+      "currencyCode": "WST"
+    },
+    {
+      "id": 244,
+      "countryName": "Kosovo",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 245,
+      "countryName": "Yemen",
+      "currencyCode": "YER"
+    },
+    {
+      "id": 246,
+      "countryName": "Mayotte",
+      "currencyCode": "EUR"
+    },
+    {
+      "id": 247,
+      "countryName": "South Africa",
+      "currencyCode": "ZAR"
+    },
+    {
+      "id": 248,
+      "countryName": "Zambia",
+      "currencyCode": "ZMW"
+    },
+    {
+      "id": 249,
+      "countryName": "Zimbabwe",
+      "currencyCode": "ZWL"
     }
   ]
 }
